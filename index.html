@@ -4535,6 +4535,289 @@ body {
   line-height: 1.05 !important;
 }
 
+.leaderboard-panel {
+  border-top: 3px solid var(--wm-blue);
+  background: var(--wm-white);
+  margin: 0 0 10px !important;
+  padding: 9px 12px 10px !important;
+  box-shadow: 0 8px 22px rgba(7, 1, 84, 0.06);
+}
+
+.leaderboard-heading {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+  gap: 14px;
+  align-items: end;
+  margin-bottom: 8px;
+}
+
+.leaderboard-heading .eyebrow {
+  margin: 0 0 2px !important;
+  color: var(--wm-electric);
+  font-size: 0.58rem !important;
+  letter-spacing: 0.14em !important;
+}
+
+.leaderboard-heading h3 {
+  margin: 0 !important;
+  color: var(--wm-blue);
+  font-size: 0.92rem !important;
+  font-weight: 950;
+  letter-spacing: 0.05em;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.leaderboard-heading p {
+  margin: 0 !important;
+  color: var(--wm-gray);
+  font-size: 0.74rem !important;
+  line-height: 1.25 !important;
+}
+
+.leaderboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.leaderboard-card {
+  min-width: 0;
+  border: 1px solid var(--wm-blue);
+  background: var(--wm-white);
+}
+
+.leaderboard-card header {
+  border-bottom: 1px solid var(--wm-line);
+  background: #f7f9ff;
+  padding: 7px 8px;
+}
+
+.leaderboard-card header span {
+  display: block;
+  color: var(--wm-electric);
+  font-size: 0.56rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.leaderboard-card h4 {
+  margin: 3px 0 2px !important;
+  color: var(--wm-blue);
+  font-size: 0.78rem !important;
+  line-height: 1.05 !important;
+}
+
+.leaderboard-card header p {
+  margin: 0 !important;
+  color: var(--wm-gray);
+  font-size: 0.62rem !important;
+  line-height: 1.2 !important;
+}
+
+.leaderboard-ranks {
+  display: grid;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.leaderboard-ranks li {
+  margin: 0;
+}
+
+.leaderboard-ranks button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+  grid-template-areas:
+    "rank practice value"
+    "rank context context";
+  gap: 1px 7px;
+  align-items: center;
+  border: 0;
+  border-top: 1px solid var(--wm-line);
+  background: var(--wm-white);
+  color: var(--wm-blue);
+  cursor: pointer;
+  padding: 6px 8px;
+  text-align: left;
+}
+
+.leaderboard-ranks li:first-child button {
+  border-top: 0;
+}
+
+.leaderboard-ranks button:hover,
+.leaderboard-ranks button:focus-visible,
+.leaderboard-ranks button.is-selected {
+  background: var(--wm-blue);
+  color: var(--wm-white);
+}
+
+.leaderboard-rank {
+  grid-area: rank;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid currentColor;
+  font-size: 0.62rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.leaderboard-practice {
+  grid-area: practice;
+  min-width: 0;
+  font-size: 0.7rem;
+  font-weight: 950;
+  line-height: 1.05;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leaderboard-ranks strong {
+  grid-area: value;
+  color: inherit;
+  font-size: 0.88rem;
+  font-weight: 950;
+  line-height: 1;
+  text-align: right;
+}
+
+.leaderboard-ranks small {
+  grid-area: context;
+  color: inherit;
+  font-size: 0.58rem;
+  line-height: 1.12;
+  opacity: 0.78;
+}
+
+.leaderboard-ranks button.is-selected .leaderboard-rank {
+  border-color: var(--wm-yellow);
+  background: var(--wm-yellow);
+  color: var(--wm-blue);
+}
+
+.leaderboard-table-wrap {
+  border: 1px solid var(--wm-blue);
+  overflow-x: auto;
+}
+
+.leaderboard-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  border-right: 1px solid var(--wm-line);
+  border-bottom: 1px solid var(--wm-line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.leaderboard-table th:last-child,
+.leaderboard-table td:last-child {
+  border-right: 0;
+}
+
+.leaderboard-table thead th {
+  background: #f7f9ff;
+  color: var(--wm-blue);
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.leaderboard-table thead th span {
+  display: block;
+  margin-top: 2px;
+  color: var(--wm-gray);
+  font-size: 0.56rem;
+  font-weight: 850;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.leaderboard-table tbody th {
+  width: 170px;
+  background: var(--wm-white);
+}
+
+.leaderboard-table tbody th button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--wm-blue);
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 950;
+  line-height: 1.1;
+  padding: 0;
+  text-align: left;
+}
+
+.leaderboard-table tbody th button:hover,
+.leaderboard-table tbody th button:focus-visible {
+  color: var(--wm-electric);
+  text-decoration: underline;
+}
+
+.leaderboard-table td strong {
+  display: block;
+  color: var(--wm-blue);
+  font-size: 1.02rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.leaderboard-table td span {
+  display: block;
+  margin-top: 4px;
+  color: var(--wm-gray);
+  font-size: 0.64rem;
+  line-height: 1.2;
+}
+
+.leaderboard-table td.is-leader {
+  background: #fffde8;
+  box-shadow: inset 4px 0 0 var(--wm-yellow);
+}
+
+.leaderboard-note {
+  margin: 7px 0 0 !important;
+  color: var(--wm-gray);
+  font-size: 0.65rem !important;
+  line-height: 1.22 !important;
+}
+
+body.is-all-practices .navigation-band {
+  grid-template-columns: minmax(260px, 380px) !important;
+  align-items: start !important;
+}
+
+body.is-all-practices .navigation-band .question-band,
+body.is-all-practices .readout-hero,
+body.is-all-practices #audiencePanel,
+body.is-all-practices #assessmentHost {
+  display: none !important;
+}
+
+body.is-all-practices .leaderboard-panel {
+  margin-top: 0 !important;
+}
+
 .question-band + .assessment-host {
   padding-top: 0 !important;
 }
@@ -4805,6 +5088,11 @@ body {
   .evidence-map-row-content {
     grid-template-columns: 1fr !important;
   }
+
+  .leaderboard-heading,
+  .leaderboard-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* Appendix evidence-binder treatment. */
@@ -4928,6 +5216,8 @@ body {
           </div>
         </section>
 
+        <section id="leaderboardPanel" class="leaderboard-panel" aria-label="Practice comparison leaderboard"></section>
+
         <section id="audiencePanel" class="audience-panel" aria-label="Selected audience guidance" hidden></section>
 
         <div id="assessmentHost" class="assessment-host" aria-live="polite">
@@ -4991,7 +5281,88 @@ const PRACTICES = {
   }
 };
 
+const PRACTICE_OPTIONS = {
+  all: {
+    label: "All",
+    title: "All Practices"
+  },
+  ...PRACTICES
+};
+
 const METRIC_GROUP_ORDER = ["Coverage", "Engagement", "Operating System", "Builder Bench", "Enablement / Assets"];
+
+const LEADERBOARD_DATA = {
+  utilities: {
+    population: 225,
+    productivity: 29.1,
+    productivityTotal: "5,944.99",
+    builders: 80,
+    builderContext: "10 Builder List entries; 55 Codex users; 34 GPT creators",
+    builds: 13,
+    buildContext: "32 published GPTs; 199 use cases; 4 ready client-demo assets"
+  },
+  banking: {
+    population: 51,
+    productivity: 49.2,
+    productivityTotal: "2,359.46",
+    builders: 34,
+    builderContext: "6 Builder List entries; 23 Codex users; 7 GPT creators",
+    builds: 3,
+    buildContext: "3 published GPTs; 6 named asset themes; 6 market-facing assets"
+  },
+  healthcare: {
+    population: 53,
+    productivity: 28.6,
+    productivityTotal: "1,401.10",
+    builders: 50,
+    builderContext: "8 Builder List entries; 12 Codex users; 13 GPT creators",
+    builds: 19,
+    buildContext: "12 published GPTs; 70+ CareSource use cases; 10 demos"
+  }
+};
+
+const LEADERBOARD_DIMENSIONS = [
+  {
+    key: "population",
+    label: "Population",
+    metricLabel: "Active Workers",
+    description: "Practice denominator used for adoption and capability comparisons.",
+    format: (value) => formatInteger(value),
+    context: (practiceId) => {
+      const mau = metricValueForPractice(practiceId, "Monthly Active ChatGPT Users");
+      const coverage = {
+        utilities: "88.4%",
+        banking: "96.1%",
+        healthcare: "92.5%"
+      }[practiceId];
+      return `${mau} monthly active; ${coverage} MAU coverage`;
+    }
+  },
+  {
+    key: "productivity",
+    label: "Productivity",
+    metricLabel: "Avg Hours Saved / User",
+    description: "Directional productivity signal from the AI Adoption methodology.",
+    format: (value) => `${formatDecimal(value, 1)}`,
+    context: (practiceId) => `${LEADERBOARD_DATA[practiceId].productivityTotal} estimated total hours saved`
+  },
+  {
+    key: "builders",
+    label: "Builders",
+    metricLabel: "Named Builder Registry",
+    description: "Unique named people surfaced through builder or builder-adjacent evidence.",
+    format: (value) => formatInteger(value),
+    context: (practiceId) => LEADERBOARD_DATA[practiceId].builderContext
+  },
+  {
+    key: "builds",
+    label: "Builds",
+    metricLabel: "AI Store Assets",
+    description: "Cataloged reusable solution assets. GPTs, use cases, and demos are shown as context, not added.",
+    format: (value) => formatInteger(value),
+    context: (practiceId) => LEADERBOARD_DATA[practiceId].buildContext
+  }
+];
 
 const SECTION_DETAILS = {
   "1": {
@@ -6042,9 +6413,9 @@ const METRIC_TELLS = {
   "Scope": "Shows whether the readout's practice boundary is clear enough for commitments."
 };
 
-const CONTENT_VERSION = "20260603-source-traceability-v1";
+const CONTENT_VERSION = "20260603-all-leaderboard-v1";
 
-let selectedPractice = "utilities";
+let selectedPractice = "all";
 let selectedAudience = "general";
 let activeLoadToken = 0;
 let currentMetricLabels = [];
@@ -6054,15 +6425,17 @@ const audienceSelector = document.querySelector("#audienceSelector");
 const practiceKicker = document.querySelector("#practiceKicker");
 const practiceTitle = document.querySelector("#practiceTitle");
 const practiceLead = document.querySelector("#practiceLead");
+const leaderboardPanel = document.querySelector("#leaderboardPanel");
 const audiencePanel = document.querySelector("#audiencePanel");
 const assessmentHost = document.querySelector("#assessmentHost");
 
 renderPracticeSelector();
 renderAudienceSelector();
+renderLeaderboardPanel();
 loadPractice(selectedPractice);
 
 function renderPracticeSelector() {
-  practiceSelector.innerHTML = Object.entries(PRACTICES)
+  practiceSelector.innerHTML = Object.entries(PRACTICE_OPTIONS)
     .map(
       ([id, practice]) => `
         <option value="${id}" ${id === selectedPractice ? "selected" : ""}>
@@ -6080,6 +6453,7 @@ function renderPracticeSelector() {
     practiceSelector.blur();
     resetMainScroll();
     renderPracticeSelector();
+    renderLeaderboardPanel();
     loadPractice(selectedPractice, { resetScroll: true });
   };
 }
@@ -6112,12 +6486,28 @@ function renderAudienceSelector() {
 async function loadPractice(practiceId, options = {}) {
   const loadToken = ++activeLoadToken;
   const practice = PRACTICES[practiceId];
+  const isAllPractices = practiceId === "all";
   const shouldResetScroll = options.resetScroll === true;
 
   if (shouldResetScroll) resetMainScroll();
 
   updatePracticeHero();
   renderAudiencePanel();
+  renderLeaderboardPanel();
+
+  if (isAllPractices) {
+    assessmentHost.hidden = true;
+    assessmentHost.innerHTML = "";
+    if (shouldResetScroll) {
+      requestAnimationFrame(() => {
+        resetMainScroll();
+        window.setTimeout(resetMainScroll, 80);
+      });
+    }
+    return;
+  }
+
+  assessmentHost.hidden = false;
 
   assessmentHost.innerHTML = `
     <section class="loading-card">
@@ -6449,7 +6839,8 @@ function scrollToCurrentHash() {
 }
 
 function updatePracticeHero() {
-  const practice = PRACTICES[selectedPractice];
+  const practice = PRACTICE_OPTIONS[selectedPractice] || PRACTICES.utilities;
+  document.body.classList.toggle("is-all-practices", selectedPractice === "all");
   practiceKicker.hidden = true;
   practiceKicker.textContent = "";
   practiceTitle.textContent = practice.title;
@@ -6460,6 +6851,140 @@ function updatePracticeHero() {
 function renderAudiencePanel() {
   audiencePanel.innerHTML = "";
   audiencePanel.hidden = true;
+}
+
+function renderLeaderboardPanel() {
+  if (!leaderboardPanel) return;
+  const isAllPractices = selectedPractice === "all";
+
+  leaderboardPanel.innerHTML = `
+    <div class="leaderboard-heading">
+      <div>
+        <p class="eyebrow">Practice Leaderboard</p>
+        <h3>Compare Practice AI Readiness Signals</h3>
+      </div>
+      <p>Common comparison across population, productivity, builders, and builds. ${isAllPractices ? "Select a practice row or use the dropdown to open a full practice readout." : "Use it as a directional scan, then go to Section 3 for the source-level detail."}</p>
+    </div>
+    ${isAllPractices ? renderAllPracticeLeaderboardTable() : `<div class="leaderboard-grid">${LEADERBOARD_DIMENSIONS.map((dimension) => renderLeaderboardDimension(dimension)).join("")}</div>`}
+    <p class="leaderboard-note">Builder counts use the broad named builder evidence registry. Build counts use AI Store assets as the primary shareable-build measure; GPTs, use cases, demos, and source assets are shown as context to avoid double-counting.</p>
+  `;
+
+  leaderboardPanel.querySelectorAll("[data-leaderboard-practice]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextPractice = button.dataset.leaderboardPractice;
+      if (!nextPractice || nextPractice === selectedPractice) return;
+      selectedPractice = nextPractice;
+      renderPracticeSelector();
+      renderLeaderboardPanel();
+      loadPractice(selectedPractice, { resetScroll: true });
+    });
+  });
+}
+
+function renderAllPracticeLeaderboardTable() {
+  const ranksByMetric = Object.fromEntries(
+    LEADERBOARD_DIMENSIONS.map((dimension) => {
+      const sorted = Object.keys(PRACTICES)
+        .map((practiceId) => ({
+          practiceId,
+          value: LEADERBOARD_DATA[practiceId][dimension.key]
+        }))
+        .sort((a, b) => b.value - a.value);
+
+      return [
+        dimension.key,
+        Object.fromEntries(sorted.map((item, index) => [item.practiceId, index + 1]))
+      ];
+    })
+  );
+
+  return `
+    <div class="leaderboard-table-wrap">
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Practice</th>
+            ${LEADERBOARD_DIMENSIONS.map((dimension) => `<th>${escapeHtml(dimension.label)}<span>${escapeHtml(dimension.metricLabel)}</span></th>`).join("")}
+          </tr>
+        </thead>
+        <tbody>
+          ${Object.keys(PRACTICES)
+            .map(
+              (practiceId) => `
+                <tr>
+                  <th scope="row">
+                    <button type="button" data-leaderboard-practice="${escapeHtml(practiceId)}">${escapeHtml(PRACTICES[practiceId].label)}</button>
+                  </th>
+                  ${LEADERBOARD_DIMENSIONS.map((dimension) => {
+                    const value = LEADERBOARD_DATA[practiceId][dimension.key];
+                    const rank = ranksByMetric[dimension.key][practiceId];
+                    return `
+                      <td class="${rank === 1 ? "is-leader" : ""}">
+                        <strong>${escapeHtml(dimension.format(value))}</strong>
+                        <span>#${rank} · ${escapeHtml(dimension.context(practiceId))}</span>
+                      </td>
+                    `;
+                  }).join("")}
+                </tr>
+              `
+            )
+            .join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function renderLeaderboardDimension(dimension) {
+  const ranked = Object.keys(PRACTICES)
+    .map((practiceId) => ({
+      practiceId,
+      practice: PRACTICES[practiceId],
+      value: LEADERBOARD_DATA[practiceId][dimension.key]
+    }))
+    .sort((a, b) => b.value - a.value);
+
+  return `
+    <article class="leaderboard-card">
+      <header>
+        <span>${escapeHtml(dimension.label)}</span>
+        <h4>${escapeHtml(dimension.metricLabel)}</h4>
+        <p>${escapeHtml(dimension.description)}</p>
+      </header>
+      <ol class="leaderboard-ranks">
+        ${ranked
+          .map(
+            (item, index) => `
+              <li>
+                <button type="button" class="${item.practiceId === selectedPractice ? "is-selected" : ""}" data-leaderboard-practice="${escapeHtml(item.practiceId)}">
+                  <span class="leaderboard-rank">${index + 1}</span>
+                  <span class="leaderboard-practice">${escapeHtml(item.practice.label)}</span>
+                  <strong>${escapeHtml(dimension.format(item.value))}</strong>
+                  <small>${escapeHtml(dimension.context(item.practiceId))}</small>
+                </button>
+              </li>
+            `
+          )
+          .join("")}
+      </ol>
+    </article>
+  `;
+}
+
+function metricValueForPractice(practiceId, label) {
+  const metric = PRACTICES[practiceId]?.metrics.find(([, metricLabel]) => metricLabel === label);
+  return metric ? metric[0] : "n/a";
+}
+
+function formatInteger(value) {
+  return Number(value).toLocaleString("en-US", { maximumFractionDigits: 0 });
+}
+
+function formatDecimal(value, digits = 1) {
+  return Number(value).toLocaleString("en-US", {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits
+  });
 }
 
 function enhanceMarketLayout() {
