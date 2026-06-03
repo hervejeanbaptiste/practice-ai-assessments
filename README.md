@@ -1,15 +1,17 @@
 # Practice AI Assessments
 
-Static export of the West Monroe Practice AI Assessments readout.
+Static GitHub Pages export of the West Monroe Practice AI Assessments readout.
 
-This site is draft / for discussion and contains internal assessment material.
+This site is draft / for discussion.
 
-## How to view
+## Live site
+
+GitHub Pages URL:
+
+https://hervejeanbaptiste.github.io/practice-ai-assessments/
+
+## Standalone download
 
 Download `practice-ai-assessments-standalone.zip`, unzip it, and open the HTML file in a browser.
 
-The same content is also available as `index.html` in this repository. GitHub Pages can host the page if repository settings and plan permissions allow Pages for this repo.
-
-## Current status
-
-GitHub Pages was not enabled because GitHub returned: `Your current plan does not support GitHub Pages for this repository.`
+The same content is also available as `index.html` in this repository.
