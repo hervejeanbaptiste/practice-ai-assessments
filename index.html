@@ -6216,6 +6216,49 @@ body.is-leaderboard .navigation-band {
   }
 }
 
+/* Release 2 Section 3 evidence map: category as first column. */
+.evidence-map-row-content {
+  grid-template-columns: minmax(220px, 0.58fr) minmax(235px, 0.62fr) minmax(560px, 1.65fr) !important;
+  align-items: stretch !important;
+}
+
+.evidence-map-row-category {
+  display: block !important;
+  min-width: 0 !important;
+  border-bottom: 0 !important;
+  background: var(--wm-white) !important;
+  padding: 8px 9px !important;
+}
+
+.evidence-map-row-category .evidence-map-row-heading h4 {
+  margin: 0 0 6px !important;
+  color: var(--wm-blue) !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.08 !important;
+}
+
+.evidence-map-row-category .evidence-map-definition,
+.evidence-map-row-category .evidence-map-why {
+  margin: 0 0 6px !important;
+  font-size: 0.76rem !important;
+  line-height: 1.26 !important;
+}
+
+.evidence-map-row-category .evidence-map-why {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 1180px) {
+  .evidence-map-row-content {
+    grid-template-columns: 1fr !important;
+  }
+
+  .evidence-map-row-category {
+    border-bottom: 1px solid var(--wm-blue) !important;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -7443,7 +7486,7 @@ const METRIC_TELLS = {
   "Scope": "Shows whether the readout's practice boundary is clear enough for commitments."
 };
 
-const CONTENT_VERSION = "20260605-release-2-view-selector-width-v1";
+const CONTENT_VERSION = "20260605-release-2-section3-category-column-v1";
 const FIRMWIDE_TIME_SAVED_BENCHMARK = {
   value: "28.3%",
   label: "Firmwide Avg.",
@@ -8170,15 +8213,15 @@ function renderEvidenceMapRow({ category, description, assessment, scorecardPayl
 
   return `
     <article class="evidence-map-row status-${statusClass(status)}">
-      <header class="evidence-map-row-header">
-        <div class="evidence-map-row-heading">
-          <h4><span class="evidence-map-area-number">3.${escapeHtml(String(areaNumber))}</span>${escapeHtml(category)}</h4>
-          ${descriptionParts.definition ? `<p class="evidence-map-definition">${escapeHtml(descriptionParts.definition)}</p>` : ""}
-          ${descriptionParts.why ? `<p class="evidence-map-why"><strong>Why it matters:</strong> ${escapeHtml(descriptionParts.why)}</p>` : ""}
-        </div>
-      </header>
-
       <div class="evidence-map-row-content">
+        <header class="evidence-map-row-header evidence-map-row-category">
+          <div class="evidence-map-row-heading">
+            <h4><span class="evidence-map-area-number">3.${escapeHtml(String(areaNumber))}</span>${escapeHtml(category)}</h4>
+            ${descriptionParts.definition ? `<p class="evidence-map-definition">${escapeHtml(descriptionParts.definition)}</p>` : ""}
+            ${descriptionParts.why ? `<p class="evidence-map-why"><strong>Why it matters:</strong> ${escapeHtml(descriptionParts.why)}</p>` : ""}
+          </div>
+        </header>
+
         <section class="evidence-map-block evidence-map-context">
           <p class="evidence-map-label">Position Relative to Market/Aspiration</p>
           ${renderRatingScaleHelp()}
