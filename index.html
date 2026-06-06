@@ -6612,6 +6612,75 @@ body.is-leaderboard .navigation-band {
   }
 }
 
+/* Release 2 Discussion layout balance. */
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-band {
+  grid-template-columns: 1fr !important;
+  gap: 4px !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-copy--combined,
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-copy--combined strong,
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-chain {
+  font-size: 0.66rem !important;
+  line-height: 1.24 !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-copy--combined {
+  margin: 0 !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-copy--combined strong {
+  color: var(--wm-blue) !important;
+  font-weight: 950 !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-chain {
+  display: block !important;
+  margin-top: 4px !important;
+  text-align: left !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+  grid-template-columns: minmax(130px, 0.48fr) minmax(430px, 1.78fr) minmax(280px, 1.12fr) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-header,
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-row {
+  grid-template-columns: 34px minmax(145px, 0.98fr) minmax(220px, 1.45fr) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor {
+  display: grid !important;
+  grid-template-columns: minmax(82px, 0.82fr) minmax(96px, 0.9fr) minmax(0, 1.8fr) !important;
+  gap: 6px !important;
+  align-items: center !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor strong,
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor span,
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor p {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor p {
+  margin: 0 !important;
+}
+
+@media (max-width: 1180px) {
+  body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+    grid-template-columns: minmax(120px, 0.5fr) minmax(360px, 1.65fr) minmax(260px, 1.1fr) !important;
+  }
+}
+
+@media (max-width: 980px) {
+  body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* Release 2 Section 3 evidence map: category as first column. */
 .evidence-map-row-content {
   grid-template-columns: minmax(220px, 0.58fr) minmax(235px, 0.62fr) minmax(560px, 1.65fr) !important;
@@ -8007,7 +8076,7 @@ const METRIC_TELLS = {
   "Scope": "Shows whether the readout's practice boundary is clear enough for commitments."
 };
 
-const CONTENT_VERSION = "20260605-release-2-discussion-table-people-v1";
+const CONTENT_VERSION = "20260605-release-2-discussion-layout-v1";
 const FIRMWIDE_TIME_SAVED_BENCHMARK = {
   value: "28.3%",
   label: "Firmwide Avg.",
@@ -8289,10 +8358,7 @@ function renderDiscussionGuide(markdown, practiceId) {
   return `
     <section class="discussion-guide" aria-label="${escapeHtml(practice.label)} discussion guide">
       <section class="guide-flow-band" aria-label="Discussion logic">
-        <div>
-          <p class="guide-flow-lead">Practice leaders should focus on use cases and builders; productivity and adoption will follow.</p>
-          <p class="guide-flow-copy">Industry-relevant use cases create demand for AI; builders create and operationalize those use cases; and as builders become successful and visible, they drive broader adoption, increased Codex usage, and ultimately measurable productivity gains across the practice.</p>
-        </div>
+        <p class="guide-flow-copy guide-flow-copy--combined"><strong>Practice leaders should focus on use cases and builders; productivity and adoption will follow.</strong> Industry-relevant use cases create demand for AI; builders create and operationalize those use cases; and as builders become successful and visible, they drive broader adoption, increased Codex usage, and ultimately measurable productivity gains across the practice.</p>
         <p class="guide-flow-chain">Use Cases <span>→</span> Builders <span>→</span> Assets/Demos <span>→</span> Practice Adoption <span>→</span> Productivity Gains <span>→</span> AI-Native Practice</p>
       </section>
       <div class="discussion-guide-grid">
@@ -8676,7 +8742,7 @@ function renderExternalContributorSection(practiceId) {
         ${contributors
           .map(
             (contributor) => `
-              <article class="guide-external-contributor">
+              <article class="guide-external-contributor" title="${escapeHtml(`${contributor.name} - ${contributor.practice}: ${contributor.reason}`)}">
                 <strong>${escapeHtml(contributor.name)}</strong>
                 <span>${escapeHtml(contributor.practice)}</span>
                 <p>${escapeHtml(contributor.reason)}</p>
