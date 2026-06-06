@@ -6724,6 +6724,244 @@ body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor p {
   }
 }
 
+/* Release 2 executive polish: status badges and discussion view. */
+.header-status {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 7px !important;
+  max-width: none !important;
+  text-align: right !important;
+}
+
+.header-status .draft-badge,
+.header-status .alpha-note {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 24px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+.header-status .draft-badge {
+  border-width: 1.5px !important;
+  padding: 5px 8px !important;
+}
+
+.header-status .alpha-note {
+  width: auto !important;
+  justify-self: auto !important;
+  border: 1.5px solid var(--wm-blue) !important;
+  border-left: 0 !important;
+  background: #f7f9ff !important;
+  color: var(--wm-gray) !important;
+  padding: 5px 8px !important;
+  font-size: 0.58rem !important;
+  font-weight: 650 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1 !important;
+}
+
+.header-status .alpha-note strong {
+  color: var(--wm-blue) !important;
+  font-weight: 850 !important;
+  text-transform: uppercase !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .discussion-guide {
+  background: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(7, 1, 84, 0.055) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-band {
+  margin: 12px 12px 0 !important;
+  padding: 10px 12px !important;
+  border-top-width: 3px !important;
+  background: #ffffff !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+  grid-template-columns: minmax(150px, 0.46fr) minmax(520px, 1.74fr) minmax(320px, 1fr) !important;
+  gap: 10px !important;
+  padding: 12px !important;
+  align-items: start !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid .guide-panel {
+  padding: 11px 11px 12px !important;
+  border: 1px solid var(--wm-line) !important;
+  border-top: 3px solid var(--wm-blue) !important;
+  box-shadow: 0 8px 20px rgba(7, 1, 84, 0.04) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid .guide-panel:nth-child(2),
+body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid .guide-panel:nth-child(3) {
+  border-top-color: var(--wm-blue) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-kicker {
+  color: var(--wm-blue) !important;
+  font-size: 0.64rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.09em !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-copy--combined,
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-copy--combined strong,
+body.is-discussion-guide:not(.is-leaderboard) .guide-flow-chain,
+body.is-discussion-guide:not(.is-leaderboard) .guide-derivation,
+body.is-discussion-guide:not(.is-leaderboard) .guide-builder-definition p {
+  font-size: 0.62rem !important;
+  line-height: 1.25 !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-header,
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-row {
+  grid-template-columns: 32px minmax(170px, 0.95fr) minmax(260px, 1.38fr) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-header {
+  background: #f7f9ff !important;
+  border-bottom-color: var(--wm-line) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-header span {
+  color: var(--wm-blue) !important;
+  font-size: 0.5rem !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.06em !important;
+  padding: 6px !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-row > span {
+  color: var(--wm-gray) !important;
+  font-size: 0.57rem !important;
+  font-weight: 550 !important;
+  line-height: 1.23 !important;
+  padding: 6px !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-number,
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-title,
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-title strong {
+  color: var(--wm-gray) !important;
+  font-weight: 600 !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-builder-summary {
+  border-color: var(--wm-line) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-builder-summary > div {
+  border-right-color: var(--wm-line) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-builder-name-column li {
+  color: var(--wm-gray) !important;
+  font-size: 0.57rem !important;
+  font-weight: 550 !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributors {
+  gap: 6px !important;
+  margin-top: 10px !important;
+  padding-top: 9px !important;
+  border-top: 1px solid var(--wm-line) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributors-header {
+  gap: 3px !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributors-header h4 {
+  color: var(--wm-blue) !important;
+  font-size: 0.58rem !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.075em !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributors-header p {
+  color: var(--wm-gray) !important;
+  font-size: 0.55rem !important;
+  font-weight: 550 !important;
+  line-height: 1.2 !important;
+}
+
+.guide-external-contributor-table-wrap {
+  max-height: 250px;
+  overflow: auto;
+  border: 1px solid var(--wm-line);
+  background: #ffffff;
+}
+
+.guide-external-contributor-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.guide-external-contributor-table th,
+.guide-external-contributor-table td {
+  border-bottom: 1px solid var(--wm-line);
+  color: var(--wm-gray);
+  font-size: 0.54rem;
+  font-weight: 550;
+  line-height: 1.16;
+  padding: 5px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.guide-external-contributor-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f7f9ff;
+  color: var(--wm-gray);
+  font-size: 0.5rem;
+  font-weight: 650;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.guide-external-contributor-table td:first-child,
+.guide-external-contributor-table th:first-child {
+  width: 29%;
+}
+
+.guide-external-contributor-table td:nth-child(2),
+.guide-external-contributor-table th:nth-child(2) {
+  width: 27%;
+}
+
+.guide-external-contributor-table td:nth-child(3),
+.guide-external-contributor-table th:nth-child(3) {
+  width: 44%;
+}
+
+.guide-external-contributor-table tr:last-child td {
+  border-bottom: 0;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor-list,
+body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor {
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 1180px) {
+  body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+    grid-template-columns: minmax(130px, 0.45fr) minmax(430px, 1.6fr) minmax(300px, 1fr) !important;
+  }
+}
+
+@media (max-width: 980px) {
+  body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -6737,6 +6975,9 @@ body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor p {
       </div>
       <div class="header-status" aria-label="Release and verification status">
         <div class="draft-badge">Release 2 / Draft / For Discussion</div>
+        <div class="alpha-note" role="note">
+          <strong>Alpha:</strong> Subject to business SME verification unless otherwise noted.
+        </div>
       </div>
     </header>
 
@@ -6786,10 +7027,6 @@ body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor p {
             </a>
           </nav>
 
-        </div>
-
-        <div class="alpha-note" role="note">
-          <strong>Alpha:</strong> Subject to business SME verification unless otherwise noted.
         </div>
 
         <section class="readout-hero">
@@ -8076,7 +8313,7 @@ const METRIC_TELLS = {
   "Scope": "Shows whether the readout's practice boundary is clear enough for commitments."
 };
 
-const CONTENT_VERSION = "20260606-external-link-fix-v1";
+const CONTENT_VERSION = "20260606-exec-polish-v1";
 const FIRMWIDE_TIME_SAVED_BENCHMARK = {
   value: "28.3%",
   label: "Firmwide Avg.",
@@ -8389,7 +8626,7 @@ function renderDiscussionGuide(markdown, practiceId) {
               ${renderUseCaseSourceHelp(practiceId)}
             </div>
           </div>
-          ${renderGuideUseCaseList(topUseCases)}
+          ${renderGuideUseCaseList(topUseCases, practiceId)}
         </article>
 
         <article class="guide-panel">
@@ -8541,12 +8778,12 @@ function renderProductivitySourceHelp(productivity) {
   `;
 }
 
-function renderGuideUseCaseList(table) {
+function renderGuideUseCaseList(table, practiceId) {
   if (!table.rows.length) return "<p>No top-use-case list available.</p>";
 
   return `
     <p class="guide-derivation guide-usecase-derivation">
-      <strong>How derived:</strong> Prioritized from the practice-specific use-case table using a client-facing AI play filter: important industry problem, demoable solution, deliverable practice capability, West Monroe differentiation, and visible path to AI-native market positioning.
+      <strong>How derived:</strong> ${useCaseDerivationSummary(practiceId)}
     </p>
     <div class="guide-use-case-priority-table" role="table" aria-label="Top use cases prioritized against Bret's filter">
       <div class="guide-use-case-priority-header" role="row">
@@ -8570,6 +8807,22 @@ function renderGuideUseCaseList(table) {
         .join("")}
     </div>
   `;
+}
+
+function useCaseDerivationSummary(practiceId) {
+  if (practiceId === "utilities") {
+    return "Prioritized from the Utilities use-case warehouse, E&U market-facing artifacts, account-plan mapping, Energy & Utilities AI Store labels, GPT/builder evidence, public West Monroe Utilities positioning, and external market pressure around load growth, grid modernization, reliability, affordability, DERs, field operations, gas safety, cyber/OT, and regulatory trust.";
+  }
+
+  if (practiceId === "banking") {
+    return "Prioritized from Banking / OPC source materials, Commercial Lending and Banking AI POV assets, Banking AI Store and GPT/builder evidence, Salesforce/commercial signals, public West Monroe banking positioning, and external market pressure around commercial lending, risk/regulatory work, AML/fraud, relationship intelligence, modernization, model risk, and governed AI scale.";
+  }
+
+  if (practiceId === "healthcare") {
+    return "Prioritized from Healthcare / Payer source materials, CareSource proof patterns, Healthcare demo-series assets, Healthcare AI Store and GPT/builder evidence, Salesforce/commercial signals, public West Monroe healthcare positioning, and external market pressure around prior authorization, interoperability, claims, payment integrity, member/provider service, data modernization, privacy, security, and responsible AI.";
+  }
+
+  return "Prioritized from the practice-specific source pack, internal artifact evidence, AI Store / GPT / builder activity, available commercial signals, external market research, and the client-facing AI play filter: important industry problem, demoable solution, deliverable practice capability, West Monroe differentiation, and visible path to AI-native market positioning.";
 }
 
 function renderUseCaseSourceHelp(practiceId) {
@@ -8748,18 +9001,29 @@ function renderExternalContributorSection(practiceId) {
         <h4>External Contributors</h4>
         <p>Not counted in the practice builder total. Included because they contributed shared GPT, AI Store, or asset evidence tied to the selected practice.</p>
       </div>
-      <div class="guide-external-contributor-list">
-        ${contributors
-          .map(
-            (contributor) => `
-              <article class="guide-external-contributor" title="${escapeHtml(`${contributor.name} - ${contributor.practice}: ${contributor.reason}`)}">
-                <strong>${escapeHtml(contributor.name)}</strong>
-                <span>${escapeHtml(contributor.practice)}</span>
-                <p>${escapeHtml(contributor.reason)}</p>
-              </article>
-            `
-          )
-          .join("")}
+      <div class="guide-external-contributor-table-wrap">
+        <table class="guide-external-contributor-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Practice</th>
+              <th>Basis For Inclusion</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${contributors
+              .map(
+                (contributor) => `
+                  <tr title="${escapeHtml(`${contributor.name} - ${contributor.practice}: ${contributor.reason}`)}">
+                    <td>${escapeHtml(contributor.name)}</td>
+                    <td>${escapeHtml(contributor.practice)}</td>
+                    <td>${escapeHtml(contributor.reason)}</td>
+                  </tr>
+                `
+              )
+              .join("")}
+          </tbody>
+        </table>
       </div>
     </section>
   `;
