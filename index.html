@@ -6681,6 +6681,74 @@ body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor p {
   }
 }
 
+/* Release 2 view selector tabs. */
+.lens-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  width: 100%;
+  min-width: 0;
+}
+
+.lens-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 30px;
+  border: 1.5px solid var(--wm-blue);
+  border-radius: 0;
+  background: var(--wm-white);
+  color: var(--wm-blue);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.63rem;
+  font-weight: 850;
+  letter-spacing: 0;
+  line-height: 1.05;
+  padding: 5px 8px;
+  text-align: center;
+}
+
+.lens-tab:hover,
+.lens-tab:focus-visible {
+  outline: none;
+  background: #f7f9ff;
+}
+
+.lens-tab.is-active {
+  background: var(--wm-blue);
+  color: var(--wm-white);
+}
+
+.lens-nav {
+  min-width: 430px !important;
+}
+
+.lens-nav .nav-label {
+  align-self: center !important;
+}
+
+body:not(.is-discussion-guide):not(.is-leaderboard) .navigation-band {
+  grid-template-columns: minmax(430px, 470px) minmax(0, 1fr) !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .navigation-band,
+body.is-leaderboard .navigation-band {
+  grid-template-columns: minmax(430px, 470px) minmax(260px, 1fr) !important;
+}
+
+@media (max-width: 900px) {
+  .lens-nav {
+    min-width: 0 !important;
+  }
+
+  .lens-tab {
+    min-height: 28px;
+    font-size: 0.6rem;
+  }
+}
+
 /* Release 2 discussion view breathing-room pass. */
 body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
   grid-template-columns: minmax(310px, 0.78fr) minmax(620px, 1.55fr) minmax(440px, 1.05fr) !important;
@@ -7139,6 +7207,87 @@ body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor {
   }
 }
 
+/* Release 2 final discussion-panel alignment. Keep Productivity metrics in one row. */
+body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+  grid-template-columns: minmax(360px, 0.9fr) minmax(560px, 1.45fr) minmax(420px, 1.08fr) !important;
+  gap: 10px !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-productivity-metrics {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-single-metric,
+body.is-discussion-guide:not(.is-leaderboard) .guide-single-metric-benchmark {
+  min-height: 76px !important;
+  padding: 10px !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-single-metric strong,
+body.is-discussion-guide:not(.is-leaderboard) .guide-single-metric-benchmark strong {
+  font-size: 1.52rem !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-single-metric span,
+body.is-discussion-guide:not(.is-leaderboard) .guide-single-metric-benchmark span {
+  font-size: 0.57rem !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0.045em !important;
+}
+
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-header,
+body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-row {
+  grid-template-columns: 30px minmax(150px, 0.9fr) minmax(230px, 1.15fr) !important;
+}
+
+@media (max-width: 1350px) {
+  body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+    grid-template-columns: minmax(330px, 0.9fr) minmax(500px, 1.38fr) minmax(360px, 1fr) !important;
+  }
+
+  body.is-discussion-guide:not(.is-leaderboard) .guide-single-metric strong,
+  body.is-discussion-guide:not(.is-leaderboard) .guide-single-metric-benchmark strong {
+    font-size: 1.34rem !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+    grid-template-columns: minmax(300px, 0.92fr) minmax(450px, 1.38fr) minmax(320px, 1fr) !important;
+  }
+}
+
+@media (max-width: 980px) {
+  body.is-discussion-guide:not(.is-leaderboard) .discussion-guide-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.is-discussion-guide:not(.is-leaderboard) .guide-productivity-metrics {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Release 2 tab justification. Align research section tabs to the full practice selector above. */
+@media (min-width: 901px) {
+  body:not(.is-discussion-guide):not(.is-leaderboard) .navigation-band .question-band {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    justify-self: stretch !important;
+  }
+
+  body:not(.is-discussion-guide):not(.is-leaderboard) .navigation-band .question-band a {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -7163,7 +7312,7 @@ body.is-discussion-guide:not(.is-leaderboard) .guide-external-contributor {
         <div class="navigation-band" aria-label="Practice and section navigation">
           <section class="lens-nav" aria-label="Select view">
             <p class="nav-label">View</p>
-            <select id="lensSelector" class="nav-select lens-select" aria-label="Select view"></select>
+            <div id="lensSelector" class="lens-tabs" role="tablist" aria-label="Select view"></div>
           </section>
 
           <section class="practice-nav" aria-label="Select practice">
@@ -8490,7 +8639,7 @@ const METRIC_TELLS = {
   "Scope": "Shows whether the readout's practice boundary is clear enough for commitments."
 };
 
-const CONTENT_VERSION = "20260606-discussion-breathing-room-v1";
+const CONTENT_VERSION = "20260606-tabs-justified-v1";
 const FIRMWIDE_TIME_SAVED_BENCHMARK = {
   value: "28.3%",
   label: "Firmwide Avg.",
@@ -8529,26 +8678,53 @@ loadPractice(selectedPractice);
 function renderLensSelector() {
   if (!lensSelector) return;
 
+  lensSelector.dataset.value = selectedLens;
   lensSelector.innerHTML = Object.entries(LENSES)
     .map(
       ([id, lens]) => `
-        <option value="${id}" ${id === selectedLens ? "selected" : ""}>
+        <button
+          type="button"
+          class="lens-tab ${id === selectedLens ? "is-active" : ""}"
+          role="tab"
+          aria-selected="${id === selectedLens ? "true" : "false"}"
+          tabindex="${id === selectedLens ? "0" : "-1"}"
+          data-lens="${id}"
+        >
           ${escapeHtml(lens.label)}
-        </option>
+        </button>
       `
     )
     .join("");
 
-  lensSelector.value = selectedLens;
-  lensSelector.onchange = () => {
-    const nextLens = lensSelector.value;
+  const switchLens = (nextLens) => {
     if (!nextLens || nextLens === selectedLens) return;
     selectedLens = nextLens;
-    lensSelector.blur();
     resetMainScroll();
     renderLensSelector();
     renderPracticeSelector();
     loadPractice(selectedPractice, { resetScroll: true });
+  };
+
+  lensSelector.querySelectorAll(".lens-tab").forEach((button) => {
+    button.addEventListener("click", () => {
+      switchLens(button.dataset.lens);
+    });
+  });
+
+  lensSelector.onkeydown = (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const ids = Object.keys(LENSES);
+    const currentIndex = Math.max(0, ids.indexOf(selectedLens));
+    const nextIndex =
+      event.key === "Home"
+        ? 0
+        : event.key === "End"
+          ? ids.length - 1
+          : event.key === "ArrowLeft"
+            ? (currentIndex - 1 + ids.length) % ids.length
+            : (currentIndex + 1) % ids.length;
+    switchLens(ids[nextIndex]);
   };
 }
 
