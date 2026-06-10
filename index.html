@@ -7288,12 +7288,256 @@ body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-row {
   }
 }
 
+/* Temporary dreaming gate. */
+.dreaming-page {
+  display: none;
+}
+
+body.is-dreaming-gate {
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(7, 1, 84, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(7, 1, 84, 0.08) 1px, transparent 1px),
+    #f7f9ff;
+  background-size: 42px 42px, 42px 42px, auto;
+  color: var(--wm-blue);
+}
+
+body.is-dreaming-gate .app-header,
+body.is-dreaming-gate .page-shell {
+  display: none !important;
+}
+
+body.is-dreaming-gate .dreaming-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px;
+}
+
+.dreaming-card {
+  position: relative;
+  width: min(920px, 100%);
+  min-height: 520px;
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  padding: 56px;
+  border: 2px solid var(--wm-blue);
+  border-top: 8px solid var(--wm-blue);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 26px 80px rgba(7, 1, 84, 0.18);
+  overflow: hidden;
+}
+
+.dreaming-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background: linear-gradient(90deg, var(--wm-magenta), var(--wm-yellow), var(--wm-electric));
+}
+
+.dreaming-brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--wm-blue);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.dreaming-brand img {
+  width: 184px;
+  height: auto;
+}
+
+.dreaming-kicker {
+  position: relative;
+  z-index: 1;
+  margin: 34px 0 0;
+  color: var(--wm-electric);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.dreaming-card h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: 620px;
+  color: var(--wm-blue);
+  font-size: clamp(2.4rem, 6vw, 5.1rem);
+  line-height: 0.94;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
+.dreaming-copy,
+.dreaming-note {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0;
+  color: var(--wm-gray);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.dreaming-note {
+  max-width: 520px;
+  padding-left: 14px;
+  border-left: 6px solid var(--wm-yellow);
+  color: var(--wm-blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dreaming-graphic {
+  position: absolute;
+  top: 60px;
+  right: 50px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.95;
+}
+
+.dreaming-grid {
+  position: absolute;
+  inset: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 12px;
+  transform: rotate(45deg);
+}
+
+.dreaming-grid span {
+  border: 2px solid var(--wm-blue);
+  background: #fff;
+}
+
+.dreaming-grid span:nth-child(1),
+.dreaming-grid span:nth-child(5) {
+  background: var(--wm-blue);
+}
+
+.dreaming-grid span:nth-child(3) {
+  background: var(--wm-yellow);
+  border-color: var(--wm-yellow);
+}
+
+.dreaming-grid span:nth-child(6) {
+  background: var(--wm-magenta);
+  border-color: var(--wm-magenta);
+}
+
+.dreaming-line {
+  position: absolute;
+  height: 3px;
+  background: var(--wm-blue);
+  transform-origin: left center;
+}
+
+.dreaming-line-one {
+  width: 220px;
+  left: 18px;
+  bottom: 48px;
+}
+
+.dreaming-line-two {
+  width: 150px;
+  right: 10px;
+  top: 36px;
+  background: var(--wm-magenta);
+}
+
+.dreaming-line-three {
+  width: 110px;
+  right: 50px;
+  bottom: 20px;
+  background: var(--wm-yellow);
+}
+
+@media (max-width: 760px) {
+  body.is-dreaming-gate .dreaming-page {
+    padding: 18px;
+  }
+
+  .dreaming-card {
+    min-height: 520px;
+    padding: 32px 24px;
+  }
+
+  .dreaming-brand {
+    display: grid;
+    gap: 14px;
+  }
+
+  .dreaming-brand img {
+    width: 156px;
+  }
+
+  .dreaming-graphic {
+    top: auto;
+    right: 16px;
+    bottom: 22px;
+    width: 180px;
+    height: 180px;
+    opacity: 0.18;
+  }
+}
+
     </style>
   </head>
-  <body>
+  <body class="is-dreaming-gate">
+    <script>
+      window.PRACTICE_AI_DREAMING_MODE = true;
+    </script>
+    <main class="dreaming-page" aria-label="Practice AI Assessments temporary holding page">
+      <section class="dreaming-card" aria-labelledby="dreamingTitle">
+        <div class="dreaming-brand">
+          <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iYXJ0d29yayIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzNDQuNiA3MiI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4wIEJ1aWxkIDU0KSAgLS0+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5zdDAgewogICAgICAgIGZpbGw6ICMwNzAxNTQ7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05MSwyNS42bDQuMywxMy4xaDBsMy42LTEzLjFoN2wzLjksMTMuMWgwbDMuOS0xMy4xaDYuNWwtNy40LDIwLjloLTYuNGwtNC4zLTEzLjloMGwtMy45LDEzLjloLTYuNWwtNy42LTIwLjloNi45Wk0xNDEuNyw0Mi44Yy0xLDEuMy0yLjMsMi4zLTMuOSwzLjEtMS42LjctMy4yLDEuMS00LjksMS4xcy0zLjEtLjMtNC41LS44Yy0xLjQtLjUtMi43LTEuMy0zLjctMi4yLTEtMS0xLjktMi4xLTIuNS0zLjUtLjYtMS4zLS45LTIuOC0uOS00LjVzLjMtMy4yLjktNC41Yy42LTEuMywxLjQtMi41LDIuNS0zLjUsMS0xLDIuMy0xLjcsMy43LTIuMiwxLjQtLjUsMi45LS44LDQuNS0uOHMyLjguMyw0LjEuOGMxLjIuNSwyLjIsMS4zLDMuMSwyLjIuOCwxLDEuNSwyLjEsMiwzLjUuNSwxLjMuNywyLjguNyw0LjV2MmgtMTVjLjMsMS4yLjgsMi4yLDEuNywyLjkuOS43LDEuOSwxLjEsMy4yLDEuMXMyLS4yLDIuNy0uN2MuNy0uNSwxLjQtMS4xLDEuOS0xLjhsNC41LDMuM1pNMTM2LjIsMzMuNmMwLTEuMS0uMy0yLTEuMS0yLjgtLjctLjgtMS43LTEuMi0yLjktMS4ycy0xLjMuMS0xLjkuM2MtLjUuMi0xLC41LTEuNC45LS40LjQtLjcuOC0uOSwxLjItLjIuNS0uMywxLS40LDEuNWg4LjUsMFpNMTU4LjYsMzEuN2MtLjktMS4yLTIuMi0xLjgtMy43LTEuOHMtMS4xLjEtMS42LjRjLS41LjMtLjguNy0uOCwxLjNzLjMuOS44LDEuMWMuNS4yLDEuMi41LDIsLjYuOC4yLDEuNy40LDIuNi42LjkuMiwxLjguNiwyLjYsMSwuOC41LDEuNSwxLjEsMiwxLjkuNS44LjgsMS44LjgsMy4ycy0uMywyLjUtLjksMy4zYy0uNi45LTEuMywxLjYtMi4zLDIuMS0uOS41LTIsLjktMy4xLDEuMS0xLjEuMi0yLjMuMy0zLjQuM3MtMi45LS4yLTQuNC0uNmMtMS41LS40LTIuOC0xLjItMy44LTIuMmwzLjktNC4zYy42LjcsMS4zLDEuMywyLDEuNy43LjQsMS42LjYsMi42LjZzMS40LS4xLDItLjNjLjYtLjIuOS0uNi45LTEuMnMtLjMtMS0uOC0xLjJjLS41LS4zLTEuMi0uNS0yLS43LS44LS4yLTEuNy0uNC0yLjYtLjYtLjktLjItMS44LS41LTIuNi0xLS44LS40LTEuNS0xLTItMS44LS41LS44LS44LTEuOC0uOC0zLjJzLjItMi4zLjctMy4yYy41LS45LDEuMi0xLjYsMi0yLjIuOC0uNiwxLjgtMSwyLjgtMS4zLDEuMS0uMywyLjEtLjQsMy4yLS40czIuOC4yLDQuMi42YzEuNC40LDIuNiwxLjEsMy42LDIuMWwtNCwzLjloMFpNMTgxLjEsMzAuN2gtNS43djdjMCwuNiwwLDEuMSwwLDEuNiwwLC41LjIuOS40LDEuMi4yLjMuNS42LjkuOC40LjIsMSwuMywxLjcuM3MuOCwwLDEuNC0uMSwxLS4yLDEuMy0uNXY1LjRjLS43LjMtMS41LjQtMi4yLjUtLjgsMC0xLjUuMS0yLjMuMS0xLjEsMC0yLjEtLjEtMy0uMy0uOS0uMi0xLjctLjYtMi40LTEuMS0uNy0uNS0xLjItMS4yLTEuNi0yLS40LS44LS42LTEuOC0uNi0yLjl2LTkuOWgtNC4xdi01LjFoNC4xdi02LjJoNi40djYuMmg1Ljd2NS4yWk0xOTguNCwyNS42djIuOGgwYy4yLS40LjUtLjguOS0xLjIuNC0uNC44LS44LDEuMy0xLjEuNS0uMywxLjEtLjYsMS44LS44LjctLjIsMS40LS4zLDIuMS0uMywxLjUsMCwyLjguMywzLjkuOSwxLjEuNiwyLDEuNSwyLjYsMi44LjctMS4zLDEuNi0yLjMsMi43LTIuOSwxLjEtLjYsMi40LS45LDMuOS0uOXMyLjYuMiwzLjYuN2MxLC41LDEuNywxLjEsMi4zLDEuOS42LjgsMSwxLjgsMS4yLDIuOS4yLDEuMS40LDIuMy40LDMuNXYxMi4zaC02LjR2LTEyLjFjMC0xLS4yLTEuOC0uNi0yLjUtLjQtLjctMS4xLTEuMS0yLjItMS4xcy0xLjQuMS0xLjkuNGMtLjUuMi0uOS42LTEuMiwxLS4zLjQtLjUuOS0uNiwxLjUtLjEuNi0uMiwxLjItLjIsMS44djExaC02LjV2LTExYzAtLjQsMC0uOCwwLTEuNCwwLS41LS4xLTEuMS0uMy0xLjUtLjItLjUtLjUtLjktLjgtMS4yLS40LS4zLTEtLjUtMS43LS41cy0xLjUuMi0yLC41Yy0uNS4zLS45LjctMS4yLDEuMi0uMy41LS41LDEuMS0uNSwxLjcsMCwuNi0uMSwxLjMtLjEsMnYxMC40aC02LjR2LTIwLjloNi4yWk0yMjguOSwzNmMwLTEuNy4zLTMuMi45LTQuNS42LTEuMywxLjQtMi41LDIuNS0zLjUsMS0xLDIuMy0xLjcsMy43LTIuMiwxLjQtLjUsMi45LS44LDQuNS0uOHMzLjEuMyw0LjUuOGMxLjQuNSwyLjYsMS4zLDMuNywyLjIsMSwxLDEuOSwyLjEsMi41LDMuNS42LDEuMy45LDIuOC45LDQuNXMtLjMsMy4yLS45LDQuNWMtLjYsMS4zLTEuNCwyLjUtMi41LDMuNS0xLDEtMi4zLDEuNy0zLjcsMi4yLTEuNC41LTIuOS44LTQuNS44cy0zLjEtLjMtNC41LS44Yy0xLjQtLjUtMi42LTEuMy0zLjctMi4yLTEtMS0xLjktMi4xLTIuNS0zLjUtLjYtMS4zLS45LTIuOC0uOS00LjVaTTIzNS4zLDM2YzAsMS42LjUsMi44LDEuNCwzLjguOSwxLDIuMiwxLjUsMy44LDEuNXMyLjktLjUsMy44LTEuNWMuOS0xLDEuMy0yLjMsMS4zLTMuOHMtLjUtMi44LTEuMy0zLjhjLS45LTEtMi4yLTEuNS0zLjgtMS41cy0yLjkuNS0zLjgsMS41Yy0uOSwxLTEuNCwyLjItMS40LDMuOFpNMjYyLjEsMjUuNnYyLjhoMGMuMi0uNC41LS44LjktMS4yLjQtLjQuOC0uOCwxLjMtMS4xLjUtLjMsMS4xLS42LDEuOC0uOC43LS4yLDEuNC0uMywyLjItLjMsMS42LDAsMywuMiw0LC44LDEsLjUsMS44LDEuMiwyLjMsMi4xLjYuOS45LDEuOSwxLjEsMy4xLjIsMS4yLjMsMi41LjMsMy45djExLjVoLTYuNHYtMTAuMmMwLS42LDAtMS4yLDAtMS45LDAtLjYtLjItMS4yLS40LTEuOC0uMi0uNS0uNS0xLTEtMS4zLS40LS4zLTEuMS0uNS0xLjktLjVzLTEuNS4yLTIsLjVjLS41LjMtLjkuNy0xLjIsMS4yLS4zLjUtLjUsMS4xLS41LDEuNywwLC42LS4xLDEuMy0uMSwydjEwLjRoLTYuNHYtMjAuOWg2LjJaTTI4MC43LDI1LjZoNi40djMuM2gwYy43LTEuMywxLjUtMi4zLDIuNS0yLjkuOS0uNiwyLjEtMSwzLjYtMXMuNywwLDEuMSwwYy40LDAsLjcsMCwxLC4ydjUuOWMtLjUtLjEtLjktLjItMS40LS4zLS40LDAtLjktLjEtMS40LS4xLTEuMiwwLTIuMi4yLTIuOS41LS43LjMtMS4zLjgtMS43LDEuNC0uNC42LS42LDEuNC0uOCwyLjItLjEuOS0uMiwxLjgtLjIsMi44djguN2gtNi40di0yMC45Wk0yOTYuOCwzNmMwLTEuNy4zLTMuMi45LTQuNS42LTEuMywxLjQtMi41LDIuNS0zLjUsMS0xLDIuMy0xLjcsMy43LTIuMiwxLjQtLjUsMi45LS44LDQuNS0uOHMzLjEuMyw0LjUuOGMxLjQuNSwyLjYsMS4zLDMuNywyLjIsMSwxLDEuOSwyLjEsMi41LDMuNS42LDEuMy45LDIuOC45LDQuNXMtLjMsMy4yLS45LDQuNWMtLjYsMS4zLTEuNCwyLjUtMi41LDMuNS0xLDEtMi4zLDEuNy0zLjcsMi4yLTEuNC41LTIuOS44LTQuNS44cy0zLjEtLjMtNC41LS44Yy0xLjQtLjUtMi42LTEuMy0zLjctMi4yLTEtMS0xLjktMi4xLTIuNS0zLjUtLjYtMS4zLS45LTIuOC0uOS00LjVaTTMwMy4zLDM2YzAsMS42LjUsMi44LDEuNCwzLjguOSwxLDIuMiwxLjUsMy44LDEuNXMyLjktLjUsMy44LTEuNWMuOS0xLDEuNC0yLjMsMS40LTMuOHMtLjUtMi44LTEuNC0zLjhjLS45LTEtMi4yLTEuNS0zLjgtMS41cy0yLjkuNS0zLjgsMS41Yy0uOSwxLTEuNCwyLjItMS40LDMuOFpNMzQzLjYsNDIuOGMtMSwxLjMtMi4zLDIuMy0zLjksMy4xLTEuNi43LTMuMiwxLjEtNC45LDEuMXMtMy4xLS4zLTQuNS0uOGMtMS40LS41LTIuNy0xLjMtMy43LTIuMi0xLTEtMS45LTIuMS0yLjUtMy41LS42LTEuMy0uOS0yLjgtLjktNC41cy4zLTMuMi45LTQuNWMuNi0xLjMsMS40LTIuNSwyLjUtMy41LDEtMSwyLjMtMS43LDMuNy0yLjIsMS40LS41LDIuOS0uOCw0LjUtLjhzMi44LjMsNC4xLjhjMS4yLjUsMi4yLDEuMywzLjEsMi4yLjgsMSwxLjUsMi4xLDEuOSwzLjUuNSwxLjMuNywyLjguNyw0LjV2MmgtMTVjLjMsMS4yLjgsMi4yLDEuNywyLjkuOS43LDEuOSwxLjEsMy4yLDEuMXMyLS4yLDIuNy0uN2MuNy0uNSwxLjQtMS4xLDEuOS0xLjhsNC41LDMuM1pNMzM4LjEsMzMuNmMwLTEuMS0uMy0yLTEuMS0yLjgtLjctLjgtMS43LTEuMi0yLjktMS4ycy0xLjMuMS0xLjkuM2MtLjUuMi0xLC41LTEuNC45LS40LjQtLjcuOC0uOSwxLjItLjIuNS0uMywxLS40LDEuNWg4LjUsMFpNMjIuMSwxMC41aC0xMS42djExLjZoMTEuNnYtMTEuNlpNMjIuMSw0OS45aC0xMS42djExLjZoMTEuNnYtMTEuNlpNNjEuNSwxMC41aC0xMS42djExLjZoMTEuNnYtMTEuNlpNNjEuNSw0OS45aC0xMS42djExLjZoMTEuNnYtMTEuNlpNOC4yLDI3LjhMMCwzNmw4LjIsOC4yLDguMi04LjItOC4yLTguMlpNMzYsNTUuN2wtOC4yLDguMiw4LjIsOC4yLDguMi04LjItOC4yLTguMlpNMzYsMGwtOC4yLDguMiw4LjIsOC4yLDguMi04LjJMMzYsMFpNNjMuOCwyNy44bC04LjIsOC4yLDguMiw4LjIsOC4yLTguMi04LjItOC4yWiIvPgo8L3N2Zz4=" alt="West Monroe" />
+          <span>Practice AI Assessments</span>
+        </div>
+
+        <div class="dreaming-graphic" aria-hidden="true">
+          <div class="dreaming-grid">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="dreaming-line dreaming-line-one"></div>
+          <div class="dreaming-line dreaming-line-two"></div>
+          <div class="dreaming-line dreaming-line-three"></div>
+        </div>
+
+        <p class="dreaming-kicker">Release 2</p>
+        <h1 id="dreamingTitle">dreaming in progress...</h1>
+        <p class="dreaming-copy">
+          The Practice AI Assessments experience is temporarily paused while the next iteration is being shaped.
+        </p>
+        <p class="dreaming-note">Draft / for discussion. Alpha product subject to business SME verification.</p>
+      </section>
+    </main>
+
     <header class="app-header">
       <a class="brand" href="#top" aria-label="West Monroe Practice AI Assessments">
-        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iYXJ0d29yayIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzNDQuNiA3MiI+CiAgPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDIuMS4wIEJ1aWxkIDU0KSAgLS0+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5zdDAgewogICAgICAgIGZpbGw6ICMwNzAxNTQ7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05MSwyNS42bDQuMywxMy4xaDBsMy42LTEzLjFoN2wzLjksMTMuMWgwbDMuOS0xMy4xaDYuNWwtNy40LDIwLjloLTYuNGwtNC4zLTEzLjloMGwtMy45LDEzLjloLTYuNWwtNy42LTIwLjloNi45Wk0xNDEuNyw0Mi44Yy0xLDEuMy0yLjMsMi4zLTMuOSwzLjEtMS42LjctMy4yLDEuMS00LjksMS4xcy0zLjEtLjMtNC41LS44Yy0xLjQtLjUtMi43LTEuMy0zLjctMi4yLTEtMS0xLjktMi4xLTIuNS0zLjUtLjYtMS4zLS45LTIuOC0uOS00LjVzLjMtMy4yLjktNC41Yy42LTEuMywxLjQtMi41LDIuNS0zLjUsMS0xLDIuMy0xLjcsMy43LTIuMiwxLjQtLjUsMi45LS44LDQuNS0uOHMyLjguMyw0LjEuOGMxLjIuNSwyLjIsMS4zLDMuMSwyLjIuOCwxLDEuNSwyLjEsMiwzLjUuNSwxLjMuNywyLjguNyw0LjV2MmgtMTVjLjMsMS4yLjgsMi4yLDEuNywyLjkuOS43LDEuOSwxLjEsMy4yLDEuMXMyLS4yLDIuNy0uN2MuNy0uNSwxLjQtMS4xLDEuOS0xLjhsNC41LDMuM1pNMTM2LjIsMzMuNmMwLTEuMS0uMy0yLTEuMS0yLjgtLjctLjgtMS43LTEuMi0yLjktMS4ycy0xLjMuMS0xLjkuM2MtLjUuMi0xLC41LTEuNC45LS40LjQtLjcuOC0uOSwxLjItLjIuNS0uMywxLS40LDEuNWg4LjUsMFpNMTU4LjYsMzEuN2MtLjktMS4yLTIuMi0xLjgtMy43LTEuOHMtMS4xLjEtMS42LjRjLS41LjMtLjguNy0uOCwxLjNzLjMuOS44LDEuMWMuNS4yLDEuMi41LDIsLjYuOC4yLDEuNy40LDIuNi42LjkuMiwxLjguNiwyLjYsMSwuOC41LDEuNSwxLjEsMiwxLjkuNS44LjgsMS44LjgsMy4ycy0uMywyLjUtLjksMy4zYy0uNi45LTEuMywxLjYtMi4zLDIuMS0uOS41LTIsLjktMy4xLDEuMS0xLjEuMi0yLjMuMy0zLjQuM3MtMi45LS4yLTQuNC0uNmMtMS41LS40LTIuOC0xLjItMy44LTIuMmwzLjktNC4zYy42LjcsMS4zLDEuMywyLDEuNy43LjQsMS42LjYsMi42LjZzMS40LS4xLDItLjNjLjYtLjIuOS0uNi45LTEuMnMtLjMtMS0uOC0xLjJjLS41LS4zLTEuMi0uNS0yLS43LS44LS4yLTEuNy0uNC0yLjYtLjYtLjktLjItMS44LS41LTIuNi0xLS44LS40LTEuNS0xLTItMS44LS41LS44LS44LTEuOC0uOC0zLjJzLjItMi4zLjctMy4yYy41LS45LDEuMi0xLjYsMi0yLjIuOC0uNiwxLjgtMSwyLjgtMS4zLDEuMS0uMywyLjEtLjQsMy4yLS40czIuOC4yLDQuMi42YzEuNC40LDIuNiwxLjEsMy42LDIuMWwtNCwzLjloMFpNMTgxLjEsMzAuN2gtNS43djdjMCwuNiwwLDEuMSwwLDEuNiwwLC41LjIuOS40LDEuMi4yLjMuNS42LjkuOC40LjIsMSwuMywxLjcuM3MuOCwwLDEuNC0uMSwxLS4yLDEuMy0uNXY1LjRjLS43LjMtMS41LjQtMi4yLjUtLjgsMC0xLjUuMS0yLjMuMS0xLjEsMC0yLjEtLjEtMy0uMy0uOS0uMi0xLjctLjYtMi40LTEuMS0uNy0uNS0xLjItMS4yLTEuNi0yLS40LS44LS42LTEuOC0uNi0yLjl2LTkuOWgtNC4xdi01LjFoNC4xdi02LjJoNi40djYuMmg1Ljd2NS4yWk0xOTguNCwyNS42djIuOGgwYy4yLS40LjUtLjguOS0xLjIuNC0uNC44LS44LDEuMy0xLjEuNS0uMywxLjEtLjYsMS44LS44LjctLjIsMS40LS4zLDIuMS0uMywxLjUsMCwyLjguMywzLjkuOSwxLjEuNiwyLDEuNSwyLjYsMi44LjctMS4zLDEuNi0yLjMsMi43LTIuOSwxLjEtLjYsMi40LS45LDMuOS0uOXMyLjYuMiwzLjYuN2MxLC41LDEuNywxLjEsMi4zLDEuOS42LjgsMSwxLjgsMS4yLDIuOS4yLDEuMS40LDIuMy40LDMuNXYxMi4zaC02LjR2LTEyLjFjMC0xLS4yLTEuOC0uNi0yLjUtLjQtLjctMS4xLTEuMS0yLjItMS4xcy0xLjQuMS0xLjkuNGMtLjUuMi0uOS42LTEuMiwxLS4zLjQtLjUuOS0uNiwxLjUtLjEuNi0uMiwxLjItLjIsMS44djExaC02LjV2LTExYzAtLjQsMC0uOCwwLTEuNCwwLS41LS4xLTEuMS0uMy0xLjUtLjItLjUtLjUtLjktLjgtMS4yLS40LS4zLTEtLjUtMS43LS41cy0xLjUuMi0yLC41Yy0uNS4zLS45LjctMS4yLDEuMi0uMy41LS41LDEuMS0uNSwxLjcsMCwuNi0uMSwxLjMtLjEsMnYxMC40aC02LjR2LTIwLjloNi4yWk0yMjguOSwzNmMwLTEuNy4zLTMuMi45LTQuNS42LTEuMywxLjQtMi41LDIuNS0zLjUsMS0xLDIuMy0xLjcsMy43LTIuMiwxLjQtLjUsMi45LS44LDQuNS0uOHMzLjEuMyw0LjUuOGMxLjQuNSwyLjYsMS4zLDMuNywyLjIsMSwxLDEuOSwyLjEsMi41LDMuNS42LDEuMy45LDIuOC45LDQuNXMtLjMsMy4yLS45LDQuNWMtLjYsMS4zLTEuNCwyLjUtMi41LDMuNS0xLDEtMi4zLDEuNy0zLjcsMi4yLTEuNC41LTIuOS44LTQuNS44cy0zLjEtLjMtNC41LS44Yy0xLjQtLjUtMi42LTEuMy0zLjctMi4yLTEtMS0xLjktMi4xLTIuNS0zLjUtLjYtMS4zLS45LTIuOC0uOS00LjVaTTIzNS4zLDM2YzAsMS42LjUsMi44LDEuNCwzLjguOSwxLDIuMiwxLjUsMy44LDEuNXMyLjktLjUsMy44LTEuNWMuOS0xLDEuMy0yLjMsMS4zLTMuOHMtLjUtMi44LTEuMy0zLjhjLS45LTEtMi4yLTEuNS0zLjgtMS41cy0yLjkuNS0zLjgsMS41Yy0uOSwxLTEuNCwyLjItMS40LDMuOFpNMjYyLjEsMjUuNnYyLjhoMGMuMi0uNC41LS44LjktMS4yLjQtLjQuOC0uOCwxLjMtMS4xLjUtLjMsMS4xLS42LDEuOC0uOC43LS4yLDEuNC0uMywyLjItLjMsMS42LDAsMywuMiw0LC44LDEsLjUsMS44LDEuMiwyLjMsMi4xLjYuOS45LDEuOSwxLjEsMy4xLjIsMS4yLjMsMi41LjMsMy45djExLjVoLTYuNHYtMTAuMmMwLS42LDAtMS4yLDAtMS45LDAtLjYtLjItMS4yLS40LTEuOC0uMi0uNS0uNS0xLTEtMS4zLS40LS4zLTEuMS0uNS0xLjktLjVzLTEuNS4yLTIsLjVjLS41LjMtLjkuNy0xLjIsMS4yLS4zLjUtLjUsMS4xLS41LDEuNywwLC42LS4xLDEuMy0uMSwydjEwLjRoLTYuNHYtMjAuOWg2LjJaTTI4MC43LDI1LjZoNi40djMuM2gwYy43LTEuMywxLjUtMi4zLDIuNS0yLjkuOS0uNiwyLjEtMSwzLjYtMXMuNywwLDEuMSwwYy40LDAsLjcsMCwxLC4ydjUuOWMtLjUtLjEtLjktLjItMS40LS4zLS40LDAtLjktLjEtMS40LS4xLTEuMiwwLTIuMi4yLTIuOS41LS43LjMtMS4zLjgtMS43LDEuNC0uNC42LS42LDEuNC0uOCwyLjItLjEuOS0uMiwxLjgtLjIsMi44djguN2gtNi40di0yMC45Wk0yOTYuOCwzNmMwLTEuNy4zLTMuMi45LTQuNS42LTEuMywxLjQtMi41LDIuNS0zLjUsMS0xLDIuMy0xLjcsMy43LTIuMiwxLjQtLjUsMi45LS44LDQuNS0uOHMzLjEuMyw0LjUuOGMxLjQuNSwyLjYsMS4zLDMuNywyLjIsMSwxLDEuOSwyLjEsMi41LDMuNS42LDEuMy45LDIuOC45LDQuNXMtLjMsMy4yLS45LDQuNWMtLjYsMS4zLTEuNCwyLjUtMi41LDMuNS0xLDEtMi4zLDEuNy0zLjcsMi4yLTEuNC41LTIuOS44LTQuNS44cy0zLjEtLjMtNC41LS44Yy0xLjQtLjUtMi42LTEuMy0zLjctMi4yLTEtMS0xLjktMi4xLTIuNS0zLjUtLjYtMS4zLS45LTIuOC0uOS00LjVaTTMwMy4zLDM2YzAsMS42LjUsMi44LDEuNCwzLjguOSwxLDIuMiwxLjUsMy44LDEuNXMyLjktLjUsMy44LTEuNWMuOS0xLDEuNC0yLjMsMS40LTMuOHMtLjUtMi44LTEuNC0zLjhjLS45LTEtMi4yLTEuNS0zLjgtMS41cy0yLjkuNS0zLjgsMS41Yy0uOSwxLTEuNCwyLjItMS40LDMuOFpNMzQzLjYsNDIuOGMtMSwxLjMtMi4zLDIuMy0zLjksMy4xLTEuNi43LTMuMiwxLjEtNC45LDEuMXMtMy4xLS4zLTQuNS0uOGMtMS40LS41LTIuNy0xLjMtMy43LTIuMi0xLTEtMS45LTIuMS0yLjUtMy41LS42LTEuMy0uOS0yLjgtLjktNC41cy4zLTMuMi45LTQuNWMuNi0xLjMsMS40LTIuNSwyLjUtMy41LDEtMSwyLjMtMS43LDMuNy0yLjIsMS40LS41LDIuOS0uOCw0LjUtLjhzMi44LjMsNC4xLjhjMS4yLjUsMi4yLDEuMywzLjEsMi4yLjgsMSwxLjUsMi4xLDEuOSwzLjUuNSwxLjMuNywyLjguNyw0LjV2MmgtMTVjLjMsMS4yLjgsMi4yLDEuNywyLjkuOS43LDEuOSwxLjEsMy4yLDEuMXMyLS4yLDIuNy0uN2MuNy0uNSwxLjQtMS4xLDEuOS0xLjhsNC41LDMuM1pNMzM4LjEsMzMuNmMwLTEuMS0uMy0yLTEuMS0yLjgtLjctLjgtMS43LTEuMi0yLjktMS4ycy0xLjMuMS0xLjkuM2MtLjUuMi0xLC41LTEuNC45LS40LjQtLjcuOC0uOSwxLjItLjIuNS0uMywxLS40LDEuNWg4LjUsMFpNMjIuMSwxMC41aC0xMS42djExLjZoMTEuNnYtMTEuNlpNMjIuMSw0OS45aC0xMS42djExLjZoMTEuNnYtMTEuNlpNNjEuNSwxMC41aC0xMS42djExLjZoMTEuNnYtMTEuNlpNNjEuNSw0OS45aC0xMS42djExLjZoMTEuNnYtMTEuNlpNOC4yLDI3LjhMMCwzNmw4LjIsOC4yLDguMi04LjItOC4yLTguMlpNMzYsNTUuN2wtOC4yLDguMiw4LjIsOC4yLDguMi04LjItOC4yLTguMlpNMzYsMGwtOC4yLDguMiw4LjIsOC4yLDguMi04LjJMMzYsMFpNNjMuOCwyNy44bC04LjIsOC4yLDguMiw4LjIsOC4yLTguMi04LjItOC4yWiIvPgo8L3N2Zz4=" alt="West Monroe" />
+        <img src="assets/west-monroe-logo.svg" alt="West Monroe" />
       </a>
       <div class="header-copy">
         <h1>Practice AI Assessments</h1>
@@ -8639,7 +8883,8 @@ const METRIC_TELLS = {
   "Scope": "Shows whether the readout's practice boundary is clear enough for commitments."
 };
 
-const CONTENT_VERSION = "20260606-tabs-justified-v1";
+const CONTENT_VERSION = "20260610-dreaming-gate-v1";
+const DREAMING_MODE = window.PRACTICE_AI_DREAMING_MODE === true;
 const FIRMWIDE_TIME_SAVED_BENCHMARK = {
   value: "28.3%",
   label: "Firmwide Avg.",
@@ -8666,14 +8911,23 @@ const practiceLead = document.querySelector("#practiceLead");
 const audiencePanel = document.querySelector("#audiencePanel");
 const assessmentHost = document.querySelector("#assessmentHost");
 
-renderLensSelector();
-renderPracticeSelector();
-renderAudienceSelector();
-window.navigateAssessmentSection = navigateAssessmentSection;
-window.navigateAssessmentAppendix = navigateAssessmentAppendix;
-installSectionNavigation();
-installHashScrollMonitor();
-loadPractice(selectedPractice);
+if (DREAMING_MODE) {
+  document.body.classList.add("is-dreaming-gate");
+  window.navigateAssessmentSection = (event) => {
+    if (event) event.preventDefault();
+    return false;
+  };
+  window.navigateAssessmentAppendix = window.navigateAssessmentSection;
+} else {
+  renderLensSelector();
+  renderPracticeSelector();
+  renderAudienceSelector();
+  window.navigateAssessmentSection = navigateAssessmentSection;
+  window.navigateAssessmentAppendix = navigateAssessmentAppendix;
+  installSectionNavigation();
+  installHashScrollMonitor();
+  loadPractice(selectedPractice);
+}
 
 function renderLensSelector() {
   if (!lensSelector) return;
