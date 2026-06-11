@@ -7303,38 +7303,40 @@ body.is-dreaming-gate .app-header,
 body.is-dreaming-gate .page-shell {
   pointer-events: none !important;
   user-select: none !important;
-  filter: blur(2px) saturate(0.72);
-  opacity: 0.62;
+  filter: saturate(0.98);
+  opacity: 0.96;
 }
 
 body.is-dreaming-gate .dreaming-page {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  display: grid;
+  display: block;
   min-height: 100vh;
-  place-items: center;
-  padding: 32px;
+  padding: 0;
   background:
-    linear-gradient(90deg, rgba(7, 1, 84, 0.055) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(7, 1, 84, 0.055) 1px, transparent 1px),
-    rgba(247, 249, 255, 0.62);
+    linear-gradient(90deg, rgba(7, 1, 84, 0.018) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(7, 1, 84, 0.018) 1px, transparent 1px),
+    rgba(247, 249, 255, 0.06);
   background-size: 42px 42px, 42px 42px, auto;
-  backdrop-filter: blur(1px);
+  backdrop-filter: none;
 }
 
 .dreaming-card {
-  position: relative;
-  width: min(760px, calc(100vw - 48px));
-  min-height: 430px;
+  position: absolute;
+  top: auto;
+  right: 24px;
+  bottom: 24px;
+  width: min(300px, calc(100vw - 24px));
+  min-height: 0;
   display: grid;
   align-content: center;
-  gap: 16px;
-  padding: 46px;
+  gap: 6px;
+  padding: 13px 14px 15px;
   border: 2px solid var(--wm-blue);
-  border-top: 8px solid var(--wm-blue);
-  background: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 28px 90px rgba(7, 1, 84, 0.28);
+  border-top: 4px solid var(--wm-blue);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 30px rgba(7, 1, 84, 0.17);
   overflow: hidden;
 }
 
@@ -7344,7 +7346,7 @@ body.is-dreaming-gate .dreaming-page {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 10px;
+  height: 4px;
   background: linear-gradient(90deg, var(--wm-magenta), var(--wm-yellow), var(--wm-electric));
 }
 
@@ -7353,27 +7355,27 @@ body.is-dreaming-gate .dreaming-page {
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
   color: var(--wm-blue);
-  font-size: 0.78rem;
+  font-size: 0.5rem;
   font-weight: 900;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
 .dreaming-brand img {
-  width: 184px;
+  width: 96px;
   height: auto;
 }
 
 .dreaming-kicker {
   position: relative;
   z-index: 1;
-  margin: 34px 0 0;
+  margin: 4px 0 0;
   color: var(--wm-electric);
-  font-size: 0.78rem;
+  font-size: 0.56rem;
   font-weight: 900;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -7381,10 +7383,10 @@ body.is-dreaming-gate .dreaming-page {
   position: relative;
   z-index: 1;
   margin: 0;
-  max-width: 620px;
+  max-width: 250px;
   color: var(--wm-blue);
-  font-size: clamp(2.4rem, 6vw, 5.1rem);
-  line-height: 0.94;
+  font-size: 1.12rem;
+  line-height: 1;
   letter-spacing: 0;
   text-transform: lowercase;
 }
@@ -7393,45 +7395,45 @@ body.is-dreaming-gate .dreaming-page {
 .dreaming-note {
   position: relative;
   z-index: 1;
-  max-width: 620px;
+  max-width: 250px;
   margin: 0;
   color: var(--wm-gray);
-  font-size: 1rem;
-  line-height: 1.45;
+  font-size: 0.66rem;
+  line-height: 1.2;
 }
 
 .dreaming-note {
-  max-width: 520px;
-  padding-left: 14px;
-  border-left: 6px solid var(--wm-yellow);
+  max-width: 245px;
+  padding-left: 8px;
+  border-left: 3px solid var(--wm-yellow);
   color: var(--wm-blue);
-  font-size: 0.78rem;
+  font-size: 0.48rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 .dreaming-graphic {
   position: absolute;
-  top: 42px;
-  right: 38px;
-  width: 240px;
-  height: 240px;
-  opacity: 0.95;
+  top: 13px;
+  right: 12px;
+  width: 68px;
+  height: 68px;
+  opacity: 0.1;
 }
 
 .dreaming-grid {
   position: absolute;
-  inset: 34px;
+  inset: 12px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
-  gap: 12px;
+  gap: 4px;
   transform: rotate(45deg);
 }
 
 .dreaming-grid span {
-  border: 2px solid var(--wm-blue);
+  border: 1px solid var(--wm-blue);
   background: #fff;
 }
 
@@ -7452,57 +7454,60 @@ body.is-dreaming-gate .dreaming-page {
 
 .dreaming-line {
   position: absolute;
-  height: 3px;
+  height: 2px;
   background: var(--wm-blue);
   transform-origin: left center;
 }
 
 .dreaming-line-one {
-  width: 220px;
-  left: 18px;
-  bottom: 48px;
+  width: 58px;
+  left: 8px;
+  bottom: 13px;
 }
 
 .dreaming-line-two {
-  width: 150px;
-  right: 10px;
-  top: 36px;
+  width: 42px;
+  right: 7px;
+  top: 10px;
   background: var(--wm-magenta);
 }
 
 .dreaming-line-three {
-  width: 110px;
-  right: 50px;
-  bottom: 20px;
+  width: 34px;
+  right: 14px;
+  bottom: 6px;
   background: var(--wm-yellow);
 }
 
 @media (max-width: 760px) {
   body.is-dreaming-gate .dreaming-page {
-    padding: 18px;
+    padding: 0;
   }
 
   .dreaming-card {
-    min-height: 520px;
-    padding: 32px 24px;
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+    width: min(300px, calc(100vw - 24px));
+    padding: 13px 14px 15px;
   }
 
   .dreaming-brand {
-    display: grid;
-    gap: 14px;
+    display: flex;
+    gap: 10px;
   }
 
   .dreaming-brand img {
-    width: 156px;
+    width: 96px;
   }
 
   .dreaming-graphic {
-    top: auto;
-    right: 16px;
-    bottom: 22px;
-    width: 180px;
-    height: 180px;
-    opacity: 0.18;
+    top: 13px;
+    right: 12px;
+    bottom: auto;
+    width: 68px;
+    height: 68px;
+    opacity: 0.1;
   }
 }
 
@@ -8890,7 +8895,7 @@ const METRIC_TELLS = {
   "Scope": "Shows whether the readout's practice boundary is clear enough for commitments."
 };
 
-const CONTENT_VERSION = "20260610-dreaming-copy-v1";
+const CONTENT_VERSION = "20260610-dreaming-teaser-v1";
 const DREAMING_MODE = window.PRACTICE_AI_DREAMING_MODE === true;
 const FIRMWIDE_TIME_SAVED_BENCHMARK = {
   value: "28.3%",
