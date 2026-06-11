@@ -7296,38 +7296,45 @@ body.is-discussion-guide:not(.is-leaderboard) .guide-use-case-priority-row {
 body.is-dreaming-gate {
   min-height: 100vh;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(7, 1, 84, 0.08) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(7, 1, 84, 0.08) 1px, transparent 1px),
-    #f7f9ff;
-  background-size: 42px 42px, 42px 42px, auto;
   color: var(--wm-blue);
 }
 
 body.is-dreaming-gate .app-header,
 body.is-dreaming-gate .page-shell {
-  display: none !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  filter: blur(2px) saturate(0.72);
+  opacity: 0.62;
 }
 
 body.is-dreaming-gate .dreaming-page {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
   display: grid;
   min-height: 100vh;
   place-items: center;
   padding: 32px;
+  background:
+    linear-gradient(90deg, rgba(7, 1, 84, 0.055) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(7, 1, 84, 0.055) 1px, transparent 1px),
+    rgba(247, 249, 255, 0.62);
+  background-size: 42px 42px, 42px 42px, auto;
+  backdrop-filter: blur(1px);
 }
 
 .dreaming-card {
   position: relative;
-  width: min(920px, 100%);
-  min-height: 520px;
+  width: min(760px, calc(100vw - 48px));
+  min-height: 430px;
   display: grid;
   align-content: center;
-  gap: 18px;
-  padding: 56px;
+  gap: 16px;
+  padding: 46px;
   border: 2px solid var(--wm-blue);
   border-top: 8px solid var(--wm-blue);
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 26px 80px rgba(7, 1, 84, 0.18);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 28px 90px rgba(7, 1, 84, 0.28);
   overflow: hidden;
 }
 
@@ -7406,10 +7413,10 @@ body.is-dreaming-gate .dreaming-page {
 
 .dreaming-graphic {
   position: absolute;
-  top: 60px;
-  right: 50px;
-  width: 300px;
-  height: 300px;
+  top: 42px;
+  right: 38px;
+  width: 240px;
+  height: 240px;
   opacity: 0.95;
 }
 
@@ -8883,7 +8890,7 @@ const METRIC_TELLS = {
   "Scope": "Shows whether the readout's practice boundary is clear enough for commitments."
 };
 
-const CONTENT_VERSION = "20260610-dreaming-gate-v1";
+const CONTENT_VERSION = "20260610-dreaming-overlay-v1";
 const DREAMING_MODE = window.PRACTICE_AI_DREAMING_MODE === true;
 const FIRMWIDE_TIME_SAVED_BENCHMARK = {
   value: "28.3%",
@@ -8911,23 +8918,16 @@ const practiceLead = document.querySelector("#practiceLead");
 const audiencePanel = document.querySelector("#audiencePanel");
 const assessmentHost = document.querySelector("#assessmentHost");
 
-if (DREAMING_MODE) {
-  document.body.classList.add("is-dreaming-gate");
-  window.navigateAssessmentSection = (event) => {
-    if (event) event.preventDefault();
-    return false;
-  };
-  window.navigateAssessmentAppendix = window.navigateAssessmentSection;
-} else {
-  renderLensSelector();
-  renderPracticeSelector();
-  renderAudienceSelector();
-  window.navigateAssessmentSection = navigateAssessmentSection;
-  window.navigateAssessmentAppendix = navigateAssessmentAppendix;
-  installSectionNavigation();
-  installHashScrollMonitor();
-  loadPractice(selectedPractice);
-}
+if (DREAMING_MODE) document.body.classList.add("is-dreaming-gate");
+
+renderLensSelector();
+renderPracticeSelector();
+renderAudienceSelector();
+window.navigateAssessmentSection = navigateAssessmentSection;
+window.navigateAssessmentAppendix = navigateAssessmentAppendix;
+installSectionNavigation();
+installHashScrollMonitor();
+loadPractice(selectedPractice);
 
 function renderLensSelector() {
   if (!lensSelector) return;
