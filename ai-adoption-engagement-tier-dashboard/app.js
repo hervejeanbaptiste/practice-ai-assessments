@@ -510,6 +510,38 @@ function renderSankey(summary) {
   });
 }
 
+function renderWeeklyTierMix(report) {
+  const target = $("weeklyTierMix");
+  const highToLow = [...state.data.tiers].reverse();
+  const weeks = state.data.weeks;
+  target.innerHTML = weeks.map((week) => {
+    const summary = summarize(report, week.id, week.id);
+    const denominator = Math.max(1, summary.active || Object.values(summary.counts).reduce((sum, value) => sum + value, 0));
+    const segments = highToLow.map((tier) => {
+      const count = summary.counts[tier] || 0;
+      const pct = (count / denominator) * 100;
+      const label = `${count} (${pct.toFixed(1)}%)`;
+      const compact = pct < 7 ? " compact-segment" : "";
+      return `
+        <div class="tier-mix-segment${compact}" style="height:${pct}%; background:${tierColors[tier]}" title="${tier}: ${label}">
+          <span>${tier}</span>
+          <strong>${label}</strong>
+        </div>`;
+    }).join("");
+    const unmatched = summary.unmatched || 0;
+    const unmatchedPct = (unmatched / denominator) * 100;
+    return `
+      <article class="tier-mix-week">
+        <div class="tier-mix-bar">${segments}</div>
+        <div class="tier-mix-label">
+          <strong>${week.label}</strong>
+          <span>${summary.active} active</span>
+          ${unmatched ? `<em>${unmatched} unmatched (${unmatchedPct.toFixed(1)}%)</em>` : ""}
+        </div>
+      </article>`;
+  }).join("");
+}
+
 function render() {
   const report = getReport();
   const week = state.data.weeks.find((item) => item.id === state.weekId);
@@ -539,6 +571,7 @@ function render() {
   renderTable(summary);
   renderLeaderboardDetails(report);
   renderSankey(summary);
+  renderWeeklyTierMix(report);
 }
 
 function bindEvents() {

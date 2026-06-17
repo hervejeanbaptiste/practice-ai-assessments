@@ -111,9 +111,18 @@
           <span><b class="legend-orange"></b>Flat/down movement</span>
         </div>
         <svg id="sankey" viewBox="0 0 1040 500" role="img" aria-label="Engagement tier Sankey"></svg>
+        <div class="trend-panel">
+          <div class="panel-head compact-head">
+            <div>
+              <h3>Weekly Tier Mix <button class="help" data-help="Each stacked bar shows the selected population for that week, split by engagement tier. Percentages use the selected active-worker population as the denominator. Unmatched records are noted below the bar when present.">?</button></h3>
+              <p>Highest-use tiers appear at the top of each bar.</p>
+            </div>
+          </div>
+          <div id="weeklyTierMix" class="weekly-tier-mix" aria-label="Weekly engagement tier mix"></div>
+        </div>
       </section>
     </main>
 
-    <script src="./app.js?v=20260617-reconciliation-v2"></script>
+    <script src="./app.js?v=20260617-weekly-tier-mix-v1"></script>
   </body>
 </html>

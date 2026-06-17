@@ -507,6 +507,86 @@ svg {
   fill: #6f1d16;
 }
 
+.trend-panel {
+  margin-top: 18px;
+  border-top: 1px solid #dbe3ed;
+  padding-top: 16px;
+}
+
+.compact-head {
+  margin-bottom: 10px;
+}
+
+.weekly-tier-mix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  align-items: end;
+}
+
+.tier-mix-week {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.tier-mix-bar {
+  height: 360px;
+  border: 1px solid #cfd9e6;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tier-mix-segment {
+  min-height: 26px;
+  padding: 5px 8px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+}
+
+.tier-mix-segment[style*="#f5a623"],
+.tier-mix-segment[style*="#c9daf8"],
+.tier-mix-segment[style*="#9e9e9e"] {
+  color: #111827;
+}
+
+.tier-mix-segment.compact-segment {
+  min-height: 18px;
+  font-size: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.tier-mix-segment.compact-segment span {
+  display: none;
+}
+
+.tier-mix-label {
+  display: grid;
+  gap: 2px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.tier-mix-label strong {
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.tier-mix-label em {
+  color: var(--red);
+  font-style: normal;
+}
+
 @media (max-width: 1000px) {
   body {
     grid-template-columns: 1fr;
