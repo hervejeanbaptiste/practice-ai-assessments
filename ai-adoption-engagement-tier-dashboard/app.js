@@ -59,6 +59,9 @@ function peopleFor(report) {
 }
 
 function summarize(report, weekId, compareWeekId) {
+  if (report.comparisons) {
+    return report.comparisons[`${compareWeekId}__${weekId}`];
+  }
   const counts = Object.fromEntries(state.data.tiers.map((tier) => [tier, 0]));
   const compare = Object.fromEntries(state.data.tiers.map((tier) => [tier, 0]));
   const transitions = Object.fromEntries(state.data.tiers.map((from) => [from, Object.fromEntries(state.data.tiers.map((to) => [to, 0]))]));
