@@ -629,18 +629,23 @@ function bindEvents() {
     render();
   });
   document.addEventListener("click", (event) => {
+    if (event.target.closest(".help-popover-close")) {
+      event.target.closest(".help-popover")?.remove();
+      return;
+    }
     const button = event.target.closest(".help");
     if (button) {
       const existing = document.querySelector(".help-popover");
       if (existing) existing.remove();
       const popover = document.createElement("div");
       popover.className = "help-popover";
-      popover.textContent = button.dataset.help;
+      popover.innerHTML = `
+        <button class="help-popover-close" type="button" aria-label="Close help note">X</button>
+        <p>${button.dataset.help}</p>`;
       document.body.appendChild(popover);
       const rect = button.getBoundingClientRect();
       popover.style.left = `${Math.min(rect.left, window.innerWidth - 340)}px`;
       popover.style.top = `${rect.bottom + 8}px`;
-      setTimeout(() => popover.remove(), 6500);
     }
   });
 }
