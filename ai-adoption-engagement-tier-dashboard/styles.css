@@ -458,6 +458,11 @@ tbody tr:nth-child(even) td.heat-other {
   background: #fce5cd;
 }
 
+td.heat-flat,
+tbody tr:nth-child(even) td.heat-flat {
+  background: #eeeeee;
+}
+
 td.metric {
   text-align: right;
   font-variant-numeric: tabular-nums;

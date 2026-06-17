@@ -96,7 +96,9 @@ function deltaClass(delta) {
 }
 
 function heatClass(delta) {
-  return delta > 0 ? "heat-up" : "heat-other";
+  if (delta > 0) return "heat-up";
+  if (delta < 0) return "heat-other";
+  return "heat-flat";
 }
 
 function tierMetricCell(count, delta) {
