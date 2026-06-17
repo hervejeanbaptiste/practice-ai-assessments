@@ -258,11 +258,15 @@ function renderNarrative(summary, report) {
   const highDelta = summary.deltas.Frequent + summary.deltas.Habitual;
   const lowDelta = summary.deltas["Non-user"] + summary.deltas.Infrequent;
   const moderateDelta = summary.deltas.Moderate;
+  const tierDeltaSum = state.data.tiers.reduce((sum, tier) => sum + summary.deltas[tier], 0);
+  const unmatchedDelta = summary.unmatchedDelta || 0;
+  const reconciliationTotal = tierDeltaSum + unmatchedDelta;
   $("narrative").innerHTML = [
     ["Net", `${label}: ${n.net}`],
     ["Lower Movement", `${label}: ${n.lower} Lower-tier net change is ${fmtDelta(lowDelta)}.`],
     ["Upper Movement", `${label}: ${n.upper} Frequent/Habitual net change is ${fmtDelta(highDelta)}.`],
     ["So What / Next Steps", `${label}: ${n.action} Moderate net change is ${fmtDelta(moderateDelta)}.`],
+    ["Reconciliation", `${label}: engagement-tier deltas sum to ${fmtDelta(tierDeltaSum)}; unmatched engagement-band delta is ${fmtDelta(unmatchedDelta)}; full-population reconciliation is ${fmtDelta(reconciliationTotal)}.`],
   ].map(([label, text]) => `<div class="narrative-card"><span>${label}</span><p>${text}</p></div>`).join("");
 }
 
