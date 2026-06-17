@@ -59,9 +59,6 @@ function peopleFor(report) {
 }
 
 function summarize(report, weekId, compareWeekId) {
-  if (report.comparisons) {
-    return report.comparisons[`${compareWeekId}__${weekId}`];
-  }
   const counts = Object.fromEntries(state.data.tiers.map((tier) => [tier, 0]));
   const compare = Object.fromEntries(state.data.tiers.map((tier) => [tier, 0]));
   const transitions = Object.fromEntries(state.data.tiers.map((from) => [from, Object.fromEntries(state.data.tiers.map((to) => [to, 0]))]));
@@ -389,6 +386,7 @@ function renderLeaderboardDetails(report) {
   title.innerHTML = `Practice Line and General Detail <button class="help" data-help="Click a practice or function name to filter the report to that area. This mirrors the leaderboard PDF detail layout.">?</button>`;
   description.textContent = "All practice line reports with subtotal, followed by all practice general reports with subtotal.";
   target.innerHTML = [
+    renderFirmTotalRow(report),
     renderDetailTable("Practice Line Detail", childReports("Practice Line")),
     renderDetailTable("Practice General Detail", childReports("Practice General")),
   ].join("");
