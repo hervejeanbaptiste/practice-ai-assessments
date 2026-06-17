@@ -535,9 +535,14 @@ function renderWeeklyTierMix(report) {
     }).join("");
     const unmatched = summary.unmatched || 0;
     const unmatchedPct = (unmatched / denominator) * 100;
+    const unmatchedSegment = unmatched ? `
+      <div class="tier-mix-segment unmatched-segment${unmatchedPct < 7 ? " compact-segment" : ""}" style="height:${unmatchedPct}%" title="Unmatched: ${unmatched} (${unmatchedPct.toFixed(1)}%)">
+        <span>Unmatched</span>
+        <strong>${unmatched} (${unmatchedPct.toFixed(1)}%)</strong>
+      </div>` : "";
     return `
       <article class="tier-mix-week">
-        <div class="tier-mix-bar">${segments}</div>
+        <div class="tier-mix-bar">${segments}${unmatchedSegment}</div>
         <div class="tier-mix-label">
           <strong>${week.label}</strong>
           <span>${summary.active} active</span>
