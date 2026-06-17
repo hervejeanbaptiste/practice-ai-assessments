@@ -62,18 +62,23 @@ function peopleFor(report) {
 
 function summarize(report, weekId, compareWeekId) {
   if (report.comparisons) {
-    return report.comparisons[`${compareWeekId}__${weekId}`];
+    const summary = { ...report.comparisons[`${compareWeekId}__${weekId}`] };
+    const compareSummary = report.comparisons[`${compareWeekId}__${compareWeekId}`];
+    summary.unmatchedDelta = compareSummary ? summary.unmatched - compareSummary.unmatched : 0;
+    return summary;
   }
   const counts = Object.fromEntries(state.data.tiers.map((tier) => [tier, 0]));
   const compare = Object.fromEntries(state.data.tiers.map((tier) => [tier, 0]));
   const transitions = Object.fromEntries(state.data.tiers.map((from) => [from, Object.fromEntries(state.data.tiers.map((to) => [to, 0]))]));
   let unmatched = 0;
+  let compareUnmatched = 0;
   peopleFor(report).forEach((person) => {
     const current = person.tiers[weekId] || "";
     const prior = person.tiers[compareWeekId] || "";
     if (counts[current] !== undefined) counts[current] += 1;
     else unmatched += 1;
     if (compare[prior] !== undefined) compare[prior] += 1;
+    else compareUnmatched += 1;
     if (transitions[prior] && transitions[prior][current] !== undefined) transitions[prior][current] += 1;
   });
   return {
@@ -81,8 +86,26 @@ function summarize(report, weekId, compareWeekId) {
     counts,
     deltas: Object.fromEntries(state.data.tiers.map((tier) => [tier, counts[tier] - compare[tier]])),
     unmatched,
+    unmatchedDelta: unmatched - compareUnmatched,
     transitions,
   };
+}
+
+function deltaClass(delta) {
+  return delta > 0 ? "delta-up" : delta < 0 ? "delta-down" : "";
+}
+
+function heatClass(delta) {
+  return delta > 0 ? "heat-up" : "heat-other";
+}
+
+function tierMetricCell(count, delta) {
+  return `<td class="metric ${heatClass(delta)}"><strong>${count}</strong> <span class="${deltaClass(delta)}">(${fmtDelta(delta)})</span></td>`;
+}
+
+function unmatchedMetricCell(summary) {
+  const delta = summary.unmatchedDelta || 0;
+  return `<td class="metric ${heatClass(delta)}"><strong>${summary.unmatched}</strong> <span class="${deltaClass(delta)}">(${fmtDelta(delta)})</span></td>`;
 }
 
 function populateControls() {
@@ -178,13 +201,10 @@ function renderTable(summary) {
   $("reportTableMeta").textContent = `AI Champion lead(s): ${report.lead}. Assigned active-worker population compared with the selected start date.`;
   const table = $("tierTable");
   const tierCells = state.data.tiers.map((tier) => {
-    const delta = summary.deltas[tier];
-    const cls = delta > 0 ? "delta-up" : delta < 0 ? "delta-down" : "";
-    const heat = delta > 0 ? "heat-up" : "heat-other";
-    return `<td class="metric ${heat}"><strong>${summary.counts[tier]}</strong> <span class="${cls}">(${fmtDelta(delta)})</span></td>`;
+    return tierMetricCell(summary.counts[tier], summary.deltas[tier]);
   }).join("");
-  const extraHeaders = state.coreTierOnly ? "" : "<th>Active</th><th>Unmatched</th>";
-  const extraCells = state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td><td class="metric">${summary.unmatched}</td>`;
+  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched <button class="help inline-help" data-help="Unmatched means people in the selected population without a mapped engagement tier for the selected end date. Its delta is included so tier changes reconcile across the full population.">?</button></th>`;
+  const extraCells = state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td>${unmatchedMetricCell(summary)}`;
   table.innerHTML = `
     <thead>
       <tr>
@@ -255,24 +275,23 @@ function renderDetailTable(title, reports) {
       acc.counts[tier] += summary.counts[tier];
       acc.deltas[tier] += summary.deltas[tier];
     });
+    acc.unmatchedDelta += summary.unmatchedDelta || 0;
     return acc;
   }, {
     active: 0,
     unmatched: 0,
+    unmatchedDelta: 0,
     counts: Object.fromEntries(state.data.tiers.map((tier) => [tier, 0])),
     deltas: Object.fromEntries(state.data.tiers.map((tier) => [tier, 0])),
   });
-  const extraHeaders = state.coreTierOnly ? "" : "<th>Active</th><th>Unmatched</th>";
-  const extraTotalCells = state.coreTierOnly ? "" : `<td class="metric">${totals.active}</td><td class="metric">${totals.unmatched}</td>`;
+  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched <button class="help inline-help" data-help="Unmatched means people in the selected population without a mapped engagement tier for the selected end date. Its delta is included so tier changes reconcile across the full population.">?</button></th>`;
+  const extraTotalCells = state.coreTierOnly ? "" : `<td class="metric">${totals.active}</td>${unmatchedMetricCell(totals)}`;
   const subtotalRow = `
     <tr class="subtotal-row">
       <td>${title} Subtotal</td>
       ${extraTotalCells}
       ${state.data.tiers.map((tier) => {
-        const delta = totals.deltas[tier];
-        const cls = delta > 0 ? "delta-up" : delta < 0 ? "delta-down" : "";
-        const heat = delta > 0 ? "heat-up" : "heat-other";
-        return `<td class="metric ${heat}"><strong>${totals.counts[tier]}</strong> <span class="${cls}">(${fmtDelta(delta)})</span></td>`;
+        return tierMetricCell(totals.counts[tier], totals.deltas[tier]);
       }).join("")}
     </tr>`;
   return `
@@ -292,13 +311,10 @@ function renderDetailTable(title, reports) {
               .map(({ report, summary }) => `
                 <tr>
                   <td><button class="link-button" type="button" data-report-id="${report.id}">${report.name}</button></td>
-                  ${state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td><td class="metric">${summary.unmatched}</td>`}
+                  ${state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td>${unmatchedMetricCell(summary)}`}
                   ${state.data.tiers
                     .map((tier) => {
-                      const delta = summary.deltas[tier];
-                      const cls = delta > 0 ? "delta-up" : delta < 0 ? "delta-down" : "";
-                      const heat = delta > 0 ? "heat-up" : "heat-other";
-                      return `<td class="metric ${heat}"><strong>${summary.counts[tier]}</strong> <span class="${cls}">(${fmtDelta(delta)})</span></td>`;
+                      return tierMetricCell(summary.counts[tier], summary.deltas[tier]);
                     })
                     .join("")}
                 </tr>`)
@@ -312,8 +328,8 @@ function renderDetailTable(title, reports) {
 
 function renderFirmTotalRow(report) {
   const summary = summarize(report, state.weekId, state.compareWeekId);
-  const extraHeaders = state.coreTierOnly ? "" : "<th>Active</th><th>Unmatched</th>";
-  const extraCells = state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td><td class="metric">${summary.unmatched}</td>`;
+  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched <button class="help inline-help" data-help="Unmatched means people in the selected population without a mapped engagement tier for the selected end date. Its delta is included so tier changes reconcile across the full population.">?</button></th>`;
+  const extraCells = state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td>${unmatchedMetricCell(summary)}`;
   return `
     <div class="detail-block">
       <h4>Firmwide Total</h4>
@@ -331,10 +347,7 @@ function renderFirmTotalRow(report) {
               <td>Firm Total</td>
               ${extraCells}
               ${state.data.tiers.map((tier) => {
-                const delta = summary.deltas[tier];
-                const cls = delta > 0 ? "delta-up" : delta < 0 ? "delta-down" : "";
-                const heat = delta > 0 ? "heat-up" : "heat-other";
-                return `<td class="metric ${heat}"><strong>${summary.counts[tier]}</strong> <span class="${cls}">(${fmtDelta(delta)})</span></td>`;
+                return tierMetricCell(summary.counts[tier], summary.deltas[tier]);
               }).join("")}
             </tr>
           </tbody>
