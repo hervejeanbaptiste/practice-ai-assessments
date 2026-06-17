@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Adoption Engagement Tier Leaderboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">west monroe</div>
+      <h1>AI Adoption Engagement Tier Reporting</h1>
+      <p class="byline">Herve' (100% powered by Codex)</p>
+
+      <label class="field">
+        <span>Report Area</span>
+        <select id="areaSelect"></select>
+      </label>
+
+      <label class="field">
+        <span>Specialty Groups</span>
+        <select id="specialtySelect"></select>
+      </label>
+
+      <div class="period-grid">
+        <label class="field">
+          <span>From Date</span>
+          <select id="compareSelect"></select>
+        </label>
+        <label class="field">
+          <span>To Date</span>
+          <select id="weekSelect"></select>
+        </label>
+      </div>
+
+      <p class="note">Select a report area and compare any available Monday snapshot against another Monday snapshot.</p>
+    </aside>
+
+    <main class="app">
+      <section class="panel narrative-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Interactive Leaderboard</p>
+            <h2 id="reportTitle">Loading...</h2>
+            <p id="reportMeta"></p>
+          </div>
+        </div>
+        <div id="narrative" class="narrative-grid"></div>
+      </section>
+
+      <section class="panel" id="reportTablePanel">
+        <div class="panel-head">
+          <div>
+            <h3 id="reportTableTitle">AI adoption readout <button class="help" data-help="Counts show the selected end date. Values in parentheses show the change versus the selected start date. Tiers are ordered from least to most use.">?</button></h3>
+            <p id="reportTableMeta">Assigned active-worker population compared with the selected start date.</p>
+          </div>
+        </div>
+        <div class="tier-table-wrap">
+          <table id="tierTable"></table>
+        </div>
+      </section>
+
+      <section class="panel" id="leaderboardDetailPanel">
+        <div class="panel-head">
+          <div>
+            <h3>Practice Line and General Detail <button class="help" data-help="Click a practice or function name to filter the report to that area. This mirrors the leaderboard PDF detail layout.">?</button></h3>
+            <p>Leaderboard report design, showing line and general detail together.</p>
+          </div>
+        </div>
+        <div id="leaderboardDetails" class="detail-stack"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h3>Tier Movement Flow <button class="help" data-help="This Sankey shows aggregate movement from each start-date tier to each end-date tier. It does not expose person-level data.">?</button></h3>
+            <p>Start date to selected end date.</p>
+          </div>
+        </div>
+        <div class="movement-controls">
+          <label>
+            <span>From Tier <button class="help inline-help" data-help="Filters the left side of the Sankey to people who started in a specific engagement tier. Select All to include every starting tier.">?</button></span>
+            <select id="fromTierSelect"></select>
+          </label>
+          <label>
+            <span>To Tier <button class="help inline-help" data-help="Filters the right side of the Sankey to people who ended in a specific engagement tier. Select All to include every ending tier.">?</button></span>
+            <select id="toTierSelect"></select>
+          </label>
+          <label>
+            <span>Direction <button class="help inline-help" data-help="Both shows all tier changes, Up only shows movement into higher-use tiers, and Down only shows movement into lower-use tiers. People who stayed in the same tier are included only in Both.">?</button></span>
+            <select id="directionSelect">
+              <option value="both">Both</option>
+              <option value="up">Up only</option>
+              <option value="down">Down only</option>
+            </select>
+          </label>
+        </div>
+        <div class="legend-row" aria-label="Legend">
+          <span class="legend-title">Legend <button class="help inline-help" data-help="Tier block colors identify the tier a movement started from. Table cells are light green when a tier count increased versus the From Date, and light orange otherwise. Sankey right-side labels show net tier change.">?</button></span>
+          <span><i style="background:#9e9e9e"></i>Non-user</span>
+          <span><i style="background:#c9daf8"></i>Infrequent</span>
+          <span><i style="background:#f5a623"></i>Moderate</span>
+          <span><i style="background:#6aa84f"></i>Frequent</span>
+          <span><i style="background:#073763"></i>Habitual</span>
+          <span><b class="legend-green"></b>+ movement</span>
+          <span><b class="legend-orange"></b>Flat/down movement</span>
+        </div>
+        <svg id="sankey" viewBox="0 0 1040 500" role="img" aria-label="Engagement tier Sankey"></svg>
+      </section>
+    </main>
+
+    <script src="./app.js?v=20260616-2044"></script>
+  </body>
+</html>
