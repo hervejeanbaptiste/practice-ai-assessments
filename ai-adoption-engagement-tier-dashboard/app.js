@@ -49,6 +49,7 @@ function reportLabel(report) {
   if (report.id === "Firm_Total") return "Firm Leaderboard";
   if (report.id === "Practice_Line_Total") return "Line Leaderboard";
   if (report.id === "Practice_General_Total") return "General Leaderboard";
+  if (report.id === "Office_Total") return "Office Leaderboard";
   if (report.id === "All_ERGs") return "ERG Leaderboard";
   return report.name;
 }
@@ -91,7 +92,7 @@ function populateControls() {
 
   const leaderboardGroup = document.createElement("optgroup");
   leaderboardGroup.label = "Leaderboards";
-  ["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "All_ERGs"].forEach((id) => {
+  ["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "Office_Total", "All_ERGs"].forEach((id) => {
     const report = state.data.reports.find((item) => item.id === id);
     if (!report) return;
     const option = document.createElement("option");
@@ -103,7 +104,7 @@ function populateControls() {
 
   let lastGroup = "";
   const menuReports = state.data.reports.filter((report) =>
-    !["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "All_ERGs"].includes(report.id)
+    !["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "Office_Total", "All_ERGs"].includes(report.id)
       && report.group !== "Specialty Groups"
   );
   menuReports.forEach((report) => {
@@ -167,7 +168,7 @@ function populateControls() {
 function renderTable(summary) {
   const report = getReport();
   const panel = $("reportTablePanel");
-  if (["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "All_ERGs"].includes(report.id)) {
+  if (["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "Office_Total", "All_ERGs"].includes(report.id)) {
     panel.style.display = "none";
     return;
   }
@@ -369,6 +370,14 @@ function renderLeaderboardDetails(report) {
     bindDrilldown(target);
     return;
   }
+  if (report.id === "Office_Total") {
+    panel.style.display = "block";
+    title.innerHTML = `Office Leaderboard <button class="help" data-help="Click an office/location name to filter the report to that office.">?</button>`;
+    description.textContent = "All office/location reports with subtotal.";
+    target.innerHTML = renderDetailTable("Office Detail", childReports("Office"));
+    bindDrilldown(target);
+    return;
+  }
   if (report.id === "All_ERGs") {
     panel.style.display = "block";
     title.innerHTML = `ERG Leaderboard <button class="help" data-help="Click an ERG name to filter the report to that ERG. One person can belong to more than one ERG, so ERG rows are not mutually exclusive.">?</button>`;
@@ -500,6 +509,8 @@ function render() {
       ? `Practice line leaderboard | ${week.label} compared to ${compare.label}`
     : report.id === "Practice_General_Total"
       ? `Practice general leaderboard | ${week.label} compared to ${compare.label}`
+    : report.id === "Office_Total"
+      ? `Office leaderboard | ${week.label} compared to ${compare.label}`
     : report.id === "All_ERGs"
       ? `ERG leaderboard | ${week.label} compared to ${compare.label}`
     : `${report.group} | AI Champion lead(s): ${report.lead} | ${week.label} compared to ${compare.label}`;

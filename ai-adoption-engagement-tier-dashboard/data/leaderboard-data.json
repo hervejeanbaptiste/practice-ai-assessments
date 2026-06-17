@@ -1045,6 +1045,345 @@
       }
     },
     {
+      "id": "Office_Total",
+      "group": "Leaderboard",
+      "name": "Office Total",
+      "lead": "All AI Champions",
+      "active": 2078,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 2078,
+          "counts": {
+            "Non-user": 123,
+            "Infrequent": 207,
+            "Moderate": 568,
+            "Frequent": 648,
+            "Habitual": 417
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 115,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 123,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 207,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 568,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 648,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 417
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 2078,
+          "counts": {
+            "Non-user": 119,
+            "Infrequent": 212,
+            "Moderate": 561,
+            "Frequent": 630,
+            "Habitual": 449
+          },
+          "deltas": {
+            "Non-user": -4,
+            "Infrequent": 5,
+            "Moderate": -7,
+            "Frequent": -18,
+            "Habitual": 32
+          },
+          "unmatched": 107,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 102,
+              "Infrequent": 19,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 12,
+              "Infrequent": 153,
+              "Moderate": 41,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 33,
+              "Moderate": 434,
+              "Frequent": 98,
+              "Habitual": 3
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 83,
+              "Frequent": 492,
+              "Habitual": 71
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 40,
+              "Habitual": 375
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 2078,
+          "counts": {
+            "Non-user": 116,
+            "Infrequent": 202,
+            "Moderate": 643,
+            "Frequent": 635,
+            "Habitual": 471
+          },
+          "deltas": {
+            "Non-user": -7,
+            "Infrequent": -5,
+            "Moderate": 75,
+            "Frequent": -13,
+            "Habitual": 54
+          },
+          "unmatched": 11,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 91,
+              "Infrequent": 27,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 22,
+              "Infrequent": 115,
+              "Moderate": 63,
+              "Frequent": 3,
+              "Habitual": 1
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 46,
+              "Moderate": 355,
+              "Frequent": 147,
+              "Habitual": 18
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 117,
+              "Frequent": 424,
+              "Habitual": 102
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 5,
+              "Frequent": 61,
+              "Habitual": 350
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 2078,
+          "counts": {
+            "Non-user": 119,
+            "Infrequent": 212,
+            "Moderate": 561,
+            "Frequent": 630,
+            "Habitual": 449
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 107,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 119,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 212,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 561,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 630,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 449
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 2078,
+          "counts": {
+            "Non-user": 116,
+            "Infrequent": 202,
+            "Moderate": 643,
+            "Frequent": 635,
+            "Habitual": 471
+          },
+          "deltas": {
+            "Non-user": -3,
+            "Infrequent": -10,
+            "Moderate": 82,
+            "Frequent": 5,
+            "Habitual": 22
+          },
+          "unmatched": 11,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 102,
+              "Infrequent": 17,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 13,
+              "Infrequent": 143,
+              "Moderate": 53,
+              "Frequent": 0,
+              "Habitual": 1
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 32,
+              "Moderate": 431,
+              "Frequent": 94,
+              "Habitual": 1
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 67,
+              "Frequent": 493,
+              "Habitual": 69
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 48,
+              "Habitual": 400
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 2078,
+          "counts": {
+            "Non-user": 116,
+            "Infrequent": 202,
+            "Moderate": 643,
+            "Frequent": 635,
+            "Habitual": 471
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 11,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 116,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 202,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 643,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 635,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 471
+            }
+          }
+        }
+      }
+    },
+    {
       "id": "Banking",
       "group": "Practice Line",
       "name": "Banking",
@@ -9199,6 +9538,5769 @@
               "Moderate": 0,
               "Frequent": 0,
               "Habitual": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Boston",
+      "group": "Office",
+      "name": "Boston",
+      "lead": "Office Leaderboard",
+      "active": 30,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 30,
+          "counts": {
+            "Non-user": 5,
+            "Infrequent": 1,
+            "Moderate": 8,
+            "Frequent": 8,
+            "Habitual": 7
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 1,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 8,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 8,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 7
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 30,
+          "counts": {
+            "Non-user": 4,
+            "Infrequent": 2,
+            "Moderate": 7,
+            "Frequent": 10,
+            "Habitual": 6
+          },
+          "deltas": {
+            "Non-user": -1,
+            "Infrequent": 1,
+            "Moderate": -1,
+            "Frequent": 2,
+            "Habitual": -1
+          },
+          "unmatched": 1,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 4,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 7,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 8,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 6
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 30,
+          "counts": {
+            "Non-user": 3,
+            "Infrequent": 4,
+            "Moderate": 6,
+            "Frequent": 12,
+            "Habitual": 5
+          },
+          "deltas": {
+            "Non-user": -2,
+            "Infrequent": 3,
+            "Moderate": -2,
+            "Frequent": 4,
+            "Habitual": -2
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 6,
+              "Frequent": 2,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 8,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 5
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 30,
+          "counts": {
+            "Non-user": 4,
+            "Infrequent": 2,
+            "Moderate": 7,
+            "Frequent": 10,
+            "Habitual": 6
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 1,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 4,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 7,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 10,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 6
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 30,
+          "counts": {
+            "Non-user": 3,
+            "Infrequent": 4,
+            "Moderate": 6,
+            "Frequent": 12,
+            "Habitual": 5
+          },
+          "deltas": {
+            "Non-user": -1,
+            "Infrequent": 2,
+            "Moderate": -1,
+            "Frequent": 2,
+            "Habitual": -1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 6,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 10,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 5
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 30,
+          "counts": {
+            "Non-user": 3,
+            "Infrequent": 4,
+            "Moderate": 6,
+            "Frequent": 12,
+            "Habitual": 5
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 6,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 12,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 5
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Chattanooga",
+      "group": "Office",
+      "name": "Chattanooga",
+      "lead": "Office Leaderboard",
+      "active": 2,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 2,
+          "counts": {
+            "Non-user": 1,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 2,
+          "counts": {
+            "Non-user": 1,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 2,
+          "counts": {
+            "Non-user": 1,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 2,
+          "counts": {
+            "Non-user": 1,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 2,
+          "counts": {
+            "Non-user": 1,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 2,
+          "counts": {
+            "Non-user": 1,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Chicago",
+      "group": "Office",
+      "name": "Chicago",
+      "lead": "Office Leaderboard",
+      "active": 741,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 741,
+          "counts": {
+            "Non-user": 27,
+            "Infrequent": 66,
+            "Moderate": 212,
+            "Frequent": 249,
+            "Habitual": 145
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 42,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 27,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 66,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 212,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 249,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 145
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 741,
+          "counts": {
+            "Non-user": 25,
+            "Infrequent": 74,
+            "Moderate": 215,
+            "Frequent": 231,
+            "Habitual": 154
+          },
+          "deltas": {
+            "Non-user": -2,
+            "Infrequent": 8,
+            "Moderate": 3,
+            "Frequent": -18,
+            "Habitual": 9
+          },
+          "unmatched": 42,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 20,
+              "Infrequent": 6,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 4,
+              "Infrequent": 46,
+              "Moderate": 16,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 20,
+              "Moderate": 162,
+              "Frequent": 30,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 37,
+              "Frequent": 187,
+              "Habitual": 24
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 14,
+              "Habitual": 130
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 741,
+          "counts": {
+            "Non-user": 23,
+            "Infrequent": 69,
+            "Moderate": 257,
+            "Frequent": 226,
+            "Habitual": 160
+          },
+          "deltas": {
+            "Non-user": -4,
+            "Infrequent": 3,
+            "Moderate": 45,
+            "Frequent": -23,
+            "Habitual": 15
+          },
+          "unmatched": 6,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 15,
+              "Infrequent": 10,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 6,
+              "Infrequent": 35,
+              "Moderate": 22,
+              "Frequent": 2,
+              "Habitual": 1
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 19,
+              "Moderate": 139,
+              "Frequent": 47,
+              "Habitual": 6
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 57,
+              "Frequent": 152,
+              "Habitual": 37
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 3,
+              "Frequent": 25,
+              "Habitual": 116
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 741,
+          "counts": {
+            "Non-user": 25,
+            "Infrequent": 74,
+            "Moderate": 215,
+            "Frequent": 231,
+            "Habitual": 154
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 42,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 25,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 74,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 215,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 231,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 154
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 741,
+          "counts": {
+            "Non-user": 23,
+            "Infrequent": 69,
+            "Moderate": 257,
+            "Frequent": 226,
+            "Habitual": 160
+          },
+          "deltas": {
+            "Non-user": -2,
+            "Infrequent": -5,
+            "Moderate": 42,
+            "Frequent": -5,
+            "Habitual": 6
+          },
+          "unmatched": 6,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 19,
+              "Infrequent": 6,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 3,
+              "Infrequent": 46,
+              "Moderate": 24,
+              "Frequent": 0,
+              "Habitual": 1
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 12,
+              "Moderate": 168,
+              "Frequent": 33,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 31,
+              "Frequent": 170,
+              "Habitual": 29
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 23,
+              "Habitual": 130
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 741,
+          "counts": {
+            "Non-user": 23,
+            "Infrequent": 69,
+            "Moderate": 257,
+            "Frequent": 226,
+            "Habitual": 160
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 6,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 23,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 69,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 257,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 226,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 160
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Columbus",
+      "group": "Office",
+      "name": "Columbus",
+      "lead": "Office Leaderboard",
+      "active": 15,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 15,
+          "counts": {
+            "Non-user": 1,
+            "Infrequent": 1,
+            "Moderate": 6,
+            "Frequent": 6,
+            "Habitual": 1
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 6,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 6,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 15,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 2,
+            "Moderate": 8,
+            "Frequent": 4,
+            "Habitual": 1
+          },
+          "deltas": {
+            "Non-user": -1,
+            "Infrequent": 1,
+            "Moderate": 2,
+            "Frequent": -2,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 6,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 4,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 15,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 3,
+            "Moderate": 6,
+            "Frequent": 5,
+            "Habitual": 1
+          },
+          "deltas": {
+            "Non-user": -1,
+            "Infrequent": 2,
+            "Moderate": 0,
+            "Frequent": -1,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 4,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 4,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 15,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 2,
+            "Moderate": 8,
+            "Frequent": 4,
+            "Habitual": 1
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 8,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 4,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 15,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 3,
+            "Moderate": 6,
+            "Frequent": 5,
+            "Habitual": 1
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": -2,
+            "Frequent": 1,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 6,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 4,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 15,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 3,
+            "Moderate": 6,
+            "Frequent": 5,
+            "Habitual": 1
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 3,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 6,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 5,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Costa_Rica",
+      "group": "Office",
+      "name": "Costa Rica",
+      "lead": "Office Leaderboard",
+      "active": 189,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 189,
+          "counts": {
+            "Non-user": 19,
+            "Infrequent": 21,
+            "Moderate": 59,
+            "Frequent": 43,
+            "Habitual": 46
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 1,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 19,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 21,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 59,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 43,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 46
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 189,
+          "counts": {
+            "Non-user": 17,
+            "Infrequent": 25,
+            "Moderate": 52,
+            "Frequent": 48,
+            "Habitual": 47
+          },
+          "deltas": {
+            "Non-user": -2,
+            "Infrequent": 4,
+            "Moderate": -7,
+            "Frequent": 5,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 14,
+              "Infrequent": 5,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 3,
+              "Infrequent": 16,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 3,
+              "Moderate": 45,
+              "Frequent": 11,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 5,
+              "Frequent": 34,
+              "Habitual": 4
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 3,
+              "Habitual": 43
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 189,
+          "counts": {
+            "Non-user": 16,
+            "Infrequent": 22,
+            "Moderate": 50,
+            "Frequent": 47,
+            "Habitual": 54
+          },
+          "deltas": {
+            "Non-user": -3,
+            "Infrequent": 1,
+            "Moderate": -9,
+            "Frequent": 4,
+            "Habitual": 8
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 13,
+              "Infrequent": 4,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 3,
+              "Infrequent": 12,
+              "Moderate": 6,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 6,
+              "Moderate": 35,
+              "Frequent": 16,
+              "Habitual": 2
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 6,
+              "Frequent": 26,
+              "Habitual": 11
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 5,
+              "Habitual": 41
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 189,
+          "counts": {
+            "Non-user": 17,
+            "Infrequent": 25,
+            "Moderate": 52,
+            "Frequent": 48,
+            "Habitual": 47
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 17,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 25,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 52,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 48,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 47
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 189,
+          "counts": {
+            "Non-user": 16,
+            "Infrequent": 22,
+            "Moderate": 50,
+            "Frequent": 47,
+            "Habitual": 54
+          },
+          "deltas": {
+            "Non-user": -1,
+            "Infrequent": -3,
+            "Moderate": -2,
+            "Frequent": -1,
+            "Habitual": 7
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 16,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 17,
+              "Moderate": 8,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 39,
+              "Frequent": 9,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 3,
+              "Frequent": 36,
+              "Habitual": 9
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 45
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 189,
+          "counts": {
+            "Non-user": 16,
+            "Infrequent": 22,
+            "Moderate": 50,
+            "Frequent": 47,
+            "Habitual": 54
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 16,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 22,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 50,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 47,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 54
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Dallas",
+      "group": "Office",
+      "name": "Dallas",
+      "lead": "Office Leaderboard",
+      "active": 92,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 92,
+          "counts": {
+            "Non-user": 5,
+            "Infrequent": 7,
+            "Moderate": 21,
+            "Frequent": 29,
+            "Habitual": 19
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 11,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 7,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 21,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 29,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 19
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 92,
+          "counts": {
+            "Non-user": 3,
+            "Infrequent": 9,
+            "Moderate": 27,
+            "Frequent": 25,
+            "Habitual": 19
+          },
+          "deltas": {
+            "Non-user": -2,
+            "Infrequent": 2,
+            "Moderate": 6,
+            "Frequent": -4,
+            "Habitual": 0
+          },
+          "unmatched": 9,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 18,
+              "Frequent": 2,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 6,
+              "Frequent": 20,
+              "Habitual": 3
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 3,
+              "Habitual": 16
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 92,
+          "counts": {
+            "Non-user": 3,
+            "Infrequent": 10,
+            "Moderate": 31,
+            "Frequent": 28,
+            "Habitual": 20
+          },
+          "deltas": {
+            "Non-user": -2,
+            "Infrequent": 3,
+            "Moderate": 10,
+            "Frequent": -1,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 3,
+              "Moderate": 10,
+              "Frequent": 8,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 8,
+              "Frequent": 17,
+              "Habitual": 4
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 3,
+              "Habitual": 16
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 92,
+          "counts": {
+            "Non-user": 3,
+            "Infrequent": 9,
+            "Moderate": 27,
+            "Frequent": 25,
+            "Habitual": 19
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 9,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 9,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 27,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 25,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 19
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 92,
+          "counts": {
+            "Non-user": 3,
+            "Infrequent": 10,
+            "Moderate": 31,
+            "Frequent": 28,
+            "Habitual": 20
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": 4,
+            "Frequent": 3,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 7,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 18,
+              "Frequent": 7,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 3,
+              "Frequent": 21,
+              "Habitual": 1
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 19
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 92,
+          "counts": {
+            "Non-user": 3,
+            "Infrequent": 10,
+            "Moderate": 31,
+            "Frequent": 28,
+            "Habitual": 20
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 10,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 31,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 28,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 20
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_London",
+      "group": "Office",
+      "name": "London",
+      "lead": "Office Leaderboard",
+      "active": 20,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 20,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 1,
+            "Moderate": 3,
+            "Frequent": 6,
+            "Habitual": 6
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 2,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 6,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 6
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 20,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 2,
+            "Moderate": 4,
+            "Frequent": 5,
+            "Habitual": 7
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": 1,
+            "Frequent": -1,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 4,
+              "Habitual": 1
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 6
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 20,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 1,
+            "Moderate": 4,
+            "Frequent": 6,
+            "Habitual": 7
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 0,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 2,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 3,
+              "Habitual": 2
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 5
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 20,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 2,
+            "Moderate": 4,
+            "Frequent": 5,
+            "Habitual": 7
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 5,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 7
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 20,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 1,
+            "Moderate": 4,
+            "Frequent": 6,
+            "Habitual": 7
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": -1,
+            "Moderate": 0,
+            "Frequent": 1,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 3,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 4,
+              "Habitual": 1
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 6
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 20,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 1,
+            "Moderate": 4,
+            "Frequent": 6,
+            "Habitual": 7
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 6,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 7
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Los_Angeles",
+      "group": "Office",
+      "name": "Los Angeles",
+      "lead": "Office Leaderboard",
+      "active": 80,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 80,
+          "counts": {
+            "Non-user": 1,
+            "Infrequent": 13,
+            "Moderate": 25,
+            "Frequent": 20,
+            "Habitual": 18
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 3,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 13,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 25,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 20,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 18
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 80,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 9,
+            "Moderate": 26,
+            "Frequent": 18,
+            "Habitual": 22
+          },
+          "deltas": {
+            "Non-user": 1,
+            "Infrequent": -4,
+            "Moderate": 1,
+            "Frequent": -2,
+            "Habitual": 4
+          },
+          "unmatched": 3,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 1,
+              "Infrequent": 8,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 20,
+              "Frequent": 2,
+              "Habitual": 2
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 14,
+              "Habitual": 4
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 16
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 80,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 8,
+            "Moderate": 23,
+            "Frequent": 26,
+            "Habitual": 21
+          },
+          "deltas": {
+            "Non-user": 1,
+            "Infrequent": -5,
+            "Moderate": -2,
+            "Frequent": 6,
+            "Habitual": 3
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 1,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 1,
+              "Infrequent": 8,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 15,
+              "Frequent": 9,
+              "Habitual": 1
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 15,
+              "Habitual": 4
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 16
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 80,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 9,
+            "Moderate": 26,
+            "Frequent": 18,
+            "Habitual": 22
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 3,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 9,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 26,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 18,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 22
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 80,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 8,
+            "Moderate": 23,
+            "Frequent": 26,
+            "Habitual": 21
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": -1,
+            "Moderate": -3,
+            "Frequent": 8,
+            "Habitual": -1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 6,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 15,
+              "Frequent": 9,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 14,
+              "Habitual": 2
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 3,
+              "Habitual": 19
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 80,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 8,
+            "Moderate": 23,
+            "Frequent": 26,
+            "Habitual": 21
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 8,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 23,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 26,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 21
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Minneapolis",
+      "group": "Office",
+      "name": "Minneapolis",
+      "lead": "Office Leaderboard",
+      "active": 86,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 86,
+          "counts": {
+            "Non-user": 6,
+            "Infrequent": 9,
+            "Moderate": 19,
+            "Frequent": 35,
+            "Habitual": 13
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 4,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 6,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 9,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 19,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 35,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 13
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 86,
+          "counts": {
+            "Non-user": 5,
+            "Infrequent": 7,
+            "Moderate": 22,
+            "Frequent": 29,
+            "Habitual": 17
+          },
+          "deltas": {
+            "Non-user": -1,
+            "Infrequent": -2,
+            "Moderate": 3,
+            "Frequent": -6,
+            "Habitual": 4
+          },
+          "unmatched": 6,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 6,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 11,
+              "Frequent": 7,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 8,
+              "Frequent": 22,
+              "Habitual": 4
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 13
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 86,
+          "counts": {
+            "Non-user": 7,
+            "Infrequent": 6,
+            "Moderate": 25,
+            "Frequent": 26,
+            "Habitual": 20
+          },
+          "deltas": {
+            "Non-user": 1,
+            "Infrequent": -3,
+            "Moderate": 6,
+            "Frequent": -9,
+            "Habitual": 7
+          },
+          "unmatched": 2,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 2,
+              "Infrequent": 3,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 9,
+              "Frequent": 6,
+              "Habitual": 2
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 8,
+              "Frequent": 20,
+              "Habitual": 5
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 13
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 86,
+          "counts": {
+            "Non-user": 5,
+            "Infrequent": 7,
+            "Moderate": 22,
+            "Frequent": 29,
+            "Habitual": 17
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 6,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 7,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 22,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 29,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 17
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 86,
+          "counts": {
+            "Non-user": 7,
+            "Infrequent": 6,
+            "Moderate": 25,
+            "Frequent": 26,
+            "Habitual": 20
+          },
+          "deltas": {
+            "Non-user": 2,
+            "Infrequent": -1,
+            "Moderate": 3,
+            "Frequent": -3,
+            "Habitual": 3
+          },
+          "unmatched": 2,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 2,
+              "Infrequent": 4,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 18,
+              "Frequent": 2,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 23,
+              "Habitual": 4
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 16
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 86,
+          "counts": {
+            "Non-user": 7,
+            "Infrequent": 6,
+            "Moderate": 25,
+            "Frequent": 26,
+            "Habitual": 20
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 2,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 7,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 6,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 25,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 26,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 20
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_New_York",
+      "group": "Office",
+      "name": "New York",
+      "lead": "Office Leaderboard",
+      "active": 284,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 284,
+          "counts": {
+            "Non-user": 10,
+            "Infrequent": 30,
+            "Moderate": 56,
+            "Frequent": 90,
+            "Habitual": 66
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 32,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 10,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 30,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 56,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 90,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 66
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 284,
+          "counts": {
+            "Non-user": 12,
+            "Infrequent": 26,
+            "Moderate": 55,
+            "Frequent": 89,
+            "Habitual": 71
+          },
+          "deltas": {
+            "Non-user": 2,
+            "Infrequent": -4,
+            "Moderate": -1,
+            "Frequent": -1,
+            "Habitual": 5
+          },
+          "unmatched": 31,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 9,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 2,
+              "Infrequent": 23,
+              "Moderate": 5,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 40,
+              "Frequent": 13,
+              "Habitual": 1
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 9,
+              "Frequent": 68,
+              "Habitual": 13
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 8,
+              "Habitual": 57
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 284,
+          "counts": {
+            "Non-user": 11,
+            "Infrequent": 26,
+            "Moderate": 82,
+            "Frequent": 92,
+            "Habitual": 71
+          },
+          "deltas": {
+            "Non-user": 1,
+            "Infrequent": -4,
+            "Moderate": 26,
+            "Frequent": 2,
+            "Habitual": 5
+          },
+          "unmatched": 2,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 8,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 3,
+              "Infrequent": 16,
+              "Moderate": 9,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 5,
+              "Moderate": 33,
+              "Frequent": 16,
+              "Habitual": 1
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 9,
+              "Frequent": 65,
+              "Habitual": 16
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 10,
+              "Habitual": 54
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 284,
+          "counts": {
+            "Non-user": 12,
+            "Infrequent": 26,
+            "Moderate": 55,
+            "Frequent": 89,
+            "Habitual": 71
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 31,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 12,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 26,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 55,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 89,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 71
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 284,
+          "counts": {
+            "Non-user": 11,
+            "Infrequent": 26,
+            "Moderate": 82,
+            "Frequent": 92,
+            "Habitual": 71
+          },
+          "deltas": {
+            "Non-user": -1,
+            "Infrequent": 0,
+            "Moderate": 27,
+            "Frequent": 3,
+            "Habitual": 0
+          },
+          "unmatched": 2,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 9,
+              "Infrequent": 3,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 2,
+              "Infrequent": 17,
+              "Moderate": 6,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 39,
+              "Frequent": 11,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 8,
+              "Frequent": 73,
+              "Habitual": 8
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 8,
+              "Habitual": 63
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 284,
+          "counts": {
+            "Non-user": 11,
+            "Infrequent": 26,
+            "Moderate": 82,
+            "Frequent": 92,
+            "Habitual": 71
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 2,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 11,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 26,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 82,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 92,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 71
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Orange_Coun",
+      "group": "Office",
+      "name": "Orange County",
+      "lead": "Office Leaderboard",
+      "active": 15,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 15,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 3,
+            "Moderate": 2,
+            "Frequent": 5,
+            "Habitual": 3
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 3,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 5,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 3
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 15,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 2,
+            "Moderate": 4,
+            "Frequent": 2,
+            "Habitual": 5
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": -1,
+            "Moderate": 2,
+            "Frequent": -3,
+            "Habitual": 2
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 2,
+              "Habitual": 2
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 3
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 15,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 2,
+            "Moderate": 4,
+            "Frequent": 3,
+            "Habitual": 4
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": -1,
+            "Moderate": 2,
+            "Frequent": -2,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 3,
+              "Habitual": 1
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 3
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 15,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 2,
+            "Moderate": 4,
+            "Frequent": 2,
+            "Habitual": 5
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 5
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 15,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 2,
+            "Moderate": 4,
+            "Frequent": 3,
+            "Habitual": 4
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 1,
+            "Habitual": -1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 4
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 15,
+          "counts": {
+            "Non-user": 2,
+            "Infrequent": 2,
+            "Moderate": 4,
+            "Frequent": 3,
+            "Habitual": 4
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 2,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 3,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 4
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Pittsburgh",
+      "group": "Office",
+      "name": "Pittsburgh",
+      "lead": "Office Leaderboard",
+      "active": 11,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 11,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 4,
+            "Frequent": 5,
+            "Habitual": 2
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 5,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 2
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 11,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": 3,
+            "Frequent": 4,
+            "Habitual": 3
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": -1,
+            "Frequent": -1,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 3,
+              "Habitual": 2
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 11,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": 4,
+            "Frequent": 3,
+            "Habitual": 3
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": 0,
+            "Frequent": -2,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 2,
+              "Habitual": 2
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 11,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": 3,
+            "Frequent": 4,
+            "Habitual": 3
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 4,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 3
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 11,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": 4,
+            "Frequent": 3,
+            "Habitual": 3
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": -1,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 3,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 3
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 11,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": 4,
+            "Frequent": 3,
+            "Habitual": 3
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 3,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Remote",
+      "group": "Office",
+      "name": "Remote",
+      "lead": "Office Leaderboard",
+      "active": 288,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 288,
+          "counts": {
+            "Non-user": 28,
+            "Infrequent": 33,
+            "Moderate": 89,
+            "Frequent": 86,
+            "Habitual": 52
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 28,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 33,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 89,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 86,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 52
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 288,
+          "counts": {
+            "Non-user": 29,
+            "Infrequent": 32,
+            "Moderate": 77,
+            "Frequent": 91,
+            "Habitual": 59
+          },
+          "deltas": {
+            "Non-user": 1,
+            "Infrequent": -1,
+            "Moderate": -12,
+            "Frequent": 5,
+            "Habitual": 7
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 27,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 2,
+              "Infrequent": 28,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 3,
+              "Moderate": 65,
+              "Frequent": 21,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 9,
+              "Frequent": 68,
+              "Habitual": 9
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 50
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 288,
+          "counts": {
+            "Non-user": 31,
+            "Infrequent": 28,
+            "Moderate": 71,
+            "Frequent": 96,
+            "Habitual": 61
+          },
+          "deltas": {
+            "Non-user": 3,
+            "Infrequent": -5,
+            "Moderate": -18,
+            "Frequent": 10,
+            "Habitual": 9
+          },
+          "unmatched": 1,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 24,
+              "Infrequent": 4,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 7,
+              "Infrequent": 18,
+              "Moderate": 7,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 6,
+              "Moderate": 52,
+              "Frequent": 27,
+              "Habitual": 4
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 12,
+              "Frequent": 64,
+              "Habitual": 10
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 5,
+              "Habitual": 47
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 288,
+          "counts": {
+            "Non-user": 29,
+            "Infrequent": 32,
+            "Moderate": 77,
+            "Frequent": 91,
+            "Habitual": 59
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 29,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 32,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 77,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 91,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 59
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 288,
+          "counts": {
+            "Non-user": 31,
+            "Infrequent": 28,
+            "Moderate": 71,
+            "Frequent": 96,
+            "Habitual": 61
+          },
+          "deltas": {
+            "Non-user": 2,
+            "Infrequent": -4,
+            "Moderate": -6,
+            "Frequent": 5,
+            "Habitual": 2
+          },
+          "unmatched": 1,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 25,
+              "Infrequent": 4,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 6,
+              "Infrequent": 21,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 3,
+              "Moderate": 60,
+              "Frequent": 14,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 7,
+              "Frequent": 77,
+              "Habitual": 7
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 5,
+              "Habitual": 54
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 288,
+          "counts": {
+            "Non-user": 31,
+            "Infrequent": 28,
+            "Moderate": 71,
+            "Frequent": 96,
+            "Habitual": 61
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 1,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 31,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 28,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 71,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 96,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 61
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_San_Francis",
+      "group": "Office",
+      "name": "San Francisco",
+      "lead": "Office Leaderboard",
+      "active": 70,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 70,
+          "counts": {
+            "Non-user": 4,
+            "Infrequent": 10,
+            "Moderate": 18,
+            "Frequent": 19,
+            "Habitual": 14
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 5,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 4,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 10,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 18,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 19,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 14
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 70,
+          "counts": {
+            "Non-user": 4,
+            "Infrequent": 10,
+            "Moderate": 16,
+            "Frequent": 23,
+            "Habitual": 13
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": -2,
+            "Frequent": 4,
+            "Habitual": -1
+          },
+          "unmatched": 4,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 9,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 15,
+              "Frequent": 3,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 19,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 13
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 70,
+          "counts": {
+            "Non-user": 4,
+            "Infrequent": 8,
+            "Moderate": 22,
+            "Frequent": 23,
+            "Habitual": 13
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": -2,
+            "Moderate": 4,
+            "Frequent": 4,
+            "Habitual": -1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 3,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 7,
+              "Moderate": 3,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 13,
+              "Frequent": 5,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 16,
+              "Habitual": 1
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 12
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 70,
+          "counts": {
+            "Non-user": 4,
+            "Infrequent": 10,
+            "Moderate": 16,
+            "Frequent": 23,
+            "Habitual": 13
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 4,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 4,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 10,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 16,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 23,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 13
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 70,
+          "counts": {
+            "Non-user": 4,
+            "Infrequent": 8,
+            "Moderate": 22,
+            "Frequent": 23,
+            "Habitual": 13
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": -2,
+            "Moderate": 6,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 4,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 8,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 14,
+              "Frequent": 2,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 20,
+              "Habitual": 1
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 12
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 70,
+          "counts": {
+            "Non-user": 4,
+            "Infrequent": 8,
+            "Moderate": 22,
+            "Frequent": 23,
+            "Habitual": 13
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 4,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 8,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 22,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 23,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 13
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Santa_Monic",
+      "group": "Office",
+      "name": "Santa Monica",
+      "lead": "Office Leaderboard",
+      "active": 4,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 4,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 2,
+            "Frequent": 1,
+            "Habitual": 1
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 4,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 1,
+            "Habitual": 2
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": -1,
+            "Frequent": 0,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 4,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 1,
+            "Habitual": 2
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": -1,
+            "Frequent": 0,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 1
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 4,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 1,
+            "Habitual": 2
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 2
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 4,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 1,
+            "Habitual": 2
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 2
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 4,
+          "counts": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 1,
+            "Frequent": 1,
+            "Habitual": 2
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 2
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Seattle",
+      "group": "Office",
+      "name": "Seattle",
+      "lead": "Office Leaderboard",
+      "active": 105,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 105,
+          "counts": {
+            "Non-user": 6,
+            "Infrequent": 8,
+            "Moderate": 32,
+            "Frequent": 36,
+            "Habitual": 17
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 6,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 6,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 8,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 32,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 36,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 17
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 105,
+          "counts": {
+            "Non-user": 6,
+            "Infrequent": 4,
+            "Moderate": 35,
+            "Frequent": 36,
+            "Habitual": 18
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": -4,
+            "Moderate": 3,
+            "Frequent": 0,
+            "Habitual": 1
+          },
+          "unmatched": 6,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 6,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 28,
+              "Frequent": 4,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 3,
+              "Frequent": 29,
+              "Habitual": 4
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 3,
+              "Habitual": 14
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 105,
+          "counts": {
+            "Non-user": 6,
+            "Infrequent": 5,
+            "Moderate": 42,
+            "Frequent": 31,
+            "Habitual": 21
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": -3,
+            "Moderate": 10,
+            "Frequent": -5,
+            "Habitual": 4
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 6,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 4,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 24,
+              "Frequent": 5,
+              "Habitual": 2
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 8,
+              "Frequent": 22,
+              "Habitual": 6
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 4,
+              "Habitual": 13
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 105,
+          "counts": {
+            "Non-user": 6,
+            "Infrequent": 4,
+            "Moderate": 35,
+            "Frequent": 36,
+            "Habitual": 18
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 6,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 6,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 35,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 36,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 18
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 105,
+          "counts": {
+            "Non-user": 6,
+            "Infrequent": 5,
+            "Moderate": 42,
+            "Frequent": 31,
+            "Habitual": 21
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 1,
+            "Moderate": 7,
+            "Frequent": -5,
+            "Habitual": 3
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 6,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 30,
+              "Frequent": 3,
+              "Habitual": 1
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 6,
+              "Frequent": 26,
+              "Habitual": 4
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 16
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 105,
+          "counts": {
+            "Non-user": 6,
+            "Infrequent": 5,
+            "Moderate": 42,
+            "Frequent": 31,
+            "Habitual": 21
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 6,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 5,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 42,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 31,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 21
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "Office_Washington",
+      "group": "Office",
+      "name": "Washington DC",
+      "lead": "Office Leaderboard",
+      "active": 46,
+      "comparisons": {
+        "2026-06-01__2026-06-01": {
+          "active": 46,
+          "counts": {
+            "Non-user": 6,
+            "Infrequent": 4,
+            "Moderate": 11,
+            "Frequent": 10,
+            "Habitual": 7
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 8,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 6,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 11,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 10,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 7
+            }
+          }
+        },
+        "2026-06-01__2026-06-08": {
+          "active": 46,
+          "counts": {
+            "Non-user": 7,
+            "Infrequent": 7,
+            "Moderate": 8,
+            "Frequent": 14,
+            "Habitual": 5
+          },
+          "deltas": {
+            "Non-user": 1,
+            "Infrequent": 3,
+            "Moderate": -3,
+            "Frequent": 4,
+            "Habitual": -2
+          },
+          "unmatched": 5,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 4,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 8,
+              "Frequent": 2,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 10,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 2,
+              "Habitual": 5
+            }
+          }
+        },
+        "2026-06-01__2026-06-15": {
+          "active": 46,
+          "counts": {
+            "Non-user": 5,
+            "Infrequent": 9,
+            "Moderate": 14,
+            "Frequent": 10,
+            "Habitual": 8
+          },
+          "deltas": {
+            "Non-user": -1,
+            "Infrequent": 5,
+            "Moderate": 3,
+            "Frequent": 0,
+            "Habitual": 1
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 1,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 3,
+              "Moderate": 1,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 2,
+              "Moderate": 7,
+              "Frequent": 2,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 1,
+              "Frequent": 7,
+              "Habitual": 2
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 1,
+              "Habitual": 6
+            }
+          }
+        },
+        "2026-06-08__2026-06-08": {
+          "active": 46,
+          "counts": {
+            "Non-user": 7,
+            "Infrequent": 7,
+            "Moderate": 8,
+            "Frequent": 14,
+            "Habitual": 5
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 5,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 7,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 7,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 8,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 14,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 5
+            }
+          }
+        },
+        "2026-06-08__2026-06-15": {
+          "active": 46,
+          "counts": {
+            "Non-user": 5,
+            "Infrequent": 9,
+            "Moderate": 14,
+            "Frequent": 10,
+            "Habitual": 8
+          },
+          "deltas": {
+            "Non-user": -2,
+            "Infrequent": 2,
+            "Moderate": 6,
+            "Frequent": -4,
+            "Habitual": 3
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 2,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 5,
+              "Moderate": 2,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 1,
+              "Moderate": 6,
+              "Frequent": 1,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 2,
+              "Frequent": 9,
+              "Habitual": 3
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 5
+            }
+          }
+        },
+        "2026-06-15__2026-06-15": {
+          "active": 46,
+          "counts": {
+            "Non-user": 5,
+            "Infrequent": 9,
+            "Moderate": 14,
+            "Frequent": 10,
+            "Habitual": 8
+          },
+          "deltas": {
+            "Non-user": 0,
+            "Infrequent": 0,
+            "Moderate": 0,
+            "Frequent": 0,
+            "Habitual": 0
+          },
+          "unmatched": 0,
+          "transitions": {
+            "Non-user": {
+              "Non-user": 5,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Infrequent": {
+              "Non-user": 0,
+              "Infrequent": 9,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Moderate": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 14,
+              "Frequent": 0,
+              "Habitual": 0
+            },
+            "Frequent": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 10,
+              "Habitual": 0
+            },
+            "Habitual": {
+              "Non-user": 0,
+              "Infrequent": 0,
+              "Moderate": 0,
+              "Frequent": 0,
+              "Habitual": 8
             }
           }
         }
