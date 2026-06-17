@@ -560,17 +560,18 @@ svg {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 18px;
-  align-items: end;
+  align-items: start;
 }
 
 .tier-mix-week {
   display: grid;
+  grid-template-rows: 360px auto;
   gap: 8px;
   min-width: 0;
 }
 
 .tier-mix-bar {
-  height: 360px;
+  height: 100%;
   border: 1px solid #cfd9e6;
   background: #fff;
   display: flex;
