@@ -14,6 +14,7 @@ const state = {
   movementFrom: "all",
   movementTo: "all",
   movementDirection: "both",
+  coreTierOnly: false,
 };
 
 const $ = (id) => document.getElementById(id);
@@ -182,20 +183,20 @@ function renderTable(summary) {
     const heat = delta > 0 ? "heat-up" : "heat-other";
     return `<td class="metric ${heat}"><strong>${summary.counts[tier]}</strong> <span class="${cls}">(${fmtDelta(delta)})</span></td>`;
   }).join("");
+  const extraHeaders = state.coreTierOnly ? "" : "<th>Active</th><th>Unmatched</th>";
+  const extraCells = state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td><td class="metric">${summary.unmatched}</td>`;
   table.innerHTML = `
     <thead>
       <tr>
         <th>Report</th>
-        <th>Active</th>
-        <th>Unmatched</th>
+        ${extraHeaders}
         ${state.data.tiers.map((tier) => `<th>${tier}</th>`).join("")}
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>${reportLabel(report)}</td>
-        <td class="metric">${summary.active}</td>
-        <td class="metric">${summary.unmatched}</td>
+        ${extraCells}
         ${tierCells}
       </tr>
     </tbody>`;
@@ -231,13 +232,17 @@ function narrativeFor(summary) {
   return { net, lower, upper, action };
 }
 
-function renderNarrative(summary) {
+function renderNarrative(summary, report) {
   const n = narrativeFor(summary);
+  const label = reportLabel(report);
+  const highDelta = summary.deltas.Frequent + summary.deltas.Habitual;
+  const lowDelta = summary.deltas["Non-user"] + summary.deltas.Infrequent;
+  const moderateDelta = summary.deltas.Moderate;
   $("narrative").innerHTML = [
-    ["Net", n.net],
-    ["Lower Movement", n.lower],
-    ["Upper Movement", n.upper],
-    ["So What / Next Steps", n.action],
+    ["Net", `${label}: ${n.net}`],
+    ["Lower Movement", `${label}: ${n.lower} Lower-tier net change is ${fmtDelta(lowDelta)}.`],
+    ["Upper Movement", `${label}: ${n.upper} Frequent/Habitual net change is ${fmtDelta(highDelta)}.`],
+    ["So What / Next Steps", `${label}: ${n.action} Moderate net change is ${fmtDelta(moderateDelta)}.`],
   ].map(([label, text]) => `<div class="narrative-card"><span>${label}</span><p>${text}</p></div>`).join("");
 }
 
@@ -257,11 +262,12 @@ function renderDetailTable(title, reports) {
     counts: Object.fromEntries(state.data.tiers.map((tier) => [tier, 0])),
     deltas: Object.fromEntries(state.data.tiers.map((tier) => [tier, 0])),
   });
+  const extraHeaders = state.coreTierOnly ? "" : "<th>Active</th><th>Unmatched</th>";
+  const extraTotalCells = state.coreTierOnly ? "" : `<td class="metric">${totals.active}</td><td class="metric">${totals.unmatched}</td>`;
   const subtotalRow = `
     <tr class="subtotal-row">
       <td>${title} Subtotal</td>
-      <td class="metric">${totals.active}</td>
-      <td class="metric">${totals.unmatched}</td>
+      ${extraTotalCells}
       ${state.data.tiers.map((tier) => {
         const delta = totals.deltas[tier];
         const cls = delta > 0 ? "delta-up" : delta < 0 ? "delta-down" : "";
@@ -277,8 +283,7 @@ function renderDetailTable(title, reports) {
           <thead>
             <tr>
               <th>Report</th>
-              <th>Active</th>
-              <th>Unmatched</th>
+              ${extraHeaders}
               ${state.data.tiers.map((tier) => `<th>${tier}</th>`).join("")}
             </tr>
           </thead>
@@ -287,8 +292,7 @@ function renderDetailTable(title, reports) {
               .map(({ report, summary }) => `
                 <tr>
                   <td><button class="link-button" type="button" data-report-id="${report.id}">${report.name}</button></td>
-                  <td class="metric">${summary.active}</td>
-                  <td class="metric">${summary.unmatched}</td>
+                  ${state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td><td class="metric">${summary.unmatched}</td>`}
                   ${state.data.tiers
                     .map((tier) => {
                       const delta = summary.deltas[tier];
@@ -308,6 +312,8 @@ function renderDetailTable(title, reports) {
 
 function renderFirmTotalRow(report) {
   const summary = summarize(report, state.weekId, state.compareWeekId);
+  const extraHeaders = state.coreTierOnly ? "" : "<th>Active</th><th>Unmatched</th>";
+  const extraCells = state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td><td class="metric">${summary.unmatched}</td>`;
   return `
     <div class="detail-block">
       <h4>Firmwide Total</h4>
@@ -316,16 +322,14 @@ function renderFirmTotalRow(report) {
           <thead>
             <tr>
               <th>Report</th>
-              <th>Active</th>
-              <th>Unmatched</th>
+              ${extraHeaders}
               ${state.data.tiers.map((tier) => `<th>${tier}</th>`).join("")}
             </tr>
           </thead>
           <tbody>
             <tr class="firm-row">
               <td>Firm Total</td>
-              <td class="metric">${summary.active}</td>
-              <td class="metric">${summary.unmatched}</td>
+              ${extraCells}
               ${state.data.tiers.map((tier) => {
                 const delta = summary.deltas[tier];
                 const cls = delta > 0 ? "delta-up" : delta < 0 ? "delta-down" : "";
@@ -514,7 +518,7 @@ function render() {
     : report.id === "All_ERGs"
       ? `ERG leaderboard | ${week.label} compared to ${compare.label}`
     : `${report.group} | AI Champion lead(s): ${report.lead} | ${week.label} compared to ${compare.label}`;
-  renderNarrative(summary);
+  renderNarrative(summary, report);
   renderTable(summary);
   renderLeaderboardDetails(report);
   renderSankey(summary);
@@ -557,6 +561,10 @@ function bindEvents() {
   });
   $("directionSelect").addEventListener("change", (event) => {
     state.movementDirection = event.target.value;
+    render();
+  });
+  $("coreTierOnlyToggle").addEventListener("change", (event) => {
+    state.coreTierOnly = event.target.checked;
     render();
   });
   document.addEventListener("click", (event) => {

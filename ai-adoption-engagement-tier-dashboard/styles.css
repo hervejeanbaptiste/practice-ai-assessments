@@ -103,6 +103,27 @@ button {
   gap: 10px;
 }
 
+.toggle-field {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 4px 0 18px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.toggle-field input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--orange);
+  flex: 0 0 auto;
+}
+
+.toggle-field span {
+  color: #e8eef6;
+}
+
 .movement-controls {
   display: grid;
   grid-template-columns: repeat(3, minmax(160px, 1fr));
@@ -344,6 +365,10 @@ th {
   text-align: left;
   padding: 9px;
   font-size: 13px;
+}
+
+th:not(:first-child) {
+  text-align: right;
 }
 
 td {
