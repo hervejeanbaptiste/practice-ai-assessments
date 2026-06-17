@@ -381,12 +381,29 @@ table {
   table-layout: fixed;
 }
 
+th,
+td {
+  min-width: 105px;
+}
+
+th:first-child,
+td:first-child {
+  min-width: 250px;
+}
+
+th .inline-help,
+th .help {
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
 th {
   background: var(--navy);
   color: #fff;
   text-align: left;
   padding: 9px;
   font-size: 13px;
+  white-space: nowrap;
 }
 
 th:not(:first-child) {
