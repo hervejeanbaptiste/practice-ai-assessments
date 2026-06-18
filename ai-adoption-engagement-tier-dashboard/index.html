@@ -100,12 +100,14 @@
         </div>
         <div class="movement-controls">
           <div id="visualScopePanel" class="visual-scope-panel">
-            <span>Show visuals for</span>
-            <div class="segmented-control" role="group" aria-label="Visual population">
-              <button type="button" data-visual-scope="overall">Overall</button>
-              <button type="button" data-visual-scope="line">Practice Line</button>
-              <button type="button" data-visual-scope="general">Practice General</button>
-            </div>
+            <label>
+              <span>Show visuals for</span>
+              <select id="visualScopeSelect" aria-label="Show visuals for">
+                <option value="overall">Overall</option>
+                <option value="line">Practice Line</option>
+                <option value="general">Practice General</option>
+              </select>
+            </label>
           </div>
           <label>
             <span>From Tier <button class="help inline-help" data-help="Filters the left side of the Sankey to people who started in a specific engagement tier. Select All to include every starting tier.">?</button></span>
@@ -157,6 +159,6 @@
       </section>
     </main>
 
-    <script src="./app.js?v=20260618-unmatched-header-clean-v1"></script>
+    <script src="./app.js?v=20260618-visual-scope-dropdown-v1"></script>
   </body>
 </html>

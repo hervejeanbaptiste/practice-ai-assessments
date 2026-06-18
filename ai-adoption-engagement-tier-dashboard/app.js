@@ -537,10 +537,8 @@ function renderVisualScopeControls(report, visualReport) {
     description.textContent = `Start date to selected end date. Visuals reflect ${reportLabel(report)}.`;
     return;
   }
-  panel.style.display = "flex";
-  panel.querySelectorAll("[data-visual-scope]").forEach((button) => {
-    button.classList.toggle("active", button.dataset.visualScope === state.visualScope);
-  });
+  panel.style.display = "block";
+  $("visualScopeSelect").value = state.visualScope;
   description.textContent = `Start date to selected end date. Visuals currently reflect ${reportLabel(visualReport)}.`;
 }
 
@@ -660,10 +658,8 @@ function bindEvents() {
     state.coreTierOnly = event.target.checked;
     render();
   });
-  $("visualScopePanel").addEventListener("click", (event) => {
-    const button = event.target.closest("[data-visual-scope]");
-    if (!button) return;
-    state.visualScope = button.dataset.visualScope;
+  $("visualScopeSelect").addEventListener("change", (event) => {
+    state.visualScope = event.target.value;
     render();
   });
   document.addEventListener("click", (event) => {
