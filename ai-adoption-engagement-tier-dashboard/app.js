@@ -17,6 +17,7 @@ const state = {
   coreTierOnly: false,
   activeEmployeesOnly: false,
   visualScope: "overall",
+  disciplineFilter: "all",
 };
 
 const $ = (id) => document.getElementById(id);
@@ -59,6 +60,10 @@ function visualReportFor(report) {
   return report;
 }
 
+function activeVisualDiscipline(report) {
+  return hasDisciplineBreakout(report) ? state.disciplineFilter : "all";
+}
+
 function reportLabel(report) {
   if (report.id === "Firm_Total") return "Firm Leaderboard";
   if (report.id === "Practice_Line_Total") return "Line Leaderboard";
@@ -78,6 +83,16 @@ function populationScopeSentence() {
     : "Includes the full assigned worker population.";
 }
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  }[char]));
+}
+
 function isActiveEmployee(person) {
   const workerStatus = String(person.status || person.workerStatus || person.employeeStatus || "").toLowerCase();
   const role = String(person.role || "").toLowerCase();
@@ -86,24 +101,26 @@ function isActiveEmployee(person) {
   return !/\bintern\b/.test(`${role} ${level}`);
 }
 
-function peopleFor(report) {
-  const ids = new Set(report.employeeIds);
-  return state.data.people.filter((person) => ids.has(person.employeeId) && (!state.activeEmployeesOnly || isActiveEmployee(person)));
+function disciplineName(person) {
+  return String(person.discipline || "").trim() || "Unspecified";
 }
 
-function summarize(report, weekId, compareWeekId) {
-  if (report.comparisons && !state.activeEmployeesOnly) {
-    const summary = { ...report.comparisons[`${compareWeekId}__${weekId}`] };
-    const compareSummary = report.comparisons[`${compareWeekId}__${compareWeekId}`];
-    summary.unmatchedDelta = compareSummary ? summary.unmatched - compareSummary.unmatched : 0;
-    return summary;
-  }
+function peopleFor(report, options = {}) {
+  const ids = new Set(report.employeeIds);
+  return state.data.people.filter((person) => {
+    if (!ids.has(person.employeeId)) return false;
+    if (state.activeEmployeesOnly && !isActiveEmployee(person)) return false;
+    if (options.discipline && options.discipline !== "all" && disciplineName(person) !== options.discipline) return false;
+    return true;
+  });
+}
+
+function summarizePeople(people, weekId, compareWeekId) {
   const counts = Object.fromEntries(state.data.tiers.map((tier) => [tier, 0]));
   const compare = Object.fromEntries(state.data.tiers.map((tier) => [tier, 0]));
   const transitions = Object.fromEntries(state.data.tiers.map((from) => [from, Object.fromEntries(state.data.tiers.map((to) => [to, 0]))]));
   let unmatched = 0;
   let compareUnmatched = 0;
-  const people = peopleFor(report);
   people.forEach((person) => {
     const current = person.tiers[weekId] || "";
     const prior = person.tiers[compareWeekId] || "";
@@ -121,6 +138,36 @@ function summarize(report, weekId, compareWeekId) {
     unmatchedDelta: unmatched - compareUnmatched,
     transitions,
   };
+}
+
+function summarize(report, weekId, compareWeekId, options = {}) {
+  if (report.comparisons && !state.activeEmployeesOnly && (!options.discipline || options.discipline === "all")) {
+    const summary = { ...report.comparisons[`${compareWeekId}__${weekId}`] };
+    const compareSummary = report.comparisons[`${compareWeekId}__${compareWeekId}`];
+    summary.unmatchedDelta = compareSummary ? summary.unmatched - compareSummary.unmatched : 0;
+    return summary;
+  }
+  return summarizePeople(peopleFor(report, options), weekId, compareWeekId);
+}
+
+function disciplinesFor(report) {
+  const names = [...new Set(peopleFor(report).map(disciplineName))].filter((name) => name !== "Unspecified");
+  return names.sort((a, b) => a.localeCompare(b));
+}
+
+function hasDisciplineBreakout(report) {
+  return report.group === "Practice Line" && disciplinesFor(report).length > 1;
+}
+
+function ensureDisciplineFilter(report) {
+  if (!hasDisciplineBreakout(report)) {
+    state.disciplineFilter = "all";
+    return;
+  }
+  const disciplines = disciplinesFor(report);
+  if (state.disciplineFilter !== "all" && !disciplines.includes(state.disciplineFilter)) {
+    state.disciplineFilter = "all";
+  }
 }
 
 function deltaClass(delta) {
@@ -254,6 +301,47 @@ function renderTable(summary) {
         ${tierCells}
       </tr>
     </tbody>`;
+}
+
+function renderDisciplineDetails(report) {
+  const panel = $("disciplineDetailPanel");
+  const target = $("disciplineDetails");
+  if (!hasDisciplineBreakout(report)) {
+    panel.style.display = "none";
+    target.innerHTML = "";
+    return;
+  }
+  const disciplines = disciplinesFor(report);
+  const rows = disciplines.map((discipline) => ({
+    discipline,
+    summary: summarize(report, state.weekId, state.compareWeekId, { discipline }),
+  }));
+  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched</th>`;
+  $("disciplineDetailMeta").textContent = `${reportLabel(report)} by discipline. ${populationScopeLabel()} compared with the selected start date.`;
+  panel.style.display = "block";
+  target.innerHTML = `
+    <div class="detail-block">
+      <h4>${reportLabel(report)} Discipline Detail</h4>
+      <div class="tier-table-wrap">
+        <table class="detail-table">
+          <thead>
+            <tr>
+              <th>Discipline</th>
+              ${extraHeaders}
+              ${state.data.tiers.map((tier) => `<th>${tier}</th>`).join("")}
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map(({ discipline, summary }) => `
+              <tr>
+                <td>${escapeHtml(discipline)}</td>
+                ${state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td>${unmatchedMetricCell(summary)}`}
+                ${state.data.tiers.map((tier) => tierMetricCell(summary.counts[tier], summary.deltas[tier])).join("")}
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      </div>
+    </div>`;
 }
 
 function displayName(report) {
@@ -552,22 +640,41 @@ function renderSankey(summary) {
 function renderVisualScopeControls(report, visualReport) {
   const panel = $("visualScopePanel");
   const description = $("visualScopeDescription");
+  const discipline = activeVisualDiscipline(visualReport);
+  const disciplineText = discipline === "all" ? "" : ` Discipline: ${discipline}.`;
   if (report.id !== "Firm_Total") {
     panel.style.display = "none";
-    description.textContent = `Start date to selected end date. Visuals reflect ${reportLabel(report)}. ${populationScopeSentence()}`;
+    description.textContent = `Start date to selected end date. Visuals reflect ${reportLabel(report)}.${disciplineText} ${populationScopeSentence()}`;
     return;
   }
   panel.style.display = "block";
   $("visualScopeSelect").value = state.visualScope;
-  description.textContent = `Start date to selected end date. Visuals currently reflect ${reportLabel(visualReport)}. ${populationScopeSentence()}`;
+  description.textContent = `Start date to selected end date. Visuals currently reflect ${reportLabel(visualReport)}.${disciplineText} ${populationScopeSentence()}`;
 }
 
-function renderWeeklyTierMix(report) {
+function renderDisciplineFilterControls(report) {
+  const panel = $("disciplineFilterPanel");
+  const select = $("disciplineFilterSelect");
+  if (!hasDisciplineBreakout(report)) {
+    panel.style.display = "none";
+    select.innerHTML = "";
+    return;
+  }
+  panel.style.display = "block";
+  const disciplines = disciplinesFor(report);
+  select.innerHTML = [
+    `<option value="all">All disciplines</option>`,
+    ...disciplines.map((discipline) => `<option value="${escapeHtml(discipline)}">${escapeHtml(discipline)}</option>`),
+  ].join("");
+  select.value = state.disciplineFilter;
+}
+
+function renderWeeklyTierMix(report, options = {}) {
   const target = $("weeklyTierMix");
   const highToLow = [...state.data.tiers].reverse();
   const weeks = state.data.weeks;
   target.innerHTML = weeks.map((week) => {
-    const summary = summarize(report, week.id, week.id);
+    const summary = summarize(report, week.id, week.id, options);
     const denominator = Math.max(1, summary.active || Object.values(summary.counts).reduce((sum, value) => sum + value, 0));
     const segments = highToLow.map((tier) => {
       const count = summary.counts[tier] || 0;
@@ -600,11 +707,14 @@ function renderWeeklyTierMix(report) {
 
 function render() {
   const report = getReport();
+  ensureDisciplineFilter(report);
   const visualReport = visualReportFor(report);
+  ensureDisciplineFilter(visualReport);
+  const visualDiscipline = activeVisualDiscipline(visualReport);
   const week = state.data.weeks.find((item) => item.id === state.weekId);
   const compare = state.data.weeks.find((item) => item.id === state.compareWeekId);
   const summary = summarize(report, state.weekId, state.compareWeekId);
-  const visualSummary = summarize(visualReport, state.weekId, state.compareWeekId);
+  const visualSummary = summarize(visualReport, state.weekId, state.compareWeekId, { discipline: visualDiscipline });
   document.title = `${displayName(report)} | AI Adoption Engagement Tier Leaderboard`;
   if (report.group === "Specialty Groups" && report.id !== "All_ERGs") {
     $("areaSelect").value = "";
@@ -628,10 +738,12 @@ function render() {
   renderNarrative(summary, report);
   renderReconciliation(summary, report);
   renderTable(summary);
+  renderDisciplineDetails(report);
   renderLeaderboardDetails(report);
+  renderDisciplineFilterControls(visualReport);
   renderVisualScopeControls(report, visualReport);
   renderSankey(visualSummary);
-  renderWeeklyTierMix(visualReport);
+  renderWeeklyTierMix(visualReport, { discipline: visualDiscipline });
 }
 
 function bindEvents() {
@@ -683,6 +795,10 @@ function bindEvents() {
   });
   $("visualScopeSelect").addEventListener("change", (event) => {
     state.visualScope = event.target.value;
+    render();
+  });
+  $("disciplineFilterSelect").addEventListener("change", (event) => {
+    state.disciplineFilter = event.target.value;
     render();
   });
   document.addEventListener("click", (event) => {

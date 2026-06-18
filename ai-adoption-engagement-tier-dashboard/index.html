@@ -88,6 +88,16 @@
         </div>
       </section>
 
+      <section class="panel" id="disciplineDetailPanel">
+        <div class="panel-head">
+          <div>
+            <h3>Discipline Detail <button class="help" data-help="Shows the selected practice broken down by discipline when discipline data is available. Values in parentheses show the change versus the selected start date.">?</button></h3>
+            <p id="disciplineDetailMeta">Practice discipline breakdown.</p>
+          </div>
+        </div>
+        <div id="disciplineDetails" class="detail-stack"></div>
+      </section>
+
       <section class="panel" id="leaderboardDetailPanel">
         <div class="panel-head">
           <div>
@@ -114,6 +124,12 @@
                 <option value="line">Practice Line</option>
                 <option value="general">Practice General</option>
               </select>
+            </label>
+          </div>
+          <div id="disciplineFilterPanel" class="visual-scope-panel">
+            <label>
+              <span>Discipline</span>
+              <select id="disciplineFilterSelect" aria-label="Filter visuals by discipline"></select>
             </label>
           </div>
           <label>
