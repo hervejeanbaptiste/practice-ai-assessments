@@ -265,7 +265,7 @@ function populateControls() {
 
   const leaderboardGroup = document.createElement("optgroup");
   leaderboardGroup.label = "Leaderboards";
-  ["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "Office_Total", "All_ERGs"].forEach((id) => {
+  ["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "Office_Total"].forEach((id) => {
     const report = state.data.reports.find((item) => item.id === id);
     if (!report) return;
     const option = document.createElement("option");
@@ -278,6 +278,7 @@ function populateControls() {
   let lastGroup = "";
   const menuReports = sortReportsForDisplay(state.data.reports.filter((report) =>
     !["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "Office_Total", "All_ERGs"].includes(report.id)
+      && report.group !== "Specialty Groups"
   ));
   menuReports.forEach((report) => {
     if (report.group !== lastGroup) {
@@ -292,6 +293,29 @@ function populateControls() {
     option.textContent = reportLabel(report);
     area.lastElementChild.appendChild(option);
   });
+
+  const rpoReport = state.data.reports.find((report) => report.id === "RPO_and_Coverage_Leads");
+  if (rpoReport) {
+    const rpoGroup = document.createElement("optgroup");
+    rpoGroup.label = "RPO";
+    const option = document.createElement("option");
+    option.value = rpoReport.id;
+    option.textContent = reportLabel(rpoReport);
+    rpoGroup.appendChild(option);
+    area.appendChild(rpoGroup);
+  }
+
+  const ergGroup = document.createElement("optgroup");
+  ergGroup.label = "ERG";
+  ["All_ERGs", ...ergFilterReports().map((report) => report.id)].forEach((id) => {
+    const report = state.data.reports.find((item) => item.id === id);
+    if (!report) return;
+    const option = document.createElement("option");
+    option.value = report.id;
+    option.textContent = reportLabel(report);
+    ergGroup.appendChild(option);
+  });
+  if (ergGroup.children.length) area.appendChild(ergGroup);
   area.value = state.reportId;
 
   [$("weekSelect"), $("compareSelect")].forEach((select) => {
