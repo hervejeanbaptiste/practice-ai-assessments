@@ -470,6 +470,10 @@ h2 {
   margin-bottom: 8px;
 }
 
+.headlines-label {
+  margin: 2px 0 6px;
+}
+
 .tier-legend-panel {
   position: sticky;
   top: 0;
