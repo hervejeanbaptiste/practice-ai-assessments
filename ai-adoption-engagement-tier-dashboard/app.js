@@ -73,6 +73,37 @@ function ergFilterReports() {
     .sort((a, b) => reportLabel(a).localeCompare(reportLabel(b)));
 }
 
+const HR_GENERAL_ORDER = [
+  "General PSE",
+  "General Talent Acquisition",
+  "General Talent Management",
+  "General Total Rewards",
+  "General Training",
+];
+
+function reportSortKey(report) {
+  if (report.group !== "Practice General") {
+    return [report.group, 0, report.name];
+  }
+  const hrIndex = HR_GENERAL_ORDER.indexOf(report.name);
+  if (hrIndex >= 0) {
+    return [report.group, 1, String(hrIndex).padStart(2, "0")];
+  }
+  return [report.group, 0, report.name];
+}
+
+function sortReportsForDisplay(reports) {
+  return [...reports].sort((a, b) => {
+    const aKey = reportSortKey(a);
+    const bKey = reportSortKey(b);
+    for (let index = 0; index < aKey.length; index += 1) {
+      const comparison = String(aKey[index]).localeCompare(String(bKey[index]));
+      if (comparison !== 0) return comparison;
+    }
+    return reportLabel(a).localeCompare(reportLabel(b));
+  });
+}
+
 function reportLabel(report) {
   if (report.id === "Firm_Total") return "Firm Leaderboard";
   if (report.id === "Practice_Line_Total") return "Line Leaderboard";
@@ -225,10 +256,10 @@ function populateControls() {
   area.appendChild(leaderboardGroup);
 
   let lastGroup = "";
-  const menuReports = state.data.reports.filter((report) =>
+  const menuReports = sortReportsForDisplay(state.data.reports.filter((report) =>
     !["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "Office_Total", "All_ERGs"].includes(report.id)
       && report.group !== "Specialty Groups"
-  );
+  ));
   menuReports.forEach((report) => {
     if (report.group !== lastGroup) {
       const optgroup = document.createElement("optgroup");
@@ -366,7 +397,7 @@ function displayName(report) {
 }
 
 function childReports(group) {
-  return state.data.reports.filter((report) => report.group === group && !report.name.includes("Total"));
+  return sortReportsForDisplay(state.data.reports.filter((report) => report.group === group && !report.name.includes("Total")));
 }
 
 function narrativeFor(summary) {
