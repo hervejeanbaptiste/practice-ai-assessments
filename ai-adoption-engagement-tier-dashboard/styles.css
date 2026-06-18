@@ -170,6 +170,14 @@ button {
   margin: 0;
 }
 
+.panel-movement-controls {
+  margin: 12px 0 14px;
+}
+
+.tier-mix-controls {
+  grid-template-columns: minmax(240px, 1.25fr) minmax(180px, 1fr) minmax(92px, 0.45fr);
+}
+
 .movement-controls label span {
   display: block;
   margin-bottom: 5px;

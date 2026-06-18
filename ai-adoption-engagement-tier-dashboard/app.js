@@ -348,6 +348,26 @@ function populateControls() {
   $("directionSelect").value = state.movementDirection;
 }
 
+function setPanelDisplay(ids, display) {
+  ids.forEach((id) => {
+    const element = $(id);
+    if (element) element.style.display = display;
+  });
+}
+
+function syncVisualScopeSelects() {
+  document.querySelectorAll(".visual-scope-select").forEach((select) => {
+    select.value = state.visualScope;
+  });
+}
+
+function syncDisciplineSelects(optionsHtml) {
+  document.querySelectorAll(".discipline-filter-select").forEach((select) => {
+    select.innerHTML = optionsHtml;
+    select.value = state.disciplineFilter;
+  });
+}
+
 function renderTable(summary) {
   const report = getReport();
   const panel = $("reportTablePanel");
@@ -762,29 +782,27 @@ function renderSankey(summary) {
 }
 
 function renderVisualScopeControls(report, visualReport) {
-  const panel = $("visualScopePanel");
   const description = $("visualScopeDescription");
   const discipline = activeVisualDiscipline(visualReport);
   const disciplineText = discipline === "all" ? "" : ` Discipline: ${discipline}.`;
   if (report.id !== "Firm_Total") {
-    panel.style.display = "none";
+    setPanelDisplay(["visualScopePanel", "mixVisualScopePanel"], "none");
     description.textContent = `Start date to selected end date. Visuals reflect ${reportLabel(visualReport)}.${disciplineText} ${populationScopeSentence()}`;
     return;
   }
-  panel.style.display = "block";
-  $("visualScopeSelect").value = state.visualScope;
+  setPanelDisplay(["visualScopePanel", "mixVisualScopePanel"], "block");
+  syncVisualScopeSelects();
   description.textContent = `Start date to selected end date. Visuals currently reflect ${reportLabel(visualReport)}.${disciplineText} ${populationScopeSentence()}`;
 }
 
 function renderDisciplineFilterControls(report) {
-  const panel = $("disciplineFilterPanel");
-  const select = $("disciplineFilterSelect");
-  const label = $("visualFilterLabel");
   if (report.id === "All_ERGs") {
     const ergs = ergFilterReports();
-    panel.style.display = "block";
-    label.textContent = "ERG";
-    select.innerHTML = [
+    setPanelDisplay(["disciplineFilterPanel", "mixDisciplineFilterPanel"], "block");
+    document.querySelectorAll(".visual-filter-label").forEach((label) => {
+      label.textContent = "ERG";
+    });
+    const optionsHtml = [
       `<option value="all">All</option>`,
       ...ergs.map((erg) => `<option value="${escapeHtml(erg.id)}">${escapeHtml(reportLabel(erg))}</option>`),
     ].join("");
@@ -792,26 +810,28 @@ function renderDisciplineFilterControls(report) {
     if (state.disciplineFilter !== "all" && !validErgIds.has(state.disciplineFilter)) {
       state.disciplineFilter = "all";
     }
-    select.value = state.disciplineFilter;
+    syncDisciplineSelects(optionsHtml);
     return;
   }
   const disciplines = hasDisciplineBreakout(report) ? disciplinesFor(report) : [];
   if (!disciplines.length) {
-    panel.style.display = "none";
-    select.innerHTML = "";
+    setPanelDisplay(["disciplineFilterPanel", "mixDisciplineFilterPanel"], "none");
+    syncDisciplineSelects("");
     state.disciplineFilter = "all";
     return;
   }
-  panel.style.display = "block";
-  label.textContent = "Discipline";
-  select.innerHTML = [
+  setPanelDisplay(["disciplineFilterPanel", "mixDisciplineFilterPanel"], "block");
+  document.querySelectorAll(".visual-filter-label").forEach((label) => {
+    label.textContent = "Discipline";
+  });
+  const optionsHtml = [
     `<option value="all">All disciplines</option>`,
     ...disciplines.map((discipline) => `<option value="${escapeHtml(discipline)}">${escapeHtml(discipline)}</option>`),
   ].join("");
   if (state.disciplineFilter !== "all" && !disciplines.includes(state.disciplineFilter)) {
     state.disciplineFilter = "all";
   }
-  select.value = state.disciplineFilter;
+  syncDisciplineSelects(optionsHtml);
 }
 
 function renderWeeklyTierMix(report, options = {}) {
@@ -917,10 +937,6 @@ function bindEvents() {
     state.movementDirection = event.target.value;
     render();
   });
-  $("resetSelections").addEventListener("click", () => {
-    resetSelections();
-    render();
-  });
   $("coreTierOnlyToggle").addEventListener("change", (event) => {
     state.coreTierOnly = event.target.checked;
     render();
@@ -929,14 +945,24 @@ function bindEvents() {
     state.activeEmployeesOnly = event.target.checked;
     render();
   });
-  $("visualScopeSelect").addEventListener("change", (event) => {
-    state.visualScope = event.target.value;
-    state.disciplineFilter = "all";
-    render();
+  document.querySelectorAll(".reset-selections").forEach((button) => {
+    button.addEventListener("click", () => {
+      resetSelections();
+      render();
+    });
   });
-  $("disciplineFilterSelect").addEventListener("change", (event) => {
-    state.disciplineFilter = event.target.value;
-    render();
+  document.querySelectorAll(".visual-scope-select").forEach((select) => {
+    select.addEventListener("change", (event) => {
+      state.visualScope = event.target.value;
+      state.disciplineFilter = "all";
+      render();
+    });
+  });
+  document.querySelectorAll(".discipline-filter-select").forEach((select) => {
+    select.addEventListener("change", (event) => {
+      state.disciplineFilter = event.target.value;
+      render();
+    });
   });
   document.addEventListener("click", (event) => {
     const button = event.target.closest(".help, .tier-legend-chip");

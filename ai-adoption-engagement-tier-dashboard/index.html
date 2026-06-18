@@ -103,22 +103,28 @@
         <div id="leaderboardDetails" class="detail-stack"></div>
       </section>
 
-      <section class="panel visual-controls-panel">
-        <div class="movement-controls">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h3>Tier Movement Flow <button class="help" data-help="This Sankey shows aggregate movement from each start-date tier to each end-date tier. It does not expose person-level data.">?</button></h3>
+            <p id="visualScopeDescription">Start date to selected end date.</p>
+          </div>
+        </div>
+        <div class="movement-controls panel-movement-controls">
           <div id="visualScopePanel" class="visual-scope-panel">
             <label>
               <span>Show visuals for</span>
-              <select id="visualScopeSelect" aria-label="Show visuals for">
+              <select id="visualScopeSelect" class="visual-scope-select" aria-label="Show visuals for">
                 <option value="overall">Overall</option>
                 <option value="line">Practice Line</option>
                 <option value="general">Practice General</option>
               </select>
             </label>
           </div>
-          <div id="disciplineFilterPanel" class="visual-scope-panel">
+          <div id="disciplineFilterPanel" class="visual-scope-panel discipline-filter-panel">
             <label>
-              <span id="visualFilterLabel">Discipline</span>
-              <select id="disciplineFilterSelect" aria-label="Filter visuals"></select>
+              <span class="visual-filter-label">Discipline</span>
+              <select id="disciplineFilterSelect" class="discipline-filter-select" aria-label="Filter visuals"></select>
             </label>
           </div>
           <label>
@@ -137,16 +143,7 @@
               <option value="down">Down only</option>
             </select>
           </label>
-          <button id="resetSelections" class="reset-button" type="button">Reset</button>
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="panel-head">
-          <div>
-            <h3>Tier Movement Flow <button class="help" data-help="This Sankey shows aggregate movement from each start-date tier to each end-date tier. It does not expose person-level data.">?</button></h3>
-            <p id="visualScopeDescription">Start date to selected end date.</p>
-          </div>
+          <button class="reset-button reset-selections" type="button">Reset</button>
         </div>
         <svg id="sankey" viewBox="0 0 1040 500" role="img" aria-label="Engagement tier Sankey"></svg>
         <div class="trend-panel">
@@ -155,6 +152,25 @@
               <h3>Weekly Tier Mix <button class="help" data-help="Each stacked bar shows the selected population for that week, split by engagement tier. Percentages use the selected active-worker population as the denominator. Unmatched records are noted below the bar when present.">?</button></h3>
               <p>Highest-use tiers appear at the top of each bar.</p>
             </div>
+          </div>
+          <div class="movement-controls panel-movement-controls tier-mix-controls">
+            <div id="mixVisualScopePanel" class="visual-scope-panel">
+              <label>
+                <span>Show visuals for</span>
+                <select id="mixVisualScopeSelect" class="visual-scope-select" aria-label="Show weekly tier mix for">
+                  <option value="overall">Overall</option>
+                  <option value="line">Practice Line</option>
+                  <option value="general">Practice General</option>
+                </select>
+              </label>
+            </div>
+            <div id="mixDisciplineFilterPanel" class="visual-scope-panel discipline-filter-panel">
+              <label>
+                <span class="visual-filter-label">Discipline</span>
+                <select id="mixDisciplineFilterSelect" class="discipline-filter-select" aria-label="Filter weekly tier mix"></select>
+              </label>
+            </div>
+            <button class="reset-button reset-selections" type="button">Reset</button>
           </div>
           <div id="weeklyTierMix" class="weekly-tier-mix" aria-label="Weekly engagement tier mix"></div>
         </div>
