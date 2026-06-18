@@ -81,15 +81,23 @@ const HR_GENERAL_ORDER = [
   "General Training",
 ];
 
+const REPORT_GROUP_ORDER = {
+  "Practice Line": 0,
+  "Practice General": 1,
+  "Office": 2,
+  "Specialty Groups": 3,
+};
+
 function reportSortKey(report) {
+  const groupOrder = REPORT_GROUP_ORDER[report.group] ?? 9;
   if (report.group !== "Practice General") {
-    return [report.group, 0, report.name];
+    return [String(groupOrder), 0, report.name];
   }
   const hrIndex = HR_GENERAL_ORDER.indexOf(report.name);
   if (hrIndex >= 0) {
-    return [report.group, 1, String(hrIndex).padStart(2, "0")];
+    return [String(groupOrder), 1, String(hrIndex).padStart(2, "0")];
   }
-  return [report.group, 0, report.name];
+  return [String(groupOrder), 0, report.name];
 }
 
 function sortReportsForDisplay(reports) {
@@ -239,9 +247,7 @@ function unmatchedMetricCell(summary) {
 
 function populateControls() {
   const area = $("areaSelect");
-  const specialty = $("specialtySelect");
   area.innerHTML = "";
-  specialty.innerHTML = "";
 
   const leaderboardGroup = document.createElement("optgroup");
   leaderboardGroup.label = "Leaderboards";
@@ -258,7 +264,6 @@ function populateControls() {
   let lastGroup = "";
   const menuReports = sortReportsForDisplay(state.data.reports.filter((report) =>
     !["Firm_Total", "Practice_Line_Total", "Practice_General_Total", "Office_Total", "All_ERGs"].includes(report.id)
-      && report.group !== "Specialty Groups"
   ));
   menuReports.forEach((report) => {
     if (report.group !== lastGroup) {
@@ -274,19 +279,6 @@ function populateControls() {
     area.lastElementChild.appendChild(option);
   });
   area.value = state.reportId;
-
-  const specialtyPlaceholder = document.createElement("option");
-  specialtyPlaceholder.value = "";
-  specialtyPlaceholder.textContent = "Select specialty group...";
-  specialty.appendChild(specialtyPlaceholder);
-  const specialtyReports = state.data.reports.filter((report) => report.group === "Specialty Groups" && report.id !== "All_ERGs");
-  specialtyReports.forEach((report) => {
-    const option = document.createElement("option");
-    option.value = report.id;
-    option.textContent = reportLabel(report);
-    specialty.appendChild(option);
-  });
-  specialty.value = specialtyReports.some((report) => report.id === state.reportId) ? state.reportId : "";
 
   [$("weekSelect"), $("compareSelect")].forEach((select) => {
     select.innerHTML = "";
@@ -629,7 +621,7 @@ function renderLeaderboardDetails(report) {
       item.group === "Specialty Groups" && !["RPO_and_Coverage_Leads", "All_ERGs"].includes(item.id)
     );
     target.innerHTML = renderERGDetailTable(report, ergReports);
-    bindDrilldown(target, "specialtySelect");
+    bindDrilldown(target);
     return;
   }
   if (report.id !== "Firm_Total") {
@@ -831,13 +823,7 @@ function render() {
   const summary = summarize(report, state.weekId, state.compareWeekId);
   const visualSummary = summarize(visualReport, state.weekId, state.compareWeekId, { discipline: visualDiscipline });
   document.title = `${displayName(report)} | AI Adoption Engagement Tier Leaderboard`;
-  if (report.group === "Specialty Groups" && report.id !== "All_ERGs") {
-    $("areaSelect").value = "";
-    $("specialtySelect").value = report.id;
-  } else {
-    $("areaSelect").value = report.id;
-    $("specialtySelect").value = "";
-  }
+  $("areaSelect").value = report.id;
   $("reportTitle").textContent = displayName(report);
   $("reportMeta").textContent = report.id === "Firm_Total"
     ? `Practice line and practice general leaderboard | ${week.label} compared to ${compare.label} | ${populationScopeLabel()}`
@@ -866,14 +852,6 @@ function bindEvents() {
     if (!event.target.value) return;
     state.reportId = event.target.value;
     state.disciplineFilter = "all";
-    $("specialtySelect").value = "";
-    render();
-  });
-  $("specialtySelect").addEventListener("change", (event) => {
-    if (!event.target.value) return;
-    state.reportId = event.target.value;
-    state.disciplineFilter = "all";
-    $("areaSelect").value = "";
     render();
   });
   $("weekSelect").addEventListener("change", (event) => {
