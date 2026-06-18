@@ -15,6 +15,7 @@ const state = {
   movementTo: "all",
   movementDirection: "both",
   coreTierOnly: false,
+  activeEmployeesOnly: false,
   visualScope: "overall",
 };
 
@@ -67,13 +68,31 @@ function reportLabel(report) {
   return report.name;
 }
 
+function populationScopeLabel() {
+  return state.activeEmployeesOnly ? "Active employees only" : "All assigned workers";
+}
+
+function populationScopeSentence() {
+  return state.activeEmployeesOnly
+    ? "Filtered to active employees only."
+    : "Includes the full assigned worker population.";
+}
+
+function isActiveEmployee(person) {
+  const workerStatus = String(person.status || person.workerStatus || person.employeeStatus || "").toLowerCase();
+  const role = String(person.role || "").toLowerCase();
+  const level = String(person.level || "").toLowerCase();
+  if (workerStatus && !["active", "regular active"].includes(workerStatus)) return false;
+  return !/\bintern\b/.test(`${role} ${level}`);
+}
+
 function peopleFor(report) {
   const ids = new Set(report.employeeIds);
-  return state.data.people.filter((person) => ids.has(person.employeeId));
+  return state.data.people.filter((person) => ids.has(person.employeeId) && (!state.activeEmployeesOnly || isActiveEmployee(person)));
 }
 
 function summarize(report, weekId, compareWeekId) {
-  if (report.comparisons) {
+  if (report.comparisons && !state.activeEmployeesOnly) {
     const summary = { ...report.comparisons[`${compareWeekId}__${weekId}`] };
     const compareSummary = report.comparisons[`${compareWeekId}__${compareWeekId}`];
     summary.unmatchedDelta = compareSummary ? summary.unmatched - compareSummary.unmatched : 0;
@@ -84,7 +103,8 @@ function summarize(report, weekId, compareWeekId) {
   const transitions = Object.fromEntries(state.data.tiers.map((from) => [from, Object.fromEntries(state.data.tiers.map((to) => [to, 0]))]));
   let unmatched = 0;
   let compareUnmatched = 0;
-  peopleFor(report).forEach((person) => {
+  const people = peopleFor(report);
+  people.forEach((person) => {
     const current = person.tiers[weekId] || "";
     const prior = person.tiers[compareWeekId] || "";
     if (counts[current] !== undefined) counts[current] += 1;
@@ -94,7 +114,7 @@ function summarize(report, weekId, compareWeekId) {
     if (transitions[prior] && transitions[prior][current] !== undefined) transitions[prior][current] += 1;
   });
   return {
-    active: report.employeeIds.length,
+    active: people.length,
     counts,
     deltas: Object.fromEntries(state.data.tiers.map((tier) => [tier, counts[tier] - compare[tier]])),
     unmatched,
@@ -212,7 +232,7 @@ function renderTable(summary) {
   }
   panel.style.display = "block";
   $("reportTableTitle").innerHTML = `AI adoption readout: ${reportLabel(report)} <button class="help" data-help="Counts show the selected end date. Values in parentheses show the change versus the selected start date. Tiers are ordered from least to most use.">?</button>`;
-  $("reportTableMeta").textContent = `AI Champion lead(s): ${report.lead}. Assigned active-worker population compared with the selected start date.`;
+  $("reportTableMeta").textContent = `AI Champion lead(s): ${report.lead}. ${populationScopeLabel()} compared with the selected start date.`;
   const table = $("tierTable");
   const tierCells = state.data.tiers.map((tier) => {
     return tierMetricCell(summary.counts[tier], summary.deltas[tier]);
@@ -286,7 +306,7 @@ function renderReconciliation(summary, report) {
   const reconciliationTotal = tierDeltaSum + unmatchedDelta;
   $("reconciliationCallout").innerHTML = `
     <span>Reconciliation</span>
-    <p>${reportLabel(report)}: engagement-tier deltas sum to ${fmtDelta(tierDeltaSum)}; unmatched engagement-band delta is ${fmtDelta(unmatchedDelta)}; full-population reconciliation is ${fmtDelta(reconciliationTotal)}.</p>`;
+    <p>${reportLabel(report)} (${populationScopeLabel()}): engagement-tier deltas sum to ${fmtDelta(tierDeltaSum)}; unmatched engagement-band delta is ${fmtDelta(unmatchedDelta)}; selected-population reconciliation is ${fmtDelta(reconciliationTotal)}.</p>`;
 }
 
 function renderDetailTable(title, reports) {
@@ -534,12 +554,12 @@ function renderVisualScopeControls(report, visualReport) {
   const description = $("visualScopeDescription");
   if (report.id !== "Firm_Total") {
     panel.style.display = "none";
-    description.textContent = `Start date to selected end date. Visuals reflect ${reportLabel(report)}.`;
+    description.textContent = `Start date to selected end date. Visuals reflect ${reportLabel(report)}. ${populationScopeSentence()}`;
     return;
   }
   panel.style.display = "block";
   $("visualScopeSelect").value = state.visualScope;
-  description.textContent = `Start date to selected end date. Visuals currently reflect ${reportLabel(visualReport)}.`;
+  description.textContent = `Start date to selected end date. Visuals currently reflect ${reportLabel(visualReport)}. ${populationScopeSentence()}`;
 }
 
 function renderWeeklyTierMix(report) {
@@ -572,7 +592,7 @@ function renderWeeklyTierMix(report) {
         <div class="tier-mix-bar">${segments}${unmatchedSegment}</div>
         <div class="tier-mix-label">
           <strong>${week.label}</strong>
-          <span>${summary.active} active</span>
+          <span>${summary.active} ${state.activeEmployeesOnly ? "active employees" : "active"}</span>
         </div>
       </article>`;
   }).join("");
@@ -595,16 +615,16 @@ function render() {
   }
   $("reportTitle").textContent = displayName(report);
   $("reportMeta").textContent = report.id === "Firm_Total"
-    ? `Practice line and practice general leaderboard | ${week.label} compared to ${compare.label}`
+    ? `Practice line and practice general leaderboard | ${week.label} compared to ${compare.label} | ${populationScopeLabel()}`
     : report.id === "Practice_Line_Total"
-      ? `Practice line leaderboard | ${week.label} compared to ${compare.label}`
+      ? `Practice line leaderboard | ${week.label} compared to ${compare.label} | ${populationScopeLabel()}`
     : report.id === "Practice_General_Total"
-      ? `Practice general leaderboard | ${week.label} compared to ${compare.label}`
+      ? `Practice general leaderboard | ${week.label} compared to ${compare.label} | ${populationScopeLabel()}`
     : report.id === "Office_Total"
-      ? `Office leaderboard | ${week.label} compared to ${compare.label}`
+      ? `Office leaderboard | ${week.label} compared to ${compare.label} | ${populationScopeLabel()}`
     : report.id === "All_ERGs"
-      ? `ERG leaderboard | ${week.label} compared to ${compare.label}`
-    : `${report.group} | AI Champion lead(s): ${report.lead} | ${week.label} compared to ${compare.label}`;
+      ? `ERG leaderboard | ${week.label} compared to ${compare.label} | ${populationScopeLabel()}`
+    : `${report.group} | AI Champion lead(s): ${report.lead} | ${week.label} compared to ${compare.label} | ${populationScopeLabel()}`;
   renderNarrative(summary, report);
   renderReconciliation(summary, report);
   renderTable(summary);
@@ -655,6 +675,10 @@ function bindEvents() {
   });
   $("coreTierOnlyToggle").addEventListener("change", (event) => {
     state.coreTierOnly = event.target.checked;
+    render();
+  });
+  $("activeEmployeesOnlyToggle").addEventListener("change", (event) => {
+    state.activeEmployeesOnly = event.target.checked;
     render();
   });
   $("visualScopeSelect").addEventListener("change", (event) => {
