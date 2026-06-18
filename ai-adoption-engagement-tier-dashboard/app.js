@@ -671,7 +671,7 @@ function bindEvents() {
       event.target.closest(".help-popover")?.remove();
       return;
     }
-    const button = event.target.closest(".help");
+    const button = event.target.closest(".help, .tier-legend-chip");
     if (button) {
       const existing = document.querySelector(".help-popover");
       if (existing) existing.remove();
