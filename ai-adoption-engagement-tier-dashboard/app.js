@@ -432,10 +432,9 @@ function renderNarrative(summary, report) {
 }
 
 function highlightFirstSentence(text) {
-  const safeText = escapeHtml(text);
-  const match = safeText.match(/^([^:]+:)\s*(.*)$/);
-  if (!match) return `<mark class="headline-highlight">${safeText}</mark>`;
-  return `<mark class="headline-highlight">${match[1]}</mark>${match[2] ? ` ${match[2]}` : ""}`;
+  const match = text.match(/^([^:]+:\s*[^:.,]+)([:.,])(.*)$/);
+  if (!match) return `<mark class="headline-highlight">${escapeHtml(text)}</mark>`;
+  return `<mark class="headline-highlight">${escapeHtml(match[1])}</mark>${escapeHtml(match[2])}${escapeHtml(match[3])}`;
 }
 
 function renderReconciliation(summary, report) {
