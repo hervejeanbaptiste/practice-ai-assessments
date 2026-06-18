@@ -676,12 +676,6 @@ function renderSankey(summary) {
   const svg = clearSvg("sankey");
   const tiers = state.data.tiers;
   const tierRank = Object.fromEntries(tiers.map((tier, index) => [tier, index]));
-  const startTotals = summary.priorCounts || Object.fromEntries(
-    tiers.map((tier) => [tier, tiers.reduce((sum, to) => sum + summary.transitions[tier][to], 0)])
-  );
-  const endTotals = summary.counts || Object.fromEntries(
-    tiers.map((tier) => [tier, tiers.reduce((sum, from) => sum + summary.transitions[from][tier], 0)])
-  );
   const highToLow = [...tiers].reverse();
   const startOrder = highToLow;
   const endOrder = highToLow;
@@ -700,6 +694,12 @@ function renderSankey(summary) {
       || (state.movementDirection === "down" && direction < 0);
     if (value && matchesFrom && matchesTo && matchesDirection) flows.push({ from, to, value });
   }));
+  const filteredStartTotals = Object.fromEntries(tiers.map((tier) => [tier, 0]));
+  const filteredEndTotals = Object.fromEntries(tiers.map((tier) => [tier, 0]));
+  flows.forEach((flow) => {
+    filteredStartTotals[flow.from] += flow.value;
+    filteredEndTotals[flow.to] += flow.value;
+  });
   const max = Math.max(1, ...flows.map((flow) => flow.value));
   addText(svg, "Start date", leftX, 36, "svg-label svg-large");
   addText(svg, "End date", rightX, 36, "svg-label svg-large");
@@ -721,15 +721,15 @@ function renderSankey(summary) {
     }
   });
   [
-    { x: leftX, order: startOrder, totals: startTotals, yMap: leftY, side: "start" },
-    { x: rightX, order: endOrder, totals: endTotals, yMap: rightY, side: "end" },
+    { x: leftX, order: startOrder, totals: filteredStartTotals, yMap: leftY, side: "start" },
+    { x: rightX, order: endOrder, totals: filteredEndTotals, yMap: rightY, side: "end" },
   ].forEach(({ x, order, totals, yMap, side }) => {
     order.forEach((tier) => {
       const rect = svgEl("rect", { x, y: yMap[tier] - 22, width: 174, height: 44, rx: 5, fill: tierColors[tier] });
       svg.appendChild(rect);
       addText(svg, `${tier}: ${totals[tier]}`, x + 10, yMap[tier] + 5, "svg-block-label svg-large");
       if (side === "end") {
-        const delta = summary.deltas ? summary.deltas[tier] : endTotals[tier] - startTotals[tier];
+        const delta = filteredEndTotals[tier] - filteredStartTotals[tier];
         const cls = delta > 0 ? "svg-label svg-large svg-delta-up" : delta < 0 ? "svg-label svg-large svg-delta-down" : "svg-label svg-large";
         addText(svg, fmtBlockDelta(delta), x + 184, yMap[tier] + 5, cls);
       }
