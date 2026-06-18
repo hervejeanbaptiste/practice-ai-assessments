@@ -15,6 +15,7 @@ const state = {
   movementTo: "all",
   movementDirection: "both",
   coreTierOnly: false,
+  visualScope: "overall",
 };
 
 const $ = (id) => document.getElementById(id);
@@ -44,6 +45,17 @@ function enforceDateOrder(changed) {
 
 function getReport() {
   return state.data.reports.find((report) => report.id === state.reportId);
+}
+
+function reportById(id) {
+  return state.data.reports.find((report) => report.id === id);
+}
+
+function visualReportFor(report) {
+  if (report.id !== "Firm_Total") return report;
+  if (state.visualScope === "line") return reportById("Practice_Line_Total") || report;
+  if (state.visualScope === "general") return reportById("Practice_General_Total") || report;
+  return report;
 }
 
 function reportLabel(report) {
@@ -517,6 +529,21 @@ function renderSankey(summary) {
   });
 }
 
+function renderVisualScopeControls(report, visualReport) {
+  const panel = $("visualScopePanel");
+  const description = $("visualScopeDescription");
+  if (report.id !== "Firm_Total") {
+    panel.style.display = "none";
+    description.textContent = `Start date to selected end date. Visuals reflect ${reportLabel(report)}.`;
+    return;
+  }
+  panel.style.display = "flex";
+  panel.querySelectorAll("[data-visual-scope]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.visualScope === state.visualScope);
+  });
+  description.textContent = `Start date to selected end date. Visuals currently reflect ${reportLabel(visualReport)}.`;
+}
+
 function renderWeeklyTierMix(report) {
   const target = $("weeklyTierMix");
   const highToLow = [...state.data.tiers].reverse();
@@ -556,9 +583,11 @@ function renderWeeklyTierMix(report) {
 
 function render() {
   const report = getReport();
+  const visualReport = visualReportFor(report);
   const week = state.data.weeks.find((item) => item.id === state.weekId);
   const compare = state.data.weeks.find((item) => item.id === state.compareWeekId);
   const summary = summarize(report, state.weekId, state.compareWeekId);
+  const visualSummary = summarize(visualReport, state.weekId, state.compareWeekId);
   document.title = `${displayName(report)} | AI Adoption Engagement Tier Leaderboard`;
   if (report.group === "Specialty Groups" && report.id !== "All_ERGs") {
     $("areaSelect").value = "";
@@ -583,8 +612,9 @@ function render() {
   renderReconciliation(summary, report);
   renderTable(summary);
   renderLeaderboardDetails(report);
-  renderSankey(summary);
-  renderWeeklyTierMix(report);
+  renderVisualScopeControls(report, visualReport);
+  renderSankey(visualSummary);
+  renderWeeklyTierMix(visualReport);
 }
 
 function bindEvents() {
@@ -628,6 +658,12 @@ function bindEvents() {
   });
   $("coreTierOnlyToggle").addEventListener("change", (event) => {
     state.coreTierOnly = event.target.checked;
+    render();
+  });
+  $("visualScopePanel").addEventListener("click", (event) => {
+    const button = event.target.closest("[data-visual-scope]");
+    if (!button) return;
+    state.visualScope = button.dataset.visualScope;
     render();
   });
   document.addEventListener("click", (event) => {

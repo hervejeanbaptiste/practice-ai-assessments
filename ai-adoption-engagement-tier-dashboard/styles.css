@@ -149,6 +149,59 @@ button {
   border-color: var(--line);
 }
 
+.visual-scope-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.visual-scope-panel > span {
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.segmented-control {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border: 1px solid var(--navy);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.segmented-control button {
+  width: auto;
+  min-height: 32px;
+  margin: 0;
+  padding: 6px 12px;
+  border: 0;
+  border-right: 1px solid var(--navy);
+  border-radius: 0;
+  background: #fff;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.segmented-control button:last-child {
+  border-right: 0;
+}
+
+.segmented-control button.active {
+  background: var(--navy);
+  color: #fff;
+}
+
 .legend-row {
   display: flex;
   flex-wrap: wrap;

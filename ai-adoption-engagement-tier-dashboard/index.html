@@ -79,7 +79,15 @@
         <div class="panel-head">
           <div>
             <h3>Tier Movement Flow <button class="help" data-help="This Sankey shows aggregate movement from each start-date tier to each end-date tier. It does not expose person-level data.">?</button></h3>
-            <p>Start date to selected end date.</p>
+            <p id="visualScopeDescription">Start date to selected end date.</p>
+          </div>
+        </div>
+        <div id="visualScopePanel" class="visual-scope-panel">
+          <span>Show visuals for</span>
+          <div class="segmented-control" role="group" aria-label="Visual population">
+            <button type="button" data-visual-scope="overall">Overall</button>
+            <button type="button" data-visual-scope="line">Practice Line</button>
+            <button type="button" data-visual-scope="general">Practice General</button>
           </div>
         </div>
         <div class="movement-controls">
@@ -133,6 +141,6 @@
       </section>
     </main>
 
-    <script src="./app.js?v=20260617-tier-definitions-v1"></script>
+    <script src="./app.js?v=20260617-firm-visual-scope-v1"></script>
   </body>
 </html>
