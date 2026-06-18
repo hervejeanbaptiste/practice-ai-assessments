@@ -573,7 +573,6 @@ function renderWeeklyTierMix(report) {
         <div class="tier-mix-label">
           <strong>${week.label}</strong>
           <span>${summary.active} active</span>
-          ${unmatched ? `<em>${unmatched} unmatched (${unmatchedPct.toFixed(1)}%)</em>` : ""}
         </div>
       </article>`;
   }).join("");
