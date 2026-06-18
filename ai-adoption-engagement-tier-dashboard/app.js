@@ -398,7 +398,17 @@ function renderNarrative(summary, report) {
     ["Lower Movement", `${label}: ${n.lower} Lower-tier net change is ${fmtDelta(lowDelta)}.`],
     ["Upper Movement", `${label}: ${n.upper} Frequent/Habitual net change is ${fmtDelta(highDelta)}.`],
     ["So What / Next Steps", `${label}: ${n.action} Moderate net change is ${fmtDelta(moderateDelta)}.`],
-  ].map(([label, text]) => `<div class="narrative-card"><span>${label}</span><p>${text}</p></div>`).join("");
+  ].map(([label, text], index) => {
+    const copy = index < 3 ? highlightFirstSentence(text) : escapeHtml(text);
+    return `<div class="narrative-card"><span>${label}</span><p>${copy}</p></div>`;
+  }).join("");
+}
+
+function highlightFirstSentence(text) {
+  const safeText = escapeHtml(text);
+  const match = safeText.match(/^(.+?\\.)\\s*(.*)$/);
+  if (!match) return `<mark class="headline-highlight">${safeText}</mark>`;
+  return `<mark class="headline-highlight">${match[1]}</mark>${match[2] ? ` ${match[2]}` : ""}`;
 }
 
 function renderReconciliation(summary, report) {
