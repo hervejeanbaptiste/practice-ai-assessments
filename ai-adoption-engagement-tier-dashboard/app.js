@@ -133,6 +133,7 @@ function summarizePeople(people, weekId, compareWeekId) {
   return {
     active: people.length,
     counts,
+    priorCounts: compare,
     deltas: Object.fromEntries(state.data.tiers.map((tier) => [tier, counts[tier] - compare[tier]])),
     unmatched,
     unmatchedDelta: unmatched - compareUnmatched,
@@ -141,12 +142,6 @@ function summarizePeople(people, weekId, compareWeekId) {
 }
 
 function summarize(report, weekId, compareWeekId, options = {}) {
-  if (report.comparisons && !state.activeEmployeesOnly && (!options.discipline || options.discipline === "all")) {
-    const summary = { ...report.comparisons[`${compareWeekId}__${weekId}`] };
-    const compareSummary = report.comparisons[`${compareWeekId}__${compareWeekId}`];
-    summary.unmatchedDelta = compareSummary ? summary.unmatched - compareSummary.unmatched : 0;
-    return summary;
-  }
   return summarizePeople(peopleFor(report, options), weekId, compareWeekId);
 }
 
@@ -156,7 +151,9 @@ function disciplinesFor(report) {
 }
 
 function hasDisciplineBreakout(report) {
-  return report.group === "Practice Line" && disciplinesFor(report).length > 1;
+  return report.group === "Practice Line"
+    && !["Practice_Line_Total", "Firm_Total"].includes(report.id)
+    && disciplinesFor(report).length > 1;
 }
 
 function ensureDisciplineFilter(report) {
@@ -457,6 +454,43 @@ function renderDetailTable(title, reports) {
     </div>`;
 }
 
+function renderERGDetailTable(allErgsReport, ergReports) {
+  const allSummary = summarize(allErgsReport, state.weekId, state.compareWeekId);
+  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched</th>`;
+  const allExtraCells = state.coreTierOnly ? "" : `<td class="metric">${allSummary.active}</td>${unmatchedMetricCell(allSummary)}`;
+  return `
+    <div class="detail-block">
+      <h4>ERG Detail</h4>
+      <div class="tier-table-wrap">
+        <table class="detail-table">
+          <thead>
+            <tr>
+              <th>Report</th>
+              ${extraHeaders}
+              ${state.data.tiers.map((tier) => `<th>${tier}</th>`).join("")}
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="firm-row">
+              <td>All ERGs distinct members</td>
+              ${allExtraCells}
+              ${state.data.tiers.map((tier) => tierMetricCell(allSummary.counts[tier], allSummary.deltas[tier])).join("")}
+            </tr>
+            ${ergReports.map((report) => {
+              const summary = summarize(report, state.weekId, state.compareWeekId);
+              return `
+                <tr>
+                  <td><button class="link-button" type="button" data-report-id="${report.id}">${report.name}</button></td>
+                  ${state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td>${unmatchedMetricCell(summary)}`}
+                  ${state.data.tiers.map((tier) => tierMetricCell(summary.counts[tier], summary.deltas[tier])).join("")}
+                </tr>`;
+            }).join("")}
+          </tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
 function renderFirmTotalRow(report) {
   const summary = summarize(report, state.weekId, state.compareWeekId);
   const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched</th>`;
@@ -529,11 +563,11 @@ function renderLeaderboardDetails(report) {
   if (report.id === "All_ERGs") {
     panel.style.display = "block";
     title.innerHTML = `ERG Leaderboard <button class="help" data-help="Click an ERG name to filter the report to that ERG. One person can belong to more than one ERG, so ERG rows are not mutually exclusive.">?</button>`;
-    description.textContent = "All ERG reports with subtotal. ERG rows are not mutually exclusive.";
+    description.textContent = "All ERGs distinct-member row first, followed by individual ERG membership rows. ERG rows are not mutually exclusive.";
     const ergReports = state.data.reports.filter((item) =>
       item.group === "Specialty Groups" && !["RPO_and_Coverage_Leads", "All_ERGs"].includes(item.id)
     );
-    target.innerHTML = renderDetailTable("ERG Detail", ergReports);
+    target.innerHTML = renderERGDetailTable(report, ergReports);
     bindDrilldown(target, "specialtySelect");
     return;
   }
@@ -576,10 +610,10 @@ function renderSankey(summary) {
   const svg = clearSvg("sankey");
   const tiers = state.data.tiers;
   const tierRank = Object.fromEntries(tiers.map((tier, index) => [tier, index]));
-  const startTotals = Object.fromEntries(
+  const startTotals = summary.priorCounts || Object.fromEntries(
     tiers.map((tier) => [tier, tiers.reduce((sum, to) => sum + summary.transitions[tier][to], 0)])
   );
-  const endTotals = Object.fromEntries(
+  const endTotals = summary.counts || Object.fromEntries(
     tiers.map((tier) => [tier, tiers.reduce((sum, from) => sum + summary.transitions[from][tier], 0)])
   );
   const highToLow = [...tiers].reverse();
@@ -629,7 +663,7 @@ function renderSankey(summary) {
       svg.appendChild(rect);
       addText(svg, `${tier}: ${totals[tier]}`, x + 10, yMap[tier] + 5, "svg-block-label svg-large");
       if (side === "end") {
-        const delta = endTotals[tier] - startTotals[tier];
+        const delta = summary.deltas ? summary.deltas[tier] : endTotals[tier] - startTotals[tier];
         const cls = delta > 0 ? "svg-label svg-large svg-delta-up" : delta < 0 ? "svg-label svg-large svg-delta-down" : "svg-label svg-large";
         addText(svg, fmtBlockDelta(delta), x + 184, yMap[tier] + 5, cls);
       }
@@ -655,17 +689,21 @@ function renderVisualScopeControls(report, visualReport) {
 function renderDisciplineFilterControls(report) {
   const panel = $("disciplineFilterPanel");
   const select = $("disciplineFilterSelect");
-  if (!hasDisciplineBreakout(report)) {
+  const disciplines = hasDisciplineBreakout(report) ? disciplinesFor(report) : [];
+  if (!disciplines.length) {
     panel.style.display = "none";
     select.innerHTML = "";
+    state.disciplineFilter = "all";
     return;
   }
   panel.style.display = "block";
-  const disciplines = disciplinesFor(report);
   select.innerHTML = [
     `<option value="all">All disciplines</option>`,
     ...disciplines.map((discipline) => `<option value="${escapeHtml(discipline)}">${escapeHtml(discipline)}</option>`),
   ].join("");
+  if (state.disciplineFilter !== "all" && !disciplines.includes(state.disciplineFilter)) {
+    state.disciplineFilter = "all";
+  }
   select.value = state.disciplineFilter;
 }
 
@@ -750,12 +788,14 @@ function bindEvents() {
   $("areaSelect").addEventListener("change", (event) => {
     if (!event.target.value) return;
     state.reportId = event.target.value;
+    state.disciplineFilter = "all";
     $("specialtySelect").value = "";
     render();
   });
   $("specialtySelect").addEventListener("change", (event) => {
     if (!event.target.value) return;
     state.reportId = event.target.value;
+    state.disciplineFilter = "all";
     $("areaSelect").value = "";
     render();
   });
@@ -795,6 +835,7 @@ function bindEvents() {
   });
   $("visualScopeSelect").addEventListener("change", (event) => {
     state.visualScope = event.target.value;
+    state.disciplineFilter = "all";
     render();
   });
   $("disciplineFilterSelect").addEventListener("change", (event) => {
