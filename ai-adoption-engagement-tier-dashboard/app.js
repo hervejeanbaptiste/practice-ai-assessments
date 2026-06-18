@@ -406,7 +406,7 @@ function renderNarrative(summary, report) {
 
 function highlightFirstSentence(text) {
   const safeText = escapeHtml(text);
-  const match = safeText.match(/^(.+?\\.)\\s*(.*)$/);
+  const match = safeText.match(/^([^:]+:)\s*(.*)$/);
   if (!match) return `<mark class="headline-highlight">${safeText}</mark>`;
   return `<mark class="headline-highlight">${match[1]}</mark>${match[2] ? ` ${match[2]}` : ""}`;
 }
