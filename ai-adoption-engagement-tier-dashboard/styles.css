@@ -147,13 +147,22 @@ button {
 
 .movement-controls {
   display: grid;
-  grid-template-columns: minmax(300px, 1.35fr) repeat(3, minmax(150px, 1fr));
+  grid-template-columns: minmax(240px, 1.25fr) repeat(4, minmax(145px, 1fr));
   gap: 12px;
-  margin-bottom: 12px;
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: #f8fafc;
+}
+
+.visual-controls-panel {
+  padding: 0;
+  box-shadow: none;
+}
+
+.visual-controls-panel .movement-controls {
+  border: 0;
+  margin: 0;
 }
 
 .movement-controls label span {

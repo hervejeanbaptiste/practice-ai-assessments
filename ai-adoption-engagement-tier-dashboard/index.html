@@ -69,6 +69,43 @@
         </div>
       </section>
 
+      <section class="panel visual-controls-panel">
+        <div class="movement-controls">
+          <div id="visualScopePanel" class="visual-scope-panel">
+            <label>
+              <span>Show visuals for</span>
+              <select id="visualScopeSelect" aria-label="Show visuals for">
+                <option value="overall">Overall</option>
+                <option value="line">Practice Line</option>
+                <option value="general">Practice General</option>
+              </select>
+            </label>
+          </div>
+          <div id="disciplineFilterPanel" class="visual-scope-panel">
+            <label>
+              <span id="visualFilterLabel">Discipline</span>
+              <select id="disciplineFilterSelect" aria-label="Filter visuals"></select>
+            </label>
+          </div>
+          <label>
+            <span>From Tier <button class="help inline-help" data-help="Filters the left side of the Sankey to people who started in a specific engagement tier. Select All to include every starting tier.">?</button></span>
+            <select id="fromTierSelect"></select>
+          </label>
+          <label>
+            <span>To Tier <button class="help inline-help" data-help="Filters the right side of the Sankey to people who ended in a specific engagement tier. Select All to include every ending tier.">?</button></span>
+            <select id="toTierSelect"></select>
+          </label>
+          <label>
+            <span>Direction <button class="help inline-help" data-help="Both shows all tier changes, Up only shows movement into higher-use tiers, and Down only shows movement into lower-use tiers. People who stayed in the same tier are included only in Both.">?</button></span>
+            <select id="directionSelect">
+              <option value="both">Both</option>
+              <option value="up">Up only</option>
+              <option value="down">Down only</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
       <section class="panel" id="reportTablePanel">
         <div class="panel-head">
           <div>
@@ -114,40 +151,6 @@
             <h3>Tier Movement Flow <button class="help" data-help="This Sankey shows aggregate movement from each start-date tier to each end-date tier. It does not expose person-level data.">?</button></h3>
             <p id="visualScopeDescription">Start date to selected end date.</p>
           </div>
-        </div>
-        <div class="movement-controls">
-          <div id="visualScopePanel" class="visual-scope-panel">
-            <label>
-              <span>Show visuals for</span>
-              <select id="visualScopeSelect" aria-label="Show visuals for">
-                <option value="overall">Overall</option>
-                <option value="line">Practice Line</option>
-                <option value="general">Practice General</option>
-              </select>
-            </label>
-          </div>
-          <div id="disciplineFilterPanel" class="visual-scope-panel">
-            <label>
-              <span id="visualFilterLabel">Discipline</span>
-              <select id="disciplineFilterSelect" aria-label="Filter visuals"></select>
-            </label>
-          </div>
-          <label>
-            <span>From Tier <button class="help inline-help" data-help="Filters the left side of the Sankey to people who started in a specific engagement tier. Select All to include every starting tier.">?</button></span>
-            <select id="fromTierSelect"></select>
-          </label>
-          <label>
-            <span>To Tier <button class="help inline-help" data-help="Filters the right side of the Sankey to people who ended in a specific engagement tier. Select All to include every ending tier.">?</button></span>
-            <select id="toTierSelect"></select>
-          </label>
-          <label>
-            <span>Direction <button class="help inline-help" data-help="Both shows all tier changes, Up only shows movement into higher-use tiers, and Down only shows movement into lower-use tiers. People who stayed in the same tier are included only in Both.">?</button></span>
-            <select id="directionSelect">
-              <option value="both">Both</option>
-              <option value="up">Up only</option>
-              <option value="down">Down only</option>
-            </select>
-          </label>
         </div>
         <svg id="sankey" viewBox="0 0 1040 500" role="img" aria-label="Engagement tier Sankey"></svg>
         <div class="trend-panel">
