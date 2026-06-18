@@ -11573,9 +11573,9 @@
       ]
     },
     {
-      "id": "General_PSE_Tanya",
+      "id": "General_PSE",
       "group": "Practice General",
-      "name": "General PSE / Tanya Moore Org",
+      "name": "General PSE",
       "lead": "Carley Leist; Jenna Woodrum",
       "employeeIds": [
         "100815",
@@ -11637,7 +11637,7 @@
         "101365",
         "101606"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\07_General_PSE_Tanya_Carley_Lei\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\07_General_PSE_Carley_Leist_Jen\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
