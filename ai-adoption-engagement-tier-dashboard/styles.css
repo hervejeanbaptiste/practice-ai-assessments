@@ -240,6 +240,25 @@ button {
   background: #fce5cd;
 }
 
+.legend-grey {
+  background: #eeeeee;
+}
+
+.legend-hatched {
+  background: repeating-linear-gradient(
+    45deg,
+    #eef2f6,
+    #eef2f6 5px,
+    #d7dee8 5px,
+    #d7dee8 10px
+  );
+}
+
+.delta-legend,
+.weekly-mix-legend {
+  margin-bottom: 10px;
+}
+
 .tier-definitions {
   margin: 0 0 10px;
   border: 1px solid var(--line);
