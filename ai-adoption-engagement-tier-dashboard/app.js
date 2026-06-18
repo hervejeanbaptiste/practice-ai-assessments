@@ -681,7 +681,7 @@ function bindEvents() {
   });
 }
 
-fetch("./data/leaderboard-data.json")
+fetch("./data/leaderboard-data.json?v=20260618-techex-consolidated-v1")
   .then((response) => response.json())
   .then((data) => {
     state.data = data;
