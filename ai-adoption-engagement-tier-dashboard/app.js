@@ -13,7 +13,7 @@ const state = {
   compareWeekId: null,
   movementFrom: "all",
   movementTo: "all",
-  movementDirection: "both",
+  movementDirection: "all",
   coreTierOnly: false,
   activeEmployeesOnly: false,
   visualScope: "overall",
@@ -43,6 +43,20 @@ function enforceDateOrder(changed) {
   if (fromIdx < 0 || toIdx < 0 || fromIdx <= toIdx) return;
   if (changed === "from") state.weekId = state.compareWeekId;
   else state.compareWeekId = state.weekId;
+}
+
+function resetSelections() {
+  const latestIndex = state.data.weeks.length - 1;
+  state.reportId = "Firm_Total";
+  state.weekId = state.data.weeks[latestIndex]?.id || null;
+  state.compareWeekId = state.data.weeks[Math.max(0, latestIndex - 1)]?.id || state.weekId;
+  state.movementFrom = "all";
+  state.movementTo = "all";
+  state.movementDirection = "all";
+  state.coreTierOnly = false;
+  state.activeEmployeesOnly = false;
+  state.visualScope = "overall";
+  state.disciplineFilter = "all";
 }
 
 function getReport() {
@@ -298,7 +312,7 @@ function populateControls() {
     all.value = "all";
     all.textContent = "All";
     select.appendChild(all);
-    state.data.tiers.forEach((tier) => {
+    [...state.data.tiers].reverse().forEach((tier) => {
       const option = document.createElement("option");
       option.value = tier;
       option.textContent = tier;
@@ -681,7 +695,7 @@ function renderSankey(summary) {
     const matchesFrom = state.movementFrom === "all" || state.movementFrom === from;
     const matchesTo = state.movementTo === "all" || state.movementTo === to;
     const direction = tierRank[to] - tierRank[from];
-    const matchesDirection = state.movementDirection === "both"
+    const matchesDirection = state.movementDirection === "all"
       || (state.movementDirection === "up" && direction > 0)
       || (state.movementDirection === "down" && direction < 0);
     if (value && matchesFrom && matchesTo && matchesDirection) flows.push({ from, to, value });
@@ -877,6 +891,10 @@ function bindEvents() {
   });
   $("directionSelect").addEventListener("change", (event) => {
     state.movementDirection = event.target.value;
+    render();
+  });
+  $("resetSelections").addEventListener("click", () => {
+    resetSelections();
     render();
   });
   $("coreTierOnlyToggle").addEventListener("change", (event) => {

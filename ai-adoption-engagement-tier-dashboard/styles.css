@@ -147,7 +147,7 @@ button {
 
 .movement-controls {
   display: grid;
-  grid-template-columns: minmax(240px, 1.25fr) repeat(4, minmax(145px, 1fr));
+  grid-template-columns: minmax(240px, 1.25fr) repeat(4, minmax(130px, 1fr)) minmax(92px, 0.55fr);
   gap: 12px;
   padding: 12px;
   border: 1px solid var(--line);
@@ -182,6 +182,20 @@ button {
 
 .movement-controls select {
   border-color: var(--line);
+}
+
+.movement-controls .reset-button {
+  align-self: end;
+  min-height: 46px;
+  margin: 0;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.movement-controls .reset-button:hover {
+  background: #eef3f9;
 }
 
 .visual-scope-panel {
