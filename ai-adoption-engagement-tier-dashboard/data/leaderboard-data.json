@@ -10592,6 +10592,7 @@
       "employeeIds": [
         "901279",
         "800001",
+        "901063",
         "101497",
         "902812",
         "902605",
@@ -10605,17 +10606,17 @@
       "series": [
         {
           "weekId": "2026-06-01",
-          "active": 10,
+          "active": 11,
           "counts": {
             "Non-user": 2,
-            "Infrequent": 0,
+            "Infrequent": 1,
             "Moderate": 3,
             "Frequent": 4,
             "Habitual": 1
           },
           "deltas": {
             "Non-user": 2,
-            "Infrequent": 0,
+            "Infrequent": 1,
             "Moderate": 3,
             "Frequent": 4,
             "Habitual": 1
@@ -10661,10 +10662,10 @@
         },
         {
           "weekId": "2026-06-08",
-          "active": 10,
+          "active": 11,
           "counts": {
             "Non-user": 1,
-            "Infrequent": 1,
+            "Infrequent": 2,
             "Moderate": 3,
             "Frequent": 4,
             "Habitual": 1
@@ -10687,7 +10688,7 @@
             },
             "Infrequent": {
               "Non-user": 0,
-              "Infrequent": 0,
+              "Infrequent": 1,
               "Moderate": 0,
               "Frequent": 0,
               "Habitual": 0
@@ -10717,17 +10718,17 @@
         },
         {
           "weekId": "2026-06-15",
-          "active": 10,
+          "active": 11,
           "counts": {
-            "Non-user": 1,
+            "Non-user": 2,
             "Infrequent": 1,
             "Moderate": 0,
             "Frequent": 7,
             "Habitual": 1
           },
           "deltas": {
-            "Non-user": 0,
-            "Infrequent": 0,
+            "Non-user": 1,
+            "Infrequent": -1,
             "Moderate": -3,
             "Frequent": 3,
             "Habitual": 0
@@ -10742,7 +10743,7 @@
               "Habitual": 0
             },
             "Infrequent": {
-              "Non-user": 0,
+              "Non-user": 1,
               "Infrequent": 1,
               "Moderate": 0,
               "Frequent": 0,
@@ -10768,186 +10769,6 @@
               "Moderate": 0,
               "Frequent": 0,
               "Habitual": 1
-            }
-          }
-        }
-      ]
-    },
-    {
-      "id": "General_Consulting",
-      "group": "Practice General",
-      "name": "General Consulting Ops - Megan Conway",
-      "lead": "Josette Yaplito; Justin White",
-      "employeeIds": [
-        "901063"
-      ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\03_General_Consulting_Josette_Y\\report.xlsx",
-      "series": [
-        {
-          "weekId": "2026-06-01",
-          "active": 1,
-          "counts": {
-            "Non-user": 0,
-            "Infrequent": 1,
-            "Moderate": 0,
-            "Frequent": 0,
-            "Habitual": 0
-          },
-          "deltas": {
-            "Non-user": 0,
-            "Infrequent": 1,
-            "Moderate": 0,
-            "Frequent": 0,
-            "Habitual": 0
-          },
-          "unmatched": 0,
-          "transitions": {
-            "Non-user": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Infrequent": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Moderate": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Frequent": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Habitual": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            }
-          }
-        },
-        {
-          "weekId": "2026-06-08",
-          "active": 1,
-          "counts": {
-            "Non-user": 0,
-            "Infrequent": 1,
-            "Moderate": 0,
-            "Frequent": 0,
-            "Habitual": 0
-          },
-          "deltas": {
-            "Non-user": 0,
-            "Infrequent": 0,
-            "Moderate": 0,
-            "Frequent": 0,
-            "Habitual": 0
-          },
-          "unmatched": 0,
-          "transitions": {
-            "Non-user": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Infrequent": {
-              "Non-user": 0,
-              "Infrequent": 1,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Moderate": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Frequent": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Habitual": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            }
-          }
-        },
-        {
-          "weekId": "2026-06-15",
-          "active": 1,
-          "counts": {
-            "Non-user": 1,
-            "Infrequent": 0,
-            "Moderate": 0,
-            "Frequent": 0,
-            "Habitual": 0
-          },
-          "deltas": {
-            "Non-user": 1,
-            "Infrequent": -1,
-            "Moderate": 0,
-            "Frequent": 0,
-            "Habitual": 0
-          },
-          "unmatched": 0,
-          "transitions": {
-            "Non-user": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Infrequent": {
-              "Non-user": 1,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Moderate": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Frequent": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
-            },
-            "Habitual": {
-              "Non-user": 0,
-              "Infrequent": 0,
-              "Moderate": 0,
-              "Frequent": 0,
-              "Habitual": 0
             }
           }
         }
@@ -10995,7 +10816,7 @@
         "102120",
         "101249"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\04_General_Finance_Jenn_Foley\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\03_General_Finance_Jenn_Foley\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -11180,7 +11001,7 @@
         "903533",
         "102631"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\05_General_Firmwide_C_Audrey_Pi\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\04_General_Firmwide_C_Audrey_Pi\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -11369,7 +11190,7 @@
         "101286",
         "101239"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\06_General_Legal_Aaron_Midler_K\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\05_General_Legal_Aaron_Midler_K\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -11579,7 +11400,7 @@
         "903924",
         "904566"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\07_General_Marketing_Jesse_Sarg\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\06_General_Marketing_Jesse_Sarg\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -11816,7 +11637,7 @@
         "101365",
         "101606"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\08_General_PSE_Tanya_Carley_Lei\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\07_General_PSE_Tanya_Carley_Lei\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -12000,7 +11821,7 @@
         "101313",
         "101642"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\09_General_Sales_Jessica_Pratt\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\08_General_Sales_Jessica_Pratt\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -12280,7 +12101,7 @@
         "905007",
         "100180"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\10_General_Services_Kevin_Roone\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\09_General_Services_Kevin_Roone\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -12482,7 +12303,7 @@
         "902362",
         "904176"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\11_General_Talent_Acq_Stephanie\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\10_General_Talent_Acq_Stephanie\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -12684,7 +12505,7 @@
         "101347",
         "902993"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\12_General_Talent_Man_Caroline_\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\11_General_Talent_Man_Caroline_\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -12866,7 +12687,7 @@
         "902924",
         "904050"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\13_General_Total_Rewa_Stacie_Am\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\12_General_Total_Rewa_Stacie_Am\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
@@ -13053,7 +12874,7 @@
         "101375",
         "903044"
       ],
-      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\14_General_Training_Jennifer_Ma\\report.xlsx",
+      "sourceWorkbook": "C:\\Users\\hjeanbaptiste\\Documents\\Codex\\2026-06-03\\files-mentioned-by-the-user-pasted\\outputs\\ai_adoption_report_automation\\audience_delivery_current_techex_consolidated\\03_general\\13_General_Training_Jennifer_Ma\\report.xlsx",
       "series": [
         {
           "weekId": "2026-06-01",
