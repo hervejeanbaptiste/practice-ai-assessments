@@ -54,6 +54,9 @@ function reportById(id) {
 }
 
 function visualReportFor(report) {
+  if (report.id === "All_ERGs" && state.disciplineFilter !== "all") {
+    return reportById(state.disciplineFilter) || report;
+  }
   if (report.id !== "Firm_Total") return report;
   if (state.visualScope === "line") return reportById("Practice_Line_Total") || report;
   if (state.visualScope === "general") return reportById("Practice_General_Total") || report;
@@ -62,6 +65,12 @@ function visualReportFor(report) {
 
 function activeVisualDiscipline(report) {
   return hasDisciplineBreakout(report) ? state.disciplineFilter : "all";
+}
+
+function ergFilterReports() {
+  return state.data.reports
+    .filter((item) => item.group === "Specialty Groups" && !["RPO_and_Coverage_Leads", "All_ERGs"].includes(item.id))
+    .sort((a, b) => reportLabel(a).localeCompare(reportLabel(b)));
 }
 
 function reportLabel(report) {
@@ -156,7 +165,14 @@ function hasDisciplineBreakout(report) {
     && disciplinesFor(report).length > 1;
 }
 
-function ensureDisciplineFilter(report) {
+function ensureVisualFilter(report) {
+  if (report.id === "All_ERGs") {
+    const validErgIds = new Set(ergFilterReports().map((item) => item.id));
+    if (state.disciplineFilter !== "all" && !validErgIds.has(state.disciplineFilter)) {
+      state.disciplineFilter = "all";
+    }
+    return;
+  }
   if (!hasDisciplineBreakout(report)) {
     state.disciplineFilter = "all";
     return;
@@ -678,7 +694,7 @@ function renderVisualScopeControls(report, visualReport) {
   const disciplineText = discipline === "all" ? "" : ` Discipline: ${discipline}.`;
   if (report.id !== "Firm_Total") {
     panel.style.display = "none";
-    description.textContent = `Start date to selected end date. Visuals reflect ${reportLabel(report)}.${disciplineText} ${populationScopeSentence()}`;
+    description.textContent = `Start date to selected end date. Visuals reflect ${reportLabel(visualReport)}.${disciplineText} ${populationScopeSentence()}`;
     return;
   }
   panel.style.display = "block";
@@ -689,6 +705,22 @@ function renderVisualScopeControls(report, visualReport) {
 function renderDisciplineFilterControls(report) {
   const panel = $("disciplineFilterPanel");
   const select = $("disciplineFilterSelect");
+  const label = $("visualFilterLabel");
+  if (report.id === "All_ERGs") {
+    const ergs = ergFilterReports();
+    panel.style.display = "block";
+    label.textContent = "ERG";
+    select.innerHTML = [
+      `<option value="all">All</option>`,
+      ...ergs.map((erg) => `<option value="${escapeHtml(erg.id)}">${escapeHtml(reportLabel(erg))}</option>`),
+    ].join("");
+    const validErgIds = new Set(ergs.map((erg) => erg.id));
+    if (state.disciplineFilter !== "all" && !validErgIds.has(state.disciplineFilter)) {
+      state.disciplineFilter = "all";
+    }
+    select.value = state.disciplineFilter;
+    return;
+  }
   const disciplines = hasDisciplineBreakout(report) ? disciplinesFor(report) : [];
   if (!disciplines.length) {
     panel.style.display = "none";
@@ -697,6 +729,7 @@ function renderDisciplineFilterControls(report) {
     return;
   }
   panel.style.display = "block";
+  label.textContent = "Discipline";
   select.innerHTML = [
     `<option value="all">All disciplines</option>`,
     ...disciplines.map((discipline) => `<option value="${escapeHtml(discipline)}">${escapeHtml(discipline)}</option>`),
@@ -745,9 +778,8 @@ function renderWeeklyTierMix(report, options = {}) {
 
 function render() {
   const report = getReport();
-  ensureDisciplineFilter(report);
+  ensureVisualFilter(report);
   const visualReport = visualReportFor(report);
-  ensureDisciplineFilter(visualReport);
   const visualDiscipline = activeVisualDiscipline(visualReport);
   const week = state.data.weeks.find((item) => item.id === state.weekId);
   const compare = state.data.weeks.find((item) => item.id === state.compareWeekId);
@@ -778,7 +810,7 @@ function render() {
   renderTable(summary);
   renderDisciplineDetails(report);
   renderLeaderboardDetails(report);
-  renderDisciplineFilterControls(visualReport);
+  renderDisciplineFilterControls(report);
   renderVisualScopeControls(report, visualReport);
   renderSankey(visualSummary);
   renderWeeklyTierMix(visualReport, { discipline: visualDiscipline });
