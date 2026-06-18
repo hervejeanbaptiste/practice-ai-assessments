@@ -125,6 +125,27 @@ button {
   color: #e8eef6;
 }
 
+.legend-toggle-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 27px;
+  margin-left: auto;
+  padding: 4px 8px;
+  border-left: 1px solid var(--line);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.legend-toggle-field input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--orange);
+  flex: 0 0 auto;
+}
+
 .movement-controls {
   display: grid;
   grid-template-columns: minmax(300px, 1.35fr) repeat(3, minmax(150px, 1fr));

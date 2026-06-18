@@ -32,11 +32,6 @@
         </label>
       </div>
 
-      <label class="toggle-field">
-        <input id="coreTierOnlyToggle" type="checkbox" />
-        <span>Show core tier columns only</span>
-      </label>
-
       <p class="note">Select a report area and compare any available Monday snapshot against another Monday snapshot.</p>
     </aside>
 
@@ -60,6 +55,10 @@
         <button type="button" class="tier-legend-chip" style="--chip-color:#6aa84f" data-help="Frequent: used an AI tool on 13-16 days with more than 3 interactions per active day, or 17+ days with 3-12 interactions per active day.">Frequent <span>?</span></button>
         <button type="button" class="tier-legend-chip" style="--chip-color:#073763" data-help="Habitual: used an AI tool on 17+ days and averaged 12+ interactions per active day.">Habitual <span>?</span></button>
         <button type="button" class="tier-legend-chip unmatched-chip" data-help="Unmatched: people in the selected population without mapped engagement-tier data for the selected week. Unmatched records are included in reconciliation so total population changes remain explainable.">Unmatched <span>?</span></button>
+        <label class="legend-toggle-field">
+          <input id="coreTierOnlyToggle" type="checkbox" />
+          <span>Show core tier columns only</span>
+        </label>
       </section>
 
       <section class="panel" id="reportTablePanel">
@@ -139,6 +138,6 @@
       </section>
     </main>
 
-    <script src="./app.js?v=20260618-remove-sankey-legend-v1"></script>
+    <script src="./app.js?v=20260618-core-toggle-legend-v1"></script>
   </body>
 </html>
