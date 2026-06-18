@@ -49,18 +49,20 @@
 
       <section class="tier-legend-panel" aria-label="Clickable engagement tier legend">
         <span>Tier Legend</span>
-        <div class="main-tier-chip-group" aria-label="Engagement tiers">
-          <button type="button" class="tier-legend-chip" style="--chip-color:#9e9e9e" data-help="Non-user: no logged AI tool activity in the prior 28 days. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Non-user <span>?</span></button>
-          <button type="button" class="tier-legend-chip" style="--chip-color:#c9daf8" data-help="Infrequent: used an AI tool on 1-4 days in the prior 28 days. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Infrequent <span>?</span></button>
-          <button type="button" class="tier-legend-chip" style="--chip-color:#f5a623" data-help="Moderate: used an AI tool on 4-12 days, or used it on 13+ days but averaged fewer than 3 interactions per active day. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Moderate <span>?</span></button>
-          <button type="button" class="tier-legend-chip" style="--chip-color:#6aa84f" data-help="Frequent: used an AI tool on 13-16 days with more than 3 interactions per active day, or 17+ days with 3-12 interactions per active day. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Frequent <span>?</span></button>
-          <button type="button" class="tier-legend-chip" style="--chip-color:#073763" data-help="Habitual: used an AI tool on 17+ days and averaged 12+ interactions per active day. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Habitual <span>?</span></button>
+        <div class="tier-legend-controls">
+          <button type="button" class="tier-legend-chip unmatched-chip" data-help="Unmatched: people in the selected population without mapped engagement-tier data for the selected week. Unmatched records are included in reconciliation so total population changes remain explainable.">Unmatched <span>?</span></button>
+          <div class="main-tier-chip-group" aria-label="Engagement tiers">
+            <button type="button" class="tier-legend-chip" style="--chip-color:#9e9e9e" data-help="Non-user: no logged AI tool activity in the prior 28 days. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Non-user <span>?</span></button>
+            <button type="button" class="tier-legend-chip" style="--chip-color:#c9daf8" data-help="Infrequent: used an AI tool on 1-4 days in the prior 28 days. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Infrequent <span>?</span></button>
+            <button type="button" class="tier-legend-chip" style="--chip-color:#f5a623" data-help="Moderate: used an AI tool on 4-12 days, or used it on 13+ days but averaged fewer than 3 interactions per active day. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Moderate <span>?</span></button>
+            <button type="button" class="tier-legend-chip" style="--chip-color:#6aa84f" data-help="Frequent: used an AI tool on 13-16 days with more than 3 interactions per active day, or 17+ days with 3-12 interactions per active day. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Frequent <span>?</span></button>
+            <button type="button" class="tier-legend-chip" style="--chip-color:#073763" data-help="Habitual: used an AI tool on 17+ days and averaged 12+ interactions per active day. Tracked tools: Enterprise ChatGPT, ChatGPT Codex, and Nigel.">Habitual <span>?</span></button>
+          </div>
+          <label class="legend-toggle-field">
+            <input id="coreTierOnlyToggle" type="checkbox" />
+            <span>Show core tier columns only</span>
+          </label>
         </div>
-        <button type="button" class="tier-legend-chip unmatched-chip" data-help="Unmatched: people in the selected population without mapped engagement-tier data for the selected week. Unmatched records are included in reconciliation so total population changes remain explainable.">Unmatched <span>?</span></button>
-        <label class="legend-toggle-field">
-          <input id="coreTierOnlyToggle" type="checkbox" />
-          <span>Show core tier columns only</span>
-        </label>
       </section>
 
       <section class="panel" id="reportTablePanel">
@@ -140,6 +142,6 @@
       </section>
     </main>
 
-    <script src="./app.js?v=20260618-techex-consolidated-v1"></script>
+    <script src="./app.js?v=20260618-legend-table-order-v1"></script>
   </body>
 </html>

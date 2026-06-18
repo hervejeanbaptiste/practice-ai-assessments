@@ -130,7 +130,6 @@ button {
   align-items: center;
   gap: 7px;
   min-height: 27px;
-  margin-left: auto;
   padding: 4px 8px;
   border-left: 1px solid var(--line);
   color: var(--navy);
@@ -480,11 +479,21 @@ h2 {
 }
 
 .tier-legend-panel > span {
+  flex: 0 0 auto;
   color: var(--navy);
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.tier-legend-controls {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
 }
 
 .main-tier-chip-group {
