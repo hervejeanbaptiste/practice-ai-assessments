@@ -512,6 +512,18 @@ h2 {
   font-weight: 700;
 }
 
+.tier-legend-chip.unmatched-chip {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #eef2f6,
+      #eef2f6 4px,
+      #d7dee8 4px,
+      #d7dee8 8px
+    ) 8px 50% / 10px 10px no-repeat,
+    #fff;
+}
+
 .tier-legend-chip:hover,
 .tier-legend-chip:focus {
   border-color: var(--navy);
