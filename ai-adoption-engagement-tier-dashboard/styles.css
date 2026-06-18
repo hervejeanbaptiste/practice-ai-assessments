@@ -487,8 +487,18 @@ h2 {
   letter-spacing: 0.04em;
 }
 
+.main-tier-chip-group {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
 .tier-legend-chip {
   width: auto;
+  flex: 0 0 auto;
   min-height: 27px;
   margin: 0;
   padding: 5px 9px 5px 24px;
