@@ -419,7 +419,7 @@ input[type="range"] {
   position: fixed;
   z-index: 20;
   max-width: 330px;
-  padding: 10px 34px 10px 12px;
+  padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: #fff;
@@ -431,29 +431,6 @@ input[type="range"] {
 
 .help-popover p {
   margin: 0;
-}
-
-.help-popover-close {
-  position: absolute;
-  top: 6px;
-  right: 7px;
-  width: 22px;
-  min-height: 22px;
-  height: 22px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: var(--navy);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 800;
-  line-height: 22px;
-  cursor: pointer;
-}
-
-.help-popover-close:hover {
-  background: #0b4d85;
 }
 
 .eyebrow {
@@ -536,6 +513,19 @@ h2 {
   border-color: var(--navy);
   box-shadow: 0 0 0 2px rgba(7, 55, 99, 0.12);
   outline: none;
+}
+
+.tier-legend-chip span {
+  display: inline-grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  margin-left: 4px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
 }
 
 h3 {
