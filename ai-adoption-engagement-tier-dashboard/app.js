@@ -92,6 +92,10 @@ function populationScopeSentence() {
     : "Includes the full assigned worker population.";
 }
 
+function populationColumnLabel() {
+  return state.activeEmployeesOnly ? "Active Employees" : "All";
+}
+
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;",
@@ -297,7 +301,7 @@ function renderTable(summary) {
   const tierCells = state.data.tiers.map((tier) => {
     return tierMetricCell(summary.counts[tier], summary.deltas[tier]);
   }).join("");
-  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched</th>`;
+  const extraHeaders = state.coreTierOnly ? "" : `<th>${populationColumnLabel()}</th><th>Unmatched</th>`;
   const extraCells = state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td>${unmatchedMetricCell(summary)}`;
   table.innerHTML = `
     <thead>
@@ -329,7 +333,7 @@ function renderDisciplineDetails(report) {
     discipline,
     summary: summarize(report, state.weekId, state.compareWeekId, { discipline }),
   }));
-  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched</th>`;
+  const extraHeaders = state.coreTierOnly ? "" : `<th>${populationColumnLabel()}</th><th>Unmatched</th>`;
   $("disciplineDetailMeta").textContent = `${reportLabel(report)} by discipline. ${populationScopeLabel()} compared with the selected start date.`;
   panel.style.display = "block";
   target.innerHTML = `
@@ -438,7 +442,7 @@ function renderDetailTable(title, reports) {
     counts: Object.fromEntries(state.data.tiers.map((tier) => [tier, 0])),
     deltas: Object.fromEntries(state.data.tiers.map((tier) => [tier, 0])),
   });
-  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched</th>`;
+  const extraHeaders = state.coreTierOnly ? "" : `<th>${populationColumnLabel()}</th><th>Unmatched</th>`;
   const extraTotalCells = state.coreTierOnly ? "" : `<td class="metric">${totals.active}</td>${unmatchedMetricCell(totals)}`;
   const subtotalRow = `
     <tr class="subtotal-row">
@@ -482,7 +486,7 @@ function renderDetailTable(title, reports) {
 
 function renderERGDetailTable(allErgsReport, ergReports) {
   const allSummary = summarize(allErgsReport, state.weekId, state.compareWeekId);
-  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched</th>`;
+  const extraHeaders = state.coreTierOnly ? "" : `<th>${populationColumnLabel()}</th><th>Unmatched</th>`;
   const allExtraCells = state.coreTierOnly ? "" : `<td class="metric">${allSummary.active}</td>${unmatchedMetricCell(allSummary)}`;
   return `
     <div class="detail-block">
@@ -519,7 +523,7 @@ function renderERGDetailTable(allErgsReport, ergReports) {
 
 function renderFirmTotalRow(report) {
   const summary = summarize(report, state.weekId, state.compareWeekId);
-  const extraHeaders = state.coreTierOnly ? "" : `<th>Active</th><th>Unmatched</th>`;
+  const extraHeaders = state.coreTierOnly ? "" : `<th>${populationColumnLabel()}</th><th>Unmatched</th>`;
   const extraCells = state.coreTierOnly ? "" : `<td class="metric">${summary.active}</td>${unmatchedMetricCell(summary)}`;
   return `
     <div class="detail-block">
