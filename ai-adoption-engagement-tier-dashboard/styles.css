@@ -156,8 +156,12 @@ button {
 }
 
 .visual-controls-panel {
+  position: sticky;
+  top: 74px;
+  z-index: 5;
   padding: 0;
   box-shadow: none;
+  background: rgba(255, 255, 255, 0.97);
 }
 
 .visual-controls-panel .movement-controls {
