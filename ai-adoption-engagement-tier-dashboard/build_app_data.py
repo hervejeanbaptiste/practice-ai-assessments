@@ -47,12 +47,16 @@ def summarize_people(employee_ids, people_by_id, week_id, prior_week_id=None):
     prior_counts = {tier: 0 for tier in rr.LOW}
     transitions = {src: {dst: 0 for dst in rr.LOW} for src in rr.LOW}
     unmatched = 0
+    compare_to_report_prior = week_id == WEEKS[-1]["id"] and prior_week_id == WEEKS[-2]["id"]
     for employee_id in employee_ids:
         person = people_by_id.get(str(employee_id))
         if not person:
             continue
         current = person["tiers"].get(week_id, "")
-        prior = person["tiers"].get(prior_week_id, "") if prior_week_id else ""
+        if compare_to_report_prior:
+            prior = person.get("pastTier", "")
+        else:
+            prior = person["tiers"].get(prior_week_id, "") if prior_week_id else ""
         if current in counts:
             counts[current] += 1
         else:
@@ -236,6 +240,7 @@ def main():
             "costCenter": str(row.get("Cost Center", "")),
             "role": str(row.get("Business Title", "")),
             "level": str(row.get("Management Level", "")),
+            "pastTier": str(row.get("prior_tier", "")),
             "tiers": {},
         }
 
