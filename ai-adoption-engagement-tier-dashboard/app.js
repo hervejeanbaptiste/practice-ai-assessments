@@ -864,7 +864,7 @@ function renderWeeklyTierMix(report, options = {}) {
         <div class="tier-mix-bar">${segments}${unmatchedSegment}</div>
         <div class="tier-mix-label">
           <strong>${week.label}</strong>
-          <span>${summary.active} ${state.activeEmployeesOnly ? "active employees" : "active"}</span>
+          <span>${summary.active} ${state.activeEmployeesOnly ? "active employees" : "all"}</span>
         </div>
       </article>`;
   }).join("");
