@@ -22,8 +22,18 @@ import full_suite_reports as fs  # noqa: E402
 DATA = ROOT / "work/actual_data"
 ENGAGEMENT = ROOT / "work/june_15/engagement_june_15_candidate.xlsx"
 OUT = ROOT / "app/leaderboard/data"
-MASTER_SUITE = ROOT / "outputs/ai_adoption_report_automation/full_report_suite_current_techex_consolidated"
-MASTER_DELIVERY = ROOT / "outputs/ai_adoption_report_automation/audience_delivery_current_techex_consolidated"
+MASTER_SUITE = Path(
+    os.environ.get(
+        "AI_REPORT_MASTER_SUITE",
+        ROOT / "outputs/ai_adoption_report_automation/full_report_suite_current_techex_consolidated",
+    )
+)
+MASTER_DELIVERY = Path(
+    os.environ.get(
+        "AI_REPORT_MASTER_DELIVERY",
+        ROOT / "outputs/ai_adoption_report_automation/audience_delivery_current_techex_consolidated",
+    )
+)
 WEEKS = [
     {"id": "2026-06-01", "label": "June 1", "sheet": "Update June 1"},
     {"id": "2026-06-08", "label": "June 8", "sheet": "Update June 8"},
